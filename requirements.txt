@@ -24,3 +24,6 @@ openai>=1.0.0,<2.0.0  # For Azure OpenAI integration
 # Additional utilities
 plotly>=5.15.0,<6.0.0  # For charts in Streamlit
 pandas>=2.0.0,<3.0.0  # For data manipulation
+
+# AutoGen framework for multi-agent orchestration
+pyautogen>=0.2.0,<0.3.0  # Multi-agent orchestration framework

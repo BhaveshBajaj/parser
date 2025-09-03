@@ -31,6 +31,7 @@ from .models.document import Document, DocumentCreate, DocumentStatus, DocumentU
 from .services.document_service import document_service
 from .services.parsers import DocumentSection
 from .services.entity_extractor import Entity, EntityType
+from .services.agents.workflow_orchestrator import WorkflowOrchestrator
 
 # Configure logging
 logging.basicConfig(
@@ -65,6 +66,9 @@ app.add_middleware(
 # Add GZip middleware for responses
 app.add_middleware(GZipMiddleware, minimum_size=1000)
 
+# Initialize workflow orchestrator
+workflow_orchestrator = WorkflowOrchestrator()
+
 # Custom JSON encoder for UUID and datetime
 class CustomJSONEncoder(json.JSONEncoder):
     def default(self, obj):
@@ -98,7 +102,12 @@ async def root() -> Dict[str, Any]:
             "list_documents": "/documents",
             "get_document": "/documents/{document_id}",
             "document_status": "/documents/{document_id}/status",
-            "extract_entities": "/entities/extract"
+            "extract_entities": "/entities/extract",
+            "execute_workflow": "/documents/{document_id}/workflows",
+            "document_qa": "/documents/{document_id}/qa",
+            "corpus_workflow": "/corpus/workflows",
+            "corpus_qa": "/corpus/qa",
+            "workflow_status": "/workflows/{workflow_id}/status"
         },
         "docs": "/docs"
     }
@@ -847,6 +856,349 @@ async def regenerate_summary(
         raise HTTPException(
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
             detail=f"Error regenerating summary: {str(e)}"
+        )
+
+# Agent Workflow Endpoints
+
+class WorkflowRequest(BaseModel):
+    """Request model for workflow execution."""
+    workflow_type: str = Field(..., description="Type of workflow to execute")
+    context: Optional[Dict[str, Any]] = Field(default_factory=dict, description="Additional context for workflow")
+
+class WorkflowResponse(BaseModel):
+    """Response model for workflow execution."""
+    workflow_id: str
+    workflow_type: str
+    document_id: str
+    status: str
+    execution_results: Optional[Dict[str, Any]] = None
+    workflow_summary: Optional[Dict[str, Any]] = None
+    error: Optional[str] = None
+    timestamp: str
+
+class CorpusWorkflowRequest(BaseModel):
+    """Request model for corpus-level workflow execution."""
+    document_ids: List[str] = Field(..., description="List of document IDs to process")
+    workflow_type: str = Field(..., description="Type of corpus workflow to execute")
+    context: Optional[Dict[str, Any]] = Field(default_factory=dict, description="Additional context for workflow")
+
+class CorpusWorkflowResponse(BaseModel):
+    """Response model for corpus workflow execution."""
+    workflow_id: str
+    workflow_type: str
+    corpus_size: int
+    status: str
+    document_results: Optional[List[Dict[str, Any]]] = None
+    corpus_results: Optional[Dict[str, Any]] = None
+    error: Optional[str] = None
+    timestamp: str
+
+class QuestionRequest(BaseModel):
+    """Request model for Q&A workflows."""
+    question: str = Field(..., description="Question to answer")
+    context: Optional[Dict[str, Any]] = Field(default_factory=dict, description="Additional context")
+
+@app.post(
+    "/documents/{document_id}/workflows",
+    response_model=WorkflowResponse,
+    summary="Execute agent workflow on document"
+)
+async def execute_document_workflow(
+    document_id: str,
+    workflow_request: WorkflowRequest,
+    request_id: str = Depends(get_request_id)
+) -> WorkflowResponse:
+    """
+    Execute an agent workflow on a specific document.
+    
+    Available workflow types:
+    - full: Complete processing with all agents
+    - summarization: Summarization agents only
+    - entity_extraction: Entity extraction and tagging
+    - qa: Question answering (requires question in context)
+    """
+    try:
+        logger.info(f"[{request_id}] Executing workflow '{workflow_request.workflow_type}' on document: {document_id}")
+        
+        # Get document
+        doc_uuid = UUID(document_id.strip())
+        document = await document_service.get_document(doc_uuid)
+        if not document:
+            logger.warning(f"[{request_id}] Document not found: {document_id}")
+            raise HTTPException(
+                status_code=status.HTTP_404_NOT_FOUND,
+                detail="Document not found"
+            )
+        
+        # Execute workflow
+        workflow_result = await workflow_orchestrator.execute_document_processing_workflow(
+            document=document,
+            workflow_type=workflow_request.workflow_type,
+            context=workflow_request.context
+        )
+        
+        return WorkflowResponse(
+            workflow_id=workflow_result["workflow_id"],
+            workflow_type=workflow_result["workflow_type"],
+            document_id=workflow_result["document_id"],
+            status=workflow_result.get("status", "completed"),
+            execution_results=workflow_result.get("execution_results"),
+            workflow_summary=workflow_result.get("workflow_summary"),
+            error=workflow_result.get("error"),
+            timestamp=workflow_result["timestamp"]
+        )
+        
+    except ValueError as e:
+        logger.warning(f"[{request_id}] Invalid document ID format: {document_id}, error: {str(e)}")
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail=f"Invalid document ID format: {document_id}"
+        )
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"[{request_id}] Error executing workflow: {str(e)}", exc_info=True)
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail=f"Error executing workflow: {str(e)}"
+        )
+
+@app.post(
+    "/documents/{document_id}/qa",
+    response_model=Dict[str, Any],
+    summary="Ask questions about a document"
+)
+async def ask_document_question(
+    document_id: str,
+    question_request: QuestionRequest,
+    request_id: str = Depends(get_request_id)
+) -> Dict[str, Any]:
+    """
+    Ask a question about a specific document using Q&A agents.
+    """
+    try:
+        logger.info(f"[{request_id}] Asking question about document: {document_id}")
+        
+        # Get document
+        doc_uuid = UUID(document_id.strip())
+        document = await document_service.get_document(doc_uuid)
+        if not document:
+            logger.warning(f"[{request_id}] Document not found: {document_id}")
+            raise HTTPException(
+                status_code=status.HTTP_404_NOT_FOUND,
+                detail="Document not found"
+            )
+        
+        # Execute Q&A workflow
+        qa_context = {
+            **question_request.context,
+            "question": question_request.question
+        }
+        
+        workflow_result = await workflow_orchestrator.execute_document_processing_workflow(
+            document=document,
+            workflow_type="qa",
+            context=qa_context
+        )
+        
+        # Extract Q&A results
+        qa_results = {}
+        if "execution_results" in workflow_result:
+            for agent_name, result in workflow_result["execution_results"].items():
+                if "qa" in agent_name and hasattr(result, 'result_data'):
+                    qa_results[agent_name] = result.result_data
+        
+        return {
+            "document_id": document_id,
+            "question": question_request.question,
+            "answers": qa_results,
+            "workflow_id": workflow_result.get("workflow_id"),
+            "timestamp": workflow_result["timestamp"]
+        }
+        
+    except ValueError as e:
+        logger.warning(f"[{request_id}] Invalid document ID format: {document_id}, error: {str(e)}")
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail=f"Invalid document ID format: {document_id}"
+        )
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"[{request_id}] Error in Q&A: {str(e)}", exc_info=True)
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail=f"Error processing question: {str(e)}"
+        )
+
+@app.post(
+    "/corpus/workflows",
+    response_model=CorpusWorkflowResponse,
+    summary="Execute agent workflow on corpus"
+)
+async def execute_corpus_workflow(
+    corpus_request: CorpusWorkflowRequest,
+    request_id: str = Depends(get_request_id)
+) -> CorpusWorkflowResponse:
+    """
+    Execute an agent workflow on a corpus of documents.
+    
+    Available corpus workflow types:
+    - corpus_analysis: Full corpus analysis with summarization
+    - corpus_summarization: Corpus-level summarization only
+    - corpus_qa: Corpus-wide question answering (requires question in context)
+    """
+    try:
+        logger.info(f"[{request_id}] Executing corpus workflow '{corpus_request.workflow_type}' on {len(corpus_request.document_ids)} documents")
+        
+        # Get documents
+        documents = []
+        for doc_id in corpus_request.document_ids:
+            try:
+                doc_uuid = UUID(doc_id.strip())
+                document = await document_service.get_document(doc_uuid)
+                if document:
+                    documents.append(document)
+                else:
+                    logger.warning(f"[{request_id}] Document not found: {doc_id}")
+            except ValueError:
+                logger.warning(f"[{request_id}] Invalid document ID: {doc_id}")
+                continue
+        
+        if not documents:
+            raise HTTPException(
+                status_code=status.HTTP_400_BAD_REQUEST,
+                detail="No valid documents found"
+            )
+        
+        # Execute corpus workflow
+        workflow_result = await workflow_orchestrator.execute_corpus_workflow(
+            documents=documents,
+            workflow_type=corpus_request.workflow_type,
+            context=corpus_request.context
+        )
+        
+        return CorpusWorkflowResponse(
+            workflow_id=workflow_result["workflow_id"],
+            workflow_type=workflow_result["workflow_type"],
+            corpus_size=workflow_result["corpus_size"],
+            status=workflow_result.get("status", "completed"),
+            document_results=workflow_result.get("document_results"),
+            corpus_results=workflow_result.get("corpus_results"),
+            error=workflow_result.get("error"),
+            timestamp=workflow_result["timestamp"]
+        )
+        
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"[{request_id}] Error executing corpus workflow: {str(e)}", exc_info=True)
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail=f"Error executing corpus workflow: {str(e)}"
+        )
+
+@app.post(
+    "/corpus/qa",
+    response_model=Dict[str, Any],
+    summary="Ask questions across multiple documents"
+)
+async def ask_corpus_question(
+    corpus_request: CorpusWorkflowRequest,
+    question_request: QuestionRequest,
+    request_id: str = Depends(get_request_id)
+) -> Dict[str, Any]:
+    """
+    Ask a question across multiple documents in a corpus.
+    """
+    try:
+        logger.info(f"[{request_id}] Asking corpus question across {len(corpus_request.document_ids)} documents")
+        
+        # Get documents
+        documents = []
+        for doc_id in corpus_request.document_ids:
+            try:
+                doc_uuid = UUID(doc_id.strip())
+                document = await document_service.get_document(doc_uuid)
+                if document:
+                    documents.append(document)
+            except ValueError:
+                continue
+        
+        if not documents:
+            raise HTTPException(
+                status_code=status.HTTP_400_BAD_REQUEST,
+                detail="No valid documents found"
+            )
+        
+        # Execute corpus Q&A workflow
+        qa_context = {
+            **question_request.context,
+            "question": question_request.question
+        }
+        
+        workflow_result = await workflow_orchestrator.execute_corpus_workflow(
+            documents=documents,
+            workflow_type="corpus_qa",
+            context=qa_context
+        )
+        
+        # Extract corpus Q&A results
+        qa_results = {}
+        if "corpus_results" in workflow_result:
+            for agent_name, result in workflow_result["corpus_results"].items():
+                if "qa" in agent_name and hasattr(result, 'result_data'):
+                    qa_results[agent_name] = result.result_data
+        
+        return {
+            "corpus_size": len(documents),
+            "document_ids": [str(doc.id) for doc in documents],
+            "question": question_request.question,
+            "answers": qa_results,
+            "workflow_id": workflow_result.get("workflow_id"),
+            "timestamp": workflow_result["timestamp"]
+        }
+        
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"[{request_id}] Error in corpus Q&A: {str(e)}", exc_info=True)
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail=f"Error processing corpus question: {str(e)}"
+        )
+
+@app.get(
+    "/workflows/{workflow_id}/status",
+    response_model=Dict[str, Any],
+    summary="Get workflow execution status"
+)
+async def get_workflow_status(
+    workflow_id: str,
+    request_id: str = Depends(get_request_id)
+) -> Dict[str, Any]:
+    """
+    Get the status of a workflow execution.
+    Note: This is a placeholder endpoint. In a production system,
+    you would store workflow status in a database or cache.
+    """
+    try:
+        logger.info(f"[{request_id}] Getting status for workflow: {workflow_id}")
+        
+        # For now, return a placeholder response
+        # In a real implementation, you would query the workflow status from storage
+        return {
+            "workflow_id": workflow_id,
+            "status": "completed",
+            "message": "Workflow status tracking not yet implemented",
+            "timestamp": datetime.now(timezone.utc).isoformat()
+        }
+        
+    except Exception as e:
+        logger.error(f"[{request_id}] Error getting workflow status: {str(e)}", exc_info=True)
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail=f"Error retrieving workflow status: {str(e)}"
         )
 
 # Error handlers

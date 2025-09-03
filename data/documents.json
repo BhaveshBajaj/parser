@@ -10589,5 +10589,1215 @@
         }
       ]
     }
+  },
+  "db5d79a4-c300-4ff2-832c-5bb136e3bd2d": {
+    "filename": "The Last Train 1_2.docx",
+    "metadata": {
+      "original_filename": "The Last Train 1_2.docx",
+      "stored_path": "data/uploads/The Last Train 1_19.docx",
+      "uploaded_via": "api",
+      "test": true,
+      "source": "test_script"
+    },
+    "content_type": "application/octet-stream",
+    "size": 7956,
+    "id": "db5d79a4-c300-4ff2-832c-5bb136e3bd2d",
+    "status": "failed",
+    "created_at": "2025-09-03 20:43:57.631170+00:00",
+    "updated_at": "2025-09-03 20:43:57.646230+00:00",
+    "summary": null,
+    "error": "Unsupported content type: application/octet-stream",
+    "extra_data": {}
+  },
+  "93c82254-9c6b-4b6e-8404-637eff22c46e": {
+    "filename": "The Last Train (1).docx",
+    "metadata": {
+      "original_filename": "The Last Train (1).docx",
+      "stored_path": "data/uploads/The Last Train 1_20.docx",
+      "uploaded_via": "api",
+      "filename": "The Last Train (1).docx",
+      "content_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "size_bytes": 7956,
+      "language": "",
+      "format": "DOCX",
+      "author": "",
+      "title": "Word Document",
+      "created": null,
+      "modified": "2025-09-03 20:45:10",
+      "last_modified_by": "python-docx",
+      "revision": 1,
+      "category": "",
+      "comments": "",
+      "identifier": "",
+      "keywords": "",
+      "subject": "",
+      "version": "",
+      "sections": 1,
+      "entities": 30,
+      "entity_types": {
+        "ORG": 9,
+        "PERSON": 7,
+        "PRODUCT": 5,
+        "GPE": 5,
+        "DATE": 2,
+        "LOCATION": 1,
+        "TIME": 1
+      }
+    },
+    "content_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "size": 7956,
+    "id": "93c82254-9c6b-4b6e-8404-637eff22c46e",
+    "status": "processed",
+    "created_at": "2025-09-03 20:45:10.808372+00:00",
+    "updated_at": "2025-09-03 20:45:27.796647+00:00",
+    "summary": "The document recounts a critical incident involving Anita Sharma, an employee of Infosys Ltd., who loses a briefcase containing confidential project files for a new AI product codenamed Aurora at New Delhi Railway Station on March 3, 2025. Anita, under strict instructions from her manager Rajiv Menon to safeguard the briefcase due to its importance to the company's future, accidentally drops it in the crowded station. Realizing its disappearance, she promptly seeks help from Inspector Ramesh Yadav at the Station Security Office, who begins an official search by logging the details and contacting the Delhi Metro Authority.\n\nThe narrative highlights the urgency and potential consequences of the loss, given the sensitive nature of the Aurora prototype files. Key entities involved include Infosys, the Delhi Metro Authority, and various individuals such as Anita Sharma, Rajiv Menon, and Inspector Yadav. The incident underscores the risks associated with handling confidential corporate information in public spaces and the immediate response protocols followed by security personnel. The story sets the stage for a broader investigation and search effort, emphasizing the high stakes for both Anita and Infosys.",
+    "error": null,
+    "extra_data": {
+      "sections": [
+        {
+          "title": "The Forgotten Briefcase",
+          "content": "The Forgotten Briefcase\n\nOn March 3, 2025, Anita Sharma stepped off the train at New Delhi Railway Station. She adjusted her glasses, glanced at the crowd, and clutched a slim leather briefcase that bore the logo of Infosys Ltd. Inside were confidential project papers about a new AI product codenamed Aurora.\n\nAnita had been warned by her manager, Rajiv Menon, that morning: \u201cDon\u2019t lose sight of this. The future of the company depends on it.\u201d\n\nBut in the chaos of the station, the briefcase slipped from her hand as she bent to tie her shoelace. By the time she stood up, it was gone.\n\nPanic surged. She rushed to the Station Security Office, where an officer named Inspector Ramesh Yadav began logging details. \u201cDate of loss?\u201d he asked.\n\n\u201cToday\u2014March 3rd,\u201d Anita replied breathlessly.\n\n\u201cOrganization?\u201d\n\n\u201cInfosys.\u201d\n\n\u201cProduct inside?\u201d\n\n\u201cAurora, the prototype files.\u201d\n\nInspector Yadav scribbled in his ledger and then called the Delhi Metro Authority. \u201cCheck for a black Samsonite briefcase near Gate 5 of Connaught Place,\u201d he instructed.\n\nMeanwhile, across the city, a young man named Irfan Ali boarded a bus near India Gate. At his feet sat the very briefcase Anita had lost. Curious, he unlatched it, saw the files, and recognized the value. Aurora wasn\u2019t just software\u2014it was a product rumored to rival Microsoft\u2019s Copilot.\n\nBy evening, news reached the office of The Times of India, where journalist Meera Kapoor smelled a headline. \u201cInfosys Loses Secret AI Project in New Delhi,\u201d she typed.\n\nBut before the story could break, Anita\u2019s phone buzzed. A text message lit up her screen:\n\n*\u201cBriefcase found. Meet me at *Caf\u00e9 Coffee Day, Connaught Place, 8 PM. \u2014Irfan.\u201d\n\nHeart pounding, Anita raced through the neon-lit streets. At exactly 8:00 PM, under the caf\u00e9\u2019s glowing sign, she saw Irfan waiting with the briefcase.\n\n\u201cYou could have sold this,\u201d Anita whispered.\n\nIrfan smiled faintly. \u201cSome things are worth more than money.\u201d\n\nAs she clasped the case tightly, the city lights of New Delhi shimmered like a promise.",
+          "section_type": "document",
+          "page_number": null,
+          "entities": [
+            {
+              "text": "March 3, 2025",
+              "type": "DATE",
+              "start": 28,
+              "end": 41,
+              "confidence": 1.0,
+              "metadata": {
+                "normalized_date": "2025-03-03"
+              }
+            },
+            {
+              "text": "Anita Sharma",
+              "type": "PERSON",
+              "start": 43,
+              "end": 55,
+              "confidence": 1.0,
+              "metadata": {}
+            },
+            {
+              "text": "New Delhi Railway Station",
+              "type": "ORG",
+              "start": 81,
+              "end": 106,
+              "confidence": 0.98,
+              "metadata": {}
+            },
+            {
+              "text": "Infosys Ltd.",
+              "type": "ORG",
+              "start": 216,
+              "end": 228,
+              "confidence": 1.0,
+              "metadata": {}
+            },
+            {
+              "text": "Aurora",
+              "type": "PRODUCT",
+              "start": 302,
+              "end": 308,
+              "confidence": 1.0,
+              "metadata": {
+                "codename": true
+              }
+            },
+            {
+              "text": "Rajiv Menon",
+              "type": "PERSON",
+              "start": 349,
+              "end": 360,
+              "confidence": 1.0,
+              "metadata": {
+                "role": "manager"
+              }
+            },
+            {
+              "text": "Station Security Office",
+              "type": "ORG",
+              "start": 620,
+              "end": 643,
+              "confidence": 0.95,
+              "metadata": {}
+            },
+            {
+              "text": "Inspector Ramesh Yadav",
+              "type": "PERSON",
+              "start": 668,
+              "end": 690,
+              "confidence": 1.0,
+              "metadata": {
+                "role": "officer"
+              }
+            },
+            {
+              "text": "March 3rd",
+              "type": "DATE",
+              "start": 748,
+              "end": 757,
+              "confidence": 1.0,
+              "metadata": {
+                "normalized_date": "2025-03-03"
+              }
+            },
+            {
+              "text": "Infosys",
+              "type": "ORG",
+              "start": 807,
+              "end": 814,
+              "confidence": 1.0,
+              "metadata": {}
+            },
+            {
+              "text": "Aurora",
+              "type": "PRODUCT",
+              "start": 838,
+              "end": 844,
+              "confidence": 1.0,
+              "metadata": {
+                "prototype": true
+              }
+            },
+            {
+              "text": "Delhi Metro Authority",
+              "type": "ORG",
+              "start": 929,
+              "end": 950,
+              "confidence": 1.0,
+              "metadata": {}
+            },
+            {
+              "text": "Samsonite",
+              "type": "PRODUCT",
+              "start": 971,
+              "end": 980,
+              "confidence": 1.0,
+              "metadata": {
+                "type": "briefcase"
+              }
+            },
+            {
+              "text": "Gate 5",
+              "type": "LOCATION",
+              "start": 996,
+              "end": 1002,
+              "confidence": 0.85,
+              "metadata": {
+                "place": "Connaught Place"
+              }
+            },
+            {
+              "text": "Connaught Place",
+              "type": "GPE",
+              "start": 1006,
+              "end": 1021,
+              "confidence": 1.0,
+              "metadata": {}
+            },
+            {
+              "text": "Irfan Ali",
+              "type": "PERSON",
+              "start": 1086,
+              "end": 1095,
+              "confidence": 1.0,
+              "metadata": {}
+            },
+            {
+              "text": "India Gate",
+              "type": "GPE",
+              "start": 1115,
+              "end": 1125,
+              "confidence": 1.0,
+              "metadata": {}
+            },
+            {
+              "text": "Aurora",
+              "type": "PRODUCT",
+              "start": 1245,
+              "end": 1251,
+              "confidence": 1.0,
+              "metadata": {}
+            },
+            {
+              "text": "Microsoft",
+              "type": "ORG",
+              "start": 1307,
+              "end": 1316,
+              "confidence": 1.0,
+              "metadata": {}
+            },
+            {
+              "text": "Copilot",
+              "type": "PRODUCT",
+              "start": 1319,
+              "end": 1326,
+              "confidence": 1.0,
+              "metadata": {
+                "company": "Microsoft"
+              }
+            },
+            {
+              "text": "The Times of India",
+              "type": "ORG",
+              "start": 1368,
+              "end": 1386,
+              "confidence": 1.0,
+              "metadata": {}
+            },
+            {
+              "text": "Meera Kapoor",
+              "type": "PERSON",
+              "start": 1405,
+              "end": 1417,
+              "confidence": 1.0,
+              "metadata": {
+                "role": "journalist"
+              }
+            },
+            {
+              "text": "Infosys",
+              "type": "ORG",
+              "start": 1439,
+              "end": 1446,
+              "confidence": 1.0,
+              "metadata": {}
+            },
+            {
+              "text": "New Delhi",
+              "type": "GPE",
+              "start": 1474,
+              "end": 1483,
+              "confidence": 1.0,
+              "metadata": {}
+            },
+            {
+              "text": "Caf\u00e9 Coffee Day",
+              "type": "ORG",
+              "start": 1620,
+              "end": 1635,
+              "confidence": 1.0,
+              "metadata": {}
+            },
+            {
+              "text": "Connaught Place",
+              "type": "GPE",
+              "start": 1637,
+              "end": 1652,
+              "confidence": 1.0,
+              "metadata": {}
+            },
+            {
+              "text": "8 PM",
+              "type": "TIME",
+              "start": 1654,
+              "end": 1658,
+              "confidence": 1.0,
+              "metadata": {
+                "normalized_time": "20:00"
+              }
+            },
+            {
+              "text": "Anita",
+              "type": "PERSON",
+              "start": 1532,
+              "end": 1537,
+              "confidence": 1.0,
+              "metadata": {}
+            },
+            {
+              "text": "Irfan",
+              "type": "PERSON",
+              "start": 1661,
+              "end": 1666,
+              "confidence": 1.0,
+              "metadata": {}
+            },
+            {
+              "text": "New Delhi",
+              "type": "GPE",
+              "start": 1474,
+              "end": 1483,
+              "confidence": 1.0,
+              "metadata": {}
+            }
+          ]
+        }
+      ],
+      "all_entities": [
+        {
+          "text": "March 3, 2025",
+          "type": "DATE",
+          "start": 28,
+          "end": 41,
+          "confidence": 1.0,
+          "metadata": {
+            "normalized_date": "2025-03-03"
+          }
+        },
+        {
+          "text": "Anita Sharma",
+          "type": "PERSON",
+          "start": 43,
+          "end": 55,
+          "confidence": 1.0,
+          "metadata": {}
+        },
+        {
+          "text": "New Delhi Railway Station",
+          "type": "ORG",
+          "start": 81,
+          "end": 106,
+          "confidence": 0.98,
+          "metadata": {}
+        },
+        {
+          "text": "Infosys Ltd.",
+          "type": "ORG",
+          "start": 216,
+          "end": 228,
+          "confidence": 1.0,
+          "metadata": {}
+        },
+        {
+          "text": "Aurora",
+          "type": "PRODUCT",
+          "start": 302,
+          "end": 308,
+          "confidence": 1.0,
+          "metadata": {
+            "codename": true
+          }
+        },
+        {
+          "text": "Rajiv Menon",
+          "type": "PERSON",
+          "start": 349,
+          "end": 360,
+          "confidence": 1.0,
+          "metadata": {
+            "role": "manager"
+          }
+        },
+        {
+          "text": "Station Security Office",
+          "type": "ORG",
+          "start": 620,
+          "end": 643,
+          "confidence": 0.95,
+          "metadata": {}
+        },
+        {
+          "text": "Inspector Ramesh Yadav",
+          "type": "PERSON",
+          "start": 668,
+          "end": 690,
+          "confidence": 1.0,
+          "metadata": {
+            "role": "officer"
+          }
+        },
+        {
+          "text": "March 3rd",
+          "type": "DATE",
+          "start": 748,
+          "end": 757,
+          "confidence": 1.0,
+          "metadata": {
+            "normalized_date": "2025-03-03"
+          }
+        },
+        {
+          "text": "Infosys",
+          "type": "ORG",
+          "start": 807,
+          "end": 814,
+          "confidence": 1.0,
+          "metadata": {}
+        },
+        {
+          "text": "Aurora",
+          "type": "PRODUCT",
+          "start": 838,
+          "end": 844,
+          "confidence": 1.0,
+          "metadata": {
+            "prototype": true
+          }
+        },
+        {
+          "text": "Delhi Metro Authority",
+          "type": "ORG",
+          "start": 929,
+          "end": 950,
+          "confidence": 1.0,
+          "metadata": {}
+        },
+        {
+          "text": "Samsonite",
+          "type": "PRODUCT",
+          "start": 971,
+          "end": 980,
+          "confidence": 1.0,
+          "metadata": {
+            "type": "briefcase"
+          }
+        },
+        {
+          "text": "Gate 5",
+          "type": "LOCATION",
+          "start": 996,
+          "end": 1002,
+          "confidence": 0.85,
+          "metadata": {
+            "place": "Connaught Place"
+          }
+        },
+        {
+          "text": "Connaught Place",
+          "type": "GPE",
+          "start": 1006,
+          "end": 1021,
+          "confidence": 1.0,
+          "metadata": {}
+        },
+        {
+          "text": "Irfan Ali",
+          "type": "PERSON",
+          "start": 1086,
+          "end": 1095,
+          "confidence": 1.0,
+          "metadata": {}
+        },
+        {
+          "text": "India Gate",
+          "type": "GPE",
+          "start": 1115,
+          "end": 1125,
+          "confidence": 1.0,
+          "metadata": {}
+        },
+        {
+          "text": "Aurora",
+          "type": "PRODUCT",
+          "start": 1245,
+          "end": 1251,
+          "confidence": 1.0,
+          "metadata": {}
+        },
+        {
+          "text": "Microsoft",
+          "type": "ORG",
+          "start": 1307,
+          "end": 1316,
+          "confidence": 1.0,
+          "metadata": {}
+        },
+        {
+          "text": "Copilot",
+          "type": "PRODUCT",
+          "start": 1319,
+          "end": 1326,
+          "confidence": 1.0,
+          "metadata": {
+            "company": "Microsoft"
+          }
+        },
+        {
+          "text": "The Times of India",
+          "type": "ORG",
+          "start": 1368,
+          "end": 1386,
+          "confidence": 1.0,
+          "metadata": {}
+        },
+        {
+          "text": "Meera Kapoor",
+          "type": "PERSON",
+          "start": 1405,
+          "end": 1417,
+          "confidence": 1.0,
+          "metadata": {
+            "role": "journalist"
+          }
+        },
+        {
+          "text": "Infosys",
+          "type": "ORG",
+          "start": 1439,
+          "end": 1446,
+          "confidence": 1.0,
+          "metadata": {}
+        },
+        {
+          "text": "New Delhi",
+          "type": "GPE",
+          "start": 1474,
+          "end": 1483,
+          "confidence": 1.0,
+          "metadata": {}
+        },
+        {
+          "text": "Caf\u00e9 Coffee Day",
+          "type": "ORG",
+          "start": 1620,
+          "end": 1635,
+          "confidence": 1.0,
+          "metadata": {}
+        },
+        {
+          "text": "Connaught Place",
+          "type": "GPE",
+          "start": 1637,
+          "end": 1652,
+          "confidence": 1.0,
+          "metadata": {}
+        },
+        {
+          "text": "8 PM",
+          "type": "TIME",
+          "start": 1654,
+          "end": 1658,
+          "confidence": 1.0,
+          "metadata": {
+            "normalized_time": "20:00"
+          }
+        },
+        {
+          "text": "Anita",
+          "type": "PERSON",
+          "start": 1532,
+          "end": 1537,
+          "confidence": 1.0,
+          "metadata": {}
+        },
+        {
+          "text": "Irfan",
+          "type": "PERSON",
+          "start": 1661,
+          "end": 1666,
+          "confidence": 1.0,
+          "metadata": {}
+        },
+        {
+          "text": "New Delhi",
+          "type": "GPE",
+          "start": 1474,
+          "end": 1483,
+          "confidence": 1.0,
+          "metadata": {}
+        }
+      ]
+    }
+  },
+  "579e692d-842e-4f5d-9240-3eccc419c130": {
+    "filename": "The Last Train (1).docx",
+    "metadata": {
+      "original_filename": "The Last Train (1).docx",
+      "stored_path": "data/uploads/The Last Train 1_21.docx",
+      "uploaded_via": "api",
+      "filename": "The Last Train (1).docx",
+      "content_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "size_bytes": 7956,
+      "language": "",
+      "format": "DOCX",
+      "author": "",
+      "title": "Word Document",
+      "created": null,
+      "modified": "2025-09-03 20:45:27",
+      "last_modified_by": "python-docx",
+      "revision": 1,
+      "category": "",
+      "comments": "",
+      "identifier": "",
+      "keywords": "",
+      "subject": "",
+      "version": "",
+      "sections": 1,
+      "entities": 31,
+      "entity_types": {
+        "PERSON": 8,
+        "ORG": 8,
+        "PRODUCT": 6,
+        "GPE": 5,
+        "DATE": 2,
+        "TIME": 2
+      }
+    },
+    "content_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "size": 7956,
+    "id": "579e692d-842e-4f5d-9240-3eccc419c130",
+    "status": "processed",
+    "created_at": "2025-09-03 20:45:27.809271+00:00",
+    "updated_at": "2025-09-03 20:45:45.800981+00:00",
+    "summary": "The document recounts a critical incident involving Anita Sharma, an employee of Infosys Ltd., who loses a confidential briefcase at New Delhi Railway Station on March 3, 2025. The briefcase contains sensitive project papers related to \"Aurora,\" a new AI product prototype considered vital to the company's future. Anita, acting on her manager Rajiv Menon's warning about the importance of the documents, becomes distressed when the briefcase goes missing amid the station's chaos.\n\nImmediately after the loss, Anita contacts the Station Security Office, where Inspector Ramesh Yadav begins an official investigation. He logs the details and coordinates with the Delhi Metro Authority to search for the briefcase, emphasizing its significance due to the confidential nature of the contents and the involvement of a major technology company. The narrative highlights the urgency and potential repercussions for Infosys, underscoring the importance of security and vigilance in handling sensitive corporate information.\n\nKey entities in the incident include Anita Sharma, Rajiv Menon, Inspector Ramesh Yadav, Infosys Ltd., and the Delhi Metro Authority, with the location centered at New Delhi Railway Station. The document illustrates the challenges of safeguarding proprietary technology in high-traffic public spaces and sets the stage for a broader investigation into the fate of the Aurora project files.",
+    "error": null,
+    "extra_data": {
+      "sections": [
+        {
+          "title": "The Forgotten Briefcase",
+          "content": "The Forgotten Briefcase\n\nOn March 3, 2025, Anita Sharma stepped off the train at New Delhi Railway Station. She adjusted her glasses, glanced at the crowd, and clutched a slim leather briefcase that bore the logo of Infosys Ltd. Inside were confidential project papers about a new AI product codenamed Aurora.\n\nAnita had been warned by her manager, Rajiv Menon, that morning: \u201cDon\u2019t lose sight of this. The future of the company depends on it.\u201d\n\nBut in the chaos of the station, the briefcase slipped from her hand as she bent to tie her shoelace. By the time she stood up, it was gone.\n\nPanic surged. She rushed to the Station Security Office, where an officer named Inspector Ramesh Yadav began logging details. \u201cDate of loss?\u201d he asked.\n\n\u201cToday\u2014March 3rd,\u201d Anita replied breathlessly.\n\n\u201cOrganization?\u201d\n\n\u201cInfosys.\u201d\n\n\u201cProduct inside?\u201d\n\n\u201cAurora, the prototype files.\u201d\n\nInspector Yadav scribbled in his ledger and then called the Delhi Metro Authority. \u201cCheck for a black Samsonite briefcase near Gate 5 of Connaught Place,\u201d he instructed.\n\nMeanwhile, across the city, a young man named Irfan Ali boarded a bus near India Gate. At his feet sat the very briefcase Anita had lost. Curious, he unlatched it, saw the files, and recognized the value. Aurora wasn\u2019t just software\u2014it was a product rumored to rival Microsoft\u2019s Copilot.\n\nBy evening, news reached the office of The Times of India, where journalist Meera Kapoor smelled a headline. \u201cInfosys Loses Secret AI Project in New Delhi,\u201d she typed.\n\nBut before the story could break, Anita\u2019s phone buzzed. A text message lit up her screen:\n\n*\u201cBriefcase found. Meet me at *Caf\u00e9 Coffee Day, Connaught Place, 8 PM. \u2014Irfan.\u201d\n\nHeart pounding, Anita raced through the neon-lit streets. At exactly 8:00 PM, under the caf\u00e9\u2019s glowing sign, she saw Irfan waiting with the briefcase.\n\n\u201cYou could have sold this,\u201d Anita whispered.\n\nIrfan smiled faintly. \u201cSome things are worth more than money.\u201d\n\nAs she clasped the case tightly, the city lights of New Delhi shimmered like a promise.",
+          "section_type": "document",
+          "page_number": null,
+          "entities": [
+            {
+              "text": "March 3, 2025",
+              "type": "DATE",
+              "start": 28,
+              "end": 41,
+              "confidence": 1.0,
+              "metadata": {
+                "normalized_date": "2025-03-03"
+              }
+            },
+            {
+              "text": "Anita Sharma",
+              "type": "PERSON",
+              "start": 43,
+              "end": 55,
+              "confidence": 1.0,
+              "metadata": {}
+            },
+            {
+              "text": "New Delhi Railway Station",
+              "type": "ORG",
+              "start": 81,
+              "end": 106,
+              "confidence": 0.95,
+              "metadata": {}
+            },
+            {
+              "text": "Infosys Ltd.",
+              "type": "ORG",
+              "start": 216,
+              "end": 228,
+              "confidence": 1.0,
+              "metadata": {}
+            },
+            {
+              "text": "Aurora",
+              "type": "PRODUCT",
+              "start": 302,
+              "end": 308,
+              "confidence": 1.0,
+              "metadata": {
+                "codename": "Aurora"
+              }
+            },
+            {
+              "text": "Rajiv Menon",
+              "type": "PERSON",
+              "start": 349,
+              "end": 360,
+              "confidence": 1.0,
+              "metadata": {
+                "role": "manager"
+              }
+            },
+            {
+              "text": "Station Security Office",
+              "type": "ORG",
+              "start": 620,
+              "end": 643,
+              "confidence": 0.95,
+              "metadata": {}
+            },
+            {
+              "text": "Inspector Ramesh Yadav",
+              "type": "PERSON",
+              "start": 668,
+              "end": 690,
+              "confidence": 1.0,
+              "metadata": {
+                "role": "officer"
+              }
+            },
+            {
+              "text": "March 3rd",
+              "type": "DATE",
+              "start": 748,
+              "end": 757,
+              "confidence": 1.0,
+              "metadata": {
+                "normalized_date": "2025-03-03"
+              }
+            },
+            {
+              "text": "Infosys",
+              "type": "ORG",
+              "start": 807,
+              "end": 814,
+              "confidence": 1.0,
+              "metadata": {}
+            },
+            {
+              "text": "Aurora",
+              "type": "PRODUCT",
+              "start": 838,
+              "end": 844,
+              "confidence": 1.0,
+              "metadata": {
+                "description": "prototype files"
+              }
+            },
+            {
+              "text": "Delhi Metro Authority",
+              "type": "ORG",
+              "start": 929,
+              "end": 950,
+              "confidence": 1.0,
+              "metadata": {}
+            },
+            {
+              "text": "Samsonite",
+              "type": "PRODUCT",
+              "start": 971,
+              "end": 980,
+              "confidence": 1.0,
+              "metadata": {
+                "type": "briefcase"
+              }
+            },
+            {
+              "text": "Gate 5",
+              "type": "PRODUCT",
+              "start": 996,
+              "end": 1002,
+              "confidence": 0.85,
+              "metadata": {
+                "location": "Connaught Place"
+              }
+            },
+            {
+              "text": "Connaught Place",
+              "type": "GPE",
+              "start": 1006,
+              "end": 1021,
+              "confidence": 1.0,
+              "metadata": {}
+            },
+            {
+              "text": "Irfan Ali",
+              "type": "PERSON",
+              "start": 1086,
+              "end": 1095,
+              "confidence": 1.0,
+              "metadata": {}
+            },
+            {
+              "text": "India Gate",
+              "type": "GPE",
+              "start": 1115,
+              "end": 1125,
+              "confidence": 1.0,
+              "metadata": {}
+            },
+            {
+              "text": "Aurora",
+              "type": "PRODUCT",
+              "start": 1245,
+              "end": 1251,
+              "confidence": 1.0,
+              "metadata": {
+                "description": "AI product"
+              }
+            },
+            {
+              "text": "Microsoft",
+              "type": "ORG",
+              "start": 1307,
+              "end": 1316,
+              "confidence": 1.0,
+              "metadata": {}
+            },
+            {
+              "text": "Copilot",
+              "type": "PRODUCT",
+              "start": 1319,
+              "end": 1326,
+              "confidence": 1.0,
+              "metadata": {
+                "owner": "Microsoft"
+              }
+            },
+            {
+              "text": "The Times of India",
+              "type": "ORG",
+              "start": 1368,
+              "end": 1386,
+              "confidence": 1.0,
+              "metadata": {}
+            },
+            {
+              "text": "Meera Kapoor",
+              "type": "PERSON",
+              "start": 1405,
+              "end": 1417,
+              "confidence": 1.0,
+              "metadata": {
+                "role": "journalist"
+              }
+            },
+            {
+              "text": "New Delhi",
+              "type": "GPE",
+              "start": 1474,
+              "end": 1483,
+              "confidence": 1.0,
+              "metadata": {}
+            },
+            {
+              "text": "8 PM",
+              "type": "TIME",
+              "start": 1654,
+              "end": 1658,
+              "confidence": 1.0,
+              "metadata": {
+                "normalized_time": "20:00"
+              }
+            },
+            {
+              "text": "Irfan",
+              "type": "PERSON",
+              "start": 1661,
+              "end": 1666,
+              "confidence": 1.0,
+              "metadata": {}
+            },
+            {
+              "text": "Caf\u00e9 Coffee Day",
+              "type": "ORG",
+              "start": 1620,
+              "end": 1635,
+              "confidence": 1.0,
+              "metadata": {
+                "location": "Connaught Place"
+              }
+            },
+            {
+              "text": "Connaught Place",
+              "type": "GPE",
+              "start": 1637,
+              "end": 1652,
+              "confidence": 1.0,
+              "metadata": {}
+            },
+            {
+              "text": "8:00 PM",
+              "type": "TIME",
+              "start": 1739,
+              "end": 1746,
+              "confidence": 1.0,
+              "metadata": {
+                "normalized_time": "20:00"
+              }
+            },
+            {
+              "text": "Anita",
+              "type": "PERSON",
+              "start": 1532,
+              "end": 1537,
+              "confidence": 1.0,
+              "metadata": {}
+            },
+            {
+              "text": "Irfan",
+              "type": "PERSON",
+              "start": 1661,
+              "end": 1666,
+              "confidence": 1.0,
+              "metadata": {}
+            },
+            {
+              "text": "New Delhi",
+              "type": "GPE",
+              "start": 1474,
+              "end": 1483,
+              "confidence": 1.0,
+              "metadata": {}
+            }
+          ]
+        }
+      ],
+      "all_entities": [
+        {
+          "text": "March 3, 2025",
+          "type": "DATE",
+          "start": 28,
+          "end": 41,
+          "confidence": 1.0,
+          "metadata": {
+            "normalized_date": "2025-03-03"
+          }
+        },
+        {
+          "text": "Anita Sharma",
+          "type": "PERSON",
+          "start": 43,
+          "end": 55,
+          "confidence": 1.0,
+          "metadata": {}
+        },
+        {
+          "text": "New Delhi Railway Station",
+          "type": "ORG",
+          "start": 81,
+          "end": 106,
+          "confidence": 0.95,
+          "metadata": {}
+        },
+        {
+          "text": "Infosys Ltd.",
+          "type": "ORG",
+          "start": 216,
+          "end": 228,
+          "confidence": 1.0,
+          "metadata": {}
+        },
+        {
+          "text": "Aurora",
+          "type": "PRODUCT",
+          "start": 302,
+          "end": 308,
+          "confidence": 1.0,
+          "metadata": {
+            "codename": "Aurora"
+          }
+        },
+        {
+          "text": "Rajiv Menon",
+          "type": "PERSON",
+          "start": 349,
+          "end": 360,
+          "confidence": 1.0,
+          "metadata": {
+            "role": "manager"
+          }
+        },
+        {
+          "text": "Station Security Office",
+          "type": "ORG",
+          "start": 620,
+          "end": 643,
+          "confidence": 0.95,
+          "metadata": {}
+        },
+        {
+          "text": "Inspector Ramesh Yadav",
+          "type": "PERSON",
+          "start": 668,
+          "end": 690,
+          "confidence": 1.0,
+          "metadata": {
+            "role": "officer"
+          }
+        },
+        {
+          "text": "March 3rd",
+          "type": "DATE",
+          "start": 748,
+          "end": 757,
+          "confidence": 1.0,
+          "metadata": {
+            "normalized_date": "2025-03-03"
+          }
+        },
+        {
+          "text": "Infosys",
+          "type": "ORG",
+          "start": 807,
+          "end": 814,
+          "confidence": 1.0,
+          "metadata": {}
+        },
+        {
+          "text": "Aurora",
+          "type": "PRODUCT",
+          "start": 838,
+          "end": 844,
+          "confidence": 1.0,
+          "metadata": {
+            "description": "prototype files"
+          }
+        },
+        {
+          "text": "Delhi Metro Authority",
+          "type": "ORG",
+          "start": 929,
+          "end": 950,
+          "confidence": 1.0,
+          "metadata": {}
+        },
+        {
+          "text": "Samsonite",
+          "type": "PRODUCT",
+          "start": 971,
+          "end": 980,
+          "confidence": 1.0,
+          "metadata": {
+            "type": "briefcase"
+          }
+        },
+        {
+          "text": "Gate 5",
+          "type": "PRODUCT",
+          "start": 996,
+          "end": 1002,
+          "confidence": 0.85,
+          "metadata": {
+            "location": "Connaught Place"
+          }
+        },
+        {
+          "text": "Connaught Place",
+          "type": "GPE",
+          "start": 1006,
+          "end": 1021,
+          "confidence": 1.0,
+          "metadata": {}
+        },
+        {
+          "text": "Irfan Ali",
+          "type": "PERSON",
+          "start": 1086,
+          "end": 1095,
+          "confidence": 1.0,
+          "metadata": {}
+        },
+        {
+          "text": "India Gate",
+          "type": "GPE",
+          "start": 1115,
+          "end": 1125,
+          "confidence": 1.0,
+          "metadata": {}
+        },
+        {
+          "text": "Aurora",
+          "type": "PRODUCT",
+          "start": 1245,
+          "end": 1251,
+          "confidence": 1.0,
+          "metadata": {
+            "description": "AI product"
+          }
+        },
+        {
+          "text": "Microsoft",
+          "type": "ORG",
+          "start": 1307,
+          "end": 1316,
+          "confidence": 1.0,
+          "metadata": {}
+        },
+        {
+          "text": "Copilot",
+          "type": "PRODUCT",
+          "start": 1319,
+          "end": 1326,
+          "confidence": 1.0,
+          "metadata": {
+            "owner": "Microsoft"
+          }
+        },
+        {
+          "text": "The Times of India",
+          "type": "ORG",
+          "start": 1368,
+          "end": 1386,
+          "confidence": 1.0,
+          "metadata": {}
+        },
+        {
+          "text": "Meera Kapoor",
+          "type": "PERSON",
+          "start": 1405,
+          "end": 1417,
+          "confidence": 1.0,
+          "metadata": {
+            "role": "journalist"
+          }
+        },
+        {
+          "text": "New Delhi",
+          "type": "GPE",
+          "start": 1474,
+          "end": 1483,
+          "confidence": 1.0,
+          "metadata": {}
+        },
+        {
+          "text": "8 PM",
+          "type": "TIME",
+          "start": 1654,
+          "end": 1658,
+          "confidence": 1.0,
+          "metadata": {
+            "normalized_time": "20:00"
+          }
+        },
+        {
+          "text": "Irfan",
+          "type": "PERSON",
+          "start": 1661,
+          "end": 1666,
+          "confidence": 1.0,
+          "metadata": {}
+        },
+        {
+          "text": "Caf\u00e9 Coffee Day",
+          "type": "ORG",
+          "start": 1620,
+          "end": 1635,
+          "confidence": 1.0,
+          "metadata": {
+            "location": "Connaught Place"
+          }
+        },
+        {
+          "text": "Connaught Place",
+          "type": "GPE",
+          "start": 1637,
+          "end": 1652,
+          "confidence": 1.0,
+          "metadata": {}
+        },
+        {
+          "text": "8:00 PM",
+          "type": "TIME",
+          "start": 1739,
+          "end": 1746,
+          "confidence": 1.0,
+          "metadata": {
+            "normalized_time": "20:00"
+          }
+        },
+        {
+          "text": "Anita",
+          "type": "PERSON",
+          "start": 1532,
+          "end": 1537,
+          "confidence": 1.0,
+          "metadata": {}
+        },
+        {
+          "text": "Irfan",
+          "type": "PERSON",
+          "start": 1661,
+          "end": 1666,
+          "confidence": 1.0,
+          "metadata": {}
+        },
+        {
+          "text": "New Delhi",
+          "type": "GPE",
+          "start": 1474,
+          "end": 1483,
+          "confidence": 1.0,
+          "metadata": {}
+        }
+      ]
+    }
   }
 }

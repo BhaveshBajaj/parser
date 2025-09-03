@@ -1196,13 +1196,57 @@ def feedback_page():
         import traceback
         st.error(traceback.format_exc())
 
-# Page: QA (Mock)
+# Page: QA
 def qa_page():
-    """Ask questions about documents (mock)."""
+    """Ask questions about documents."""
     st.title("❓ Ask a Question")
     
-    # Get document ID from URL or session (optional)
-    doc_id = st.session_state.get("last_doc_id")
+    # Get document ID from URL or session
+    doc_id = (st.session_state.get("last_doc_id") or
+              (st.session_state.get("current_document", {}).get("id") if st.session_state.get("current_document") else None))
+    
+    # If no document ID, show document selection
+    if not doc_id:
+        st.warning("No document selected. Please select a document to ask questions about.")
+        
+        # Show available documents for selection
+        st.markdown("### Available Documents")
+        with st.spinner("Loading documents..."):
+            status_code, response = make_api_request("GET", "documents")
+            
+            if status_code == 200 and response.get("documents"):
+                documents = response["documents"]
+                
+                # Create a selectbox for document selection
+                doc_options = {}
+                for doc in documents:
+                    doc_id_key = doc.get("id")
+                    filename = doc.get("filename", "Unknown")
+                    status = doc.get("status", "unknown")
+                    doc_options[f"{filename} ({status})"] = doc_id_key
+                
+                if doc_options:
+                    selected_doc = st.selectbox(
+                        "Select a document to ask questions about:",
+                        options=list(doc_options.keys())
+                    )
+                    
+                    if st.button("Select Document", use_container_width=True):
+                        selected_doc_id = doc_options[selected_doc]
+                        st.session_state["last_doc_id"] = selected_doc_id
+                        st.experimental_rerun()
+            else:
+                st.info("No documents found. Please upload a document first.")
+        return
+    
+    # Show selected document info
+    with st.spinner("Loading document info..."):
+        status_code, doc_data = make_api_request("GET", f"documents/{doc_id}")
+        if status_code == 200:
+            st.info(f"📄 Selected document: {doc_data.get('filename', 'Unknown')}")
+        else:
+            st.error("Failed to load document information.")
+            return
     
     # Question form
     question = st.text_area("Enter your question:", "")
@@ -1212,27 +1256,58 @@ def qa_page():
             st.warning("Please enter a question.")
             return
             
+        if not doc_id:
+            st.error("No document selected.")
+            return
+            
         with st.spinner("Generating answer..."):
-            data = {"question": question}
-            if doc_id:
-                data["doc_id"] = doc_id
-                
+            # Use the correct API endpoint with document ID
+            data = {
+                "question": question,
+                "context": {"include_evidence": True}
+            }
+            
             status_code, response = make_api_request(
-                "POST", "qa", json=data
+                "POST", f"documents/{doc_id}/qa", json=data
             )
             
             if status_code == 200:
                 st.markdown("### Answer")
-                st.write(response.get("answer", "No answer generated."))
                 
-                sources = response.get("sources", [])
-                if sources:
-                    st.markdown("### Sources")
-                    for source in sources:
-                        st.write(f"- {source}")
+                # Extract answers from response
+                answers = response.get("answers", {})
+                if answers:
+                    for agent_name, answer_data in answers.items():
+                        if isinstance(answer_data, dict) and "answer" in answer_data:
+                            st.markdown(f"**{agent_name.replace('_', ' ').title()}:**")
+                            st.write(answer_data["answer"])
+                            
+                            # Show confidence if available
+                            if "confidence" in answer_data:
+                                st.caption(f"Confidence: {answer_data['confidence']}")
+                            
+                            # Show evidence if available
+                            if "evidence" in answer_data and answer_data["evidence"]:
+                                with st.expander("Evidence"):
+                                    for evidence in answer_data["evidence"]:
+                                        st.write(f"- {evidence}")
+                            
+                            st.markdown("---")
+                else:
+                    st.info("No answers were generated.")
+                
+                # Show workflow info
+                if "workflow_id" in response:
+                    st.caption(f"Workflow ID: {response['workflow_id']}")
+                
             else:
-                error = response.get("error", "Failed to get an answer")
+                error = response.get("detail", response.get("error", "Failed to get an answer"))
                 st.error(f"Error: {error}")
+    
+    # Add button to select a different document
+    if st.button("Select Different Document"):
+        st.session_state["last_doc_id"] = None
+        st.experimental_rerun()
 
 # Main app
 def main():
