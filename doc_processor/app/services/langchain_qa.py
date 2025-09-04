@@ -75,19 +75,34 @@ class LangChainQA:
             QAResult with answer and sources
         """
         try:
+            logger.info(f"Starting Q&A for document {document.id} with question: {question}")
+            
             # Get relevant chunks using semantic search
             relevant_chunks = await self._find_relevant_chunks(
                 question, document, top_k, min_similarity
             )
             
+            logger.info(f"Found {len(relevant_chunks)} relevant chunks for question")
+            
             if not relevant_chunks:
-                return QAResult(
-                    question=question,
-                    answer="I couldn't find relevant information in the document to answer your question.",
-                    confidence=0.0,
-                    sources=[],
-                    context_chunks=[]
+                logger.warning(f"No relevant chunks found for question: {question} with threshold {min_similarity}")
+                # Try with a lower threshold
+                logger.info(f"Trying with lower similarity threshold: 0.1")
+                relevant_chunks = await self._find_relevant_chunks(
+                    question, document, top_k, 0.1
                 )
+                
+                if not relevant_chunks:
+                    logger.warning(f"No relevant chunks found even with lower threshold")
+                    return QAResult(
+                        question=question,
+                        answer="I couldn't find relevant information in the document to answer your question. This might be because the question doesn't match the document content.",
+                        confidence=0.0,
+                        sources=[],
+                        context_chunks=[]
+                    )
+                else:
+                    logger.info(f"Found {len(relevant_chunks)} chunks with lower threshold")
             
             # Generate answer using the most relevant chunks
             answer, confidence = await self._generate_answer(question, relevant_chunks)
@@ -136,14 +151,20 @@ class LangChainQA:
     ) -> List[SearchResult]:
         """Find relevant chunks using semantic search."""
         try:
+            logger.info(f"Indexing document {document.id} for search")
             # Ensure document is indexed
-            await self._index_document(document)
+            index_success = await self._index_document(document)
+            if not index_success:
+                logger.error(f"Failed to index document {document.id}")
+                return []
             
             # Get document chunks
             doc_chunks = self.document_index.get(str(document.id), [])
             if not doc_chunks:
-                logger.warning(f"No chunks found for document {document.id}")
+                logger.warning(f"No chunks found for document {document.id} after indexing")
                 return []
+            
+            logger.info(f"Found {len(doc_chunks)} chunks for document {document.id}")
             
             # Generate embedding for the question
             question_embedding = await self.embedding_service.embed_text(question)
@@ -151,18 +172,26 @@ class LangChainQA:
                 logger.error("Failed to generate question embedding")
                 return []
             
+            logger.info(f"Generated question embedding with {len(question_embedding)} dimensions")
+            
             # Calculate similarities
             similarities = []
+            chunks_with_embeddings = 0
             for chunk in doc_chunks:
                 chunk_embedding = chunk.get("embedding", [])
                 if chunk_embedding:
+                    chunks_with_embeddings += 1
                     similarity = self.embedding_service.cosine_similarity(question_embedding, chunk_embedding)
                     if similarity >= min_similarity:
                         similarities.append((chunk, similarity))
             
+            logger.info(f"Found {chunks_with_embeddings} chunks with embeddings, {len(similarities)} above similarity threshold {min_similarity}")
+            
             # Sort by similarity and take top k
             similarities.sort(key=lambda x: x[1], reverse=True)
             top_results = similarities[:top_k]
+            
+            logger.info(f"Selected top {len(top_results)} results for answer generation")
             
             # Convert to SearchResult objects
             search_results = []
@@ -311,6 +340,7 @@ class LangChainQA:
             
             # Check if already indexed
             if doc_id in self.document_index:
+                logger.info(f"Document {document.id} already indexed with {len(self.document_index[doc_id])} chunks")
                 return True
             
             # Get document sections
@@ -320,7 +350,10 @@ class LangChainQA:
             
             sections = document.extra_data["sections"]
             if not sections:
+                logger.warning(f"Document {document.id} has empty sections list")
                 return False
+            
+            logger.info(f"Indexing document {document.id} with {len(sections)} sections")
             
             # Generate embeddings for document sections
             embedded_sections = await self.embedding_service.embed_document_sections(sections)
@@ -328,6 +361,8 @@ class LangChainQA:
             if not embedded_sections:
                 logger.warning(f"Failed to generate embeddings for document {document.id}")
                 return False
+            
+            logger.info(f"Generated embeddings for {len(embedded_sections)} sections")
             
             # Add each chunk to the index
             doc_chunks = []

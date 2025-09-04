@@ -31,6 +31,35 @@ except ImportError:
 # Configuration
 API_BASE_URL = os.getenv("API_BASE_URL", "http://localhost:8000")  # Base URL without /api/v1 prefix
 
+# Helper function for query params compatibility
+def get_query_params():
+    """Get query parameters with compatibility for different Streamlit versions."""
+    try:
+        return st.query_params
+    except AttributeError:
+        return st.experimental_get_query_params()
+
+def set_query_param(key, value):
+    """Set query parameter with compatibility for different Streamlit versions."""
+    try:
+        st.query_params[key] = value
+    except AttributeError:
+        st.experimental_set_query_params(**{key: value})
+
+def clear_query_params():
+    """Clear query parameters with compatibility for different Streamlit versions."""
+    try:
+        st.query_params.clear()
+    except AttributeError:
+        st.experimental_set_query_params()
+
+def rerun():
+    """Rerun the app with compatibility for different Streamlit versions."""
+    try:
+        st.rerun()
+    except AttributeError:
+        st.experimental_rerun()
+
 # Set page config
 st.set_page_config(
     page_title="Document Processor",
@@ -312,7 +341,7 @@ def upload_page():
                                     "entities": doc_data.get("entities", [])
                                 })
                             
-                            st.rerun()  # Refresh to show results
+                            rerun()  # Refresh to show results
                             return
                             
                         elif status in ["failed", "error"]:
@@ -378,21 +407,21 @@ def upload_page():
             with col1:
                 if st.button("🔍 View Document", use_container_width=True):
                     st.session_state.current_page = "view"
-                    st.query_params.page = "view"
-                    st.rerun()
+                    set_query_param("page", "view")
+                    rerun()
             with col2:
                 if st.button("🔄 Review & Approve", use_container_width=True):
                     st.session_state.current_page = "feedback"
-                    st.query_params.page = "feedback"
-                    st.rerun()
+                    set_query_param("page", "feedback")
+                    rerun()
             with col3:
                 if st.button("📝 Process Another", use_container_width=True):
                     st.session_state.current_document = None
-                    st.rerun()
+                    rerun()
         elif doc.get('status') in ['uploaded', 'processing']:
             st.info("Document is still being processed. Please wait...")
             if st.button("🔄 Refresh Status", use_container_width=True):
-                st.rerun()
+                rerun()
 
 def display_document_summary(doc_id: str):
     """Display structured summary of a document."""
@@ -561,7 +590,7 @@ def display_entity_analysis(doc_id: str):
 def status_page():
     """View document status and details."""
     # Get document ID from URL or session
-    query_params = st.query_params
+    query_params = get_query_params()
     doc_id = query_params.get("doc_id", None) or st.session_state.get("last_doc_id")
     
     if not doc_id:
@@ -579,12 +608,12 @@ def status_page():
     # Document actions
     st.sidebar.title("Document Actions")
     if st.sidebar.button("🔄 Refresh"):
-        st.rerun()
+        rerun()
     
     if st.sidebar.button("📝 Process New"):
         st.session_state.current_document = None
-        st.query_params.clear()
-        st.rerun()
+        clear_query_params()
+        rerun()
     
     # Main content area
     if view_mode == "📄 Summary":
@@ -781,9 +810,9 @@ def status_page():
                 
                 # Add a button to view the summary
                 if st.button("View Summary"):
-                    st.query_params.page = "summary"
-                    st.query_params.doc_id = doc_id
-                    st.rerun()
+                    set_query_param("page", "summary")
+                    set_query_param("doc_id", doc_id)
+                    rerun()
             elif status == "failed":
                 st.error(f"Document processing failed: {response.get('error', 'Unknown error')}")
         else:
@@ -796,7 +825,7 @@ def summary_page():
     st.title("📝 Document Summary")
     
     # Get document ID from multiple sources
-    query_params = st.query_params
+    query_params = get_query_params()
     doc_id = (query_params.get("doc_id", None) or 
               st.session_state.get("last_doc_id") or
               (st.session_state.get("current_document", {}).get("id") if st.session_state.get("current_document") else None))
@@ -829,8 +858,8 @@ def summary_page():
                     if st.button("View Summary", use_container_width=True):
                         selected_doc_id = doc_options[selected_doc]
                         st.session_state["last_doc_id"] = selected_doc_id
-                        st.query_params(doc_id=selected_doc_id)
-                        st.rerun()
+                        set_query_param("doc_id", selected_doc_id)
+                        rerun()
             else:
                 st.info("No documents found. Please upload a document first.")
         return
@@ -880,9 +909,9 @@ def summary_page():
             
             # Add a button to go back to status
             if st.button("Back to Status"):
-                st.query_params.page = "status"
-                st.query_params.doc_id = doc_id
-                st.rerun()
+                set_query_param("page", "status")
+                set_query_param("doc_id", doc_id)
+                rerun()
 
 # Page: Dashboard
 def dashboard_page():
@@ -995,8 +1024,8 @@ def dashboard_page():
                                     "entities": doc.get('extra_data', {}).get('all_entities', [])
                                 }
                                 st.session_state.current_page = "view"
-                                st.query_params.page = "view"
-                                st.rerun()
+                                set_query_param("page", "view")
+                                rerun()
                             
                             if st.button("🔄 Review & Approve", key=f"feedback_{doc_id}"):
                                 st.session_state.current_document = {
@@ -1007,8 +1036,8 @@ def dashboard_page():
                                     "entities": doc.get('extra_data', {}).get('all_entities', [])
                                 }
                                 st.session_state.current_page = "feedback"
-                                st.query_params.page = "feedback"
-                                st.rerun()
+                                set_query_param("page", "feedback")
+                                rerun()
         else:
             st.info(f"No documents found with status: {status_filter}")
 
@@ -1236,7 +1265,7 @@ def qa_page():
                     if st.button("Select Document", use_container_width=True):
                         selected_doc_id = doc_options[selected_doc]
                         st.session_state["last_doc_id"] = selected_doc_id
-                        st.rerun()
+                        rerun()
             else:
                 st.info("No documents found. Please upload a document first.")
         return
@@ -1276,25 +1305,32 @@ def qa_page():
             if status_code == 200:
                 st.markdown("### Answer")
                 
-                # Extract answers from response
-                answers = response.get("answers", {})
-                if answers:
-                    for agent_name, answer_data in answers.items():
-                        if isinstance(answer_data, dict) and "answer" in answer_data:
-                            st.markdown(f"**{agent_name.replace('_', ' ').title()}:**")
-                            st.write(answer_data["answer"])
-                            
-                            # Show confidence if available
-                            if "confidence" in answer_data:
-                                st.caption(f"Confidence: {answer_data['confidence']}")
-                            
-                            # Show evidence if available
-                            if "evidence" in answer_data and answer_data["evidence"]:
-                                with st.expander("Evidence"):
-                                    for evidence in answer_data["evidence"]:
-                                        st.write(f"- {evidence}")
-                            
-                            st.markdown("---")
+                # Extract answer from response (single answer format)
+                answer = response.get("answer", "")
+                confidence = response.get("confidence", 0.0)
+                sources = response.get("sources", [])
+                context_chunks = response.get("context_chunks", [])
+                
+                if answer:
+                    st.write(answer)
+                    
+                    # Show confidence if available
+                    if confidence > 0:
+                        st.caption(f"Confidence: {confidence:.2f}")
+                    
+                    # Show sources if available
+                    if sources:
+                        with st.expander("Sources"):
+                            for source in sources:
+                                st.write(f"- {source.get('section_title', 'Unknown section')} (Similarity: {source.get('similarity_score', 0):.2f})")
+                    
+                    # Show context chunks if available
+                    if context_chunks:
+                        with st.expander("Context"):
+                            for i, chunk in enumerate(context_chunks[:3]):  # Show first 3 chunks
+                                st.write(f"**Chunk {i+1}:**")
+                                st.write(chunk[:200] + "..." if len(chunk) > 200 else chunk)
+                                st.write("---")
                 else:
                     st.info("No answers were generated.")
                 
@@ -1309,7 +1345,7 @@ def qa_page():
     # Add button to select a different document
     if st.button("Select Different Document"):
         st.session_state["last_doc_id"] = None
-        st.rerun()
+        rerun()
 
 # Main app
 def main():
@@ -1328,8 +1364,8 @@ def main():
         st.session_state["api_logs"] = []
     
     # Get current page from session state or URL params, with session state taking priority
-    query_params = st.query_params
-    url_page = query_params.get("page", "upload").lower()
+    query_params = get_query_params()
+    url_page = query_params.get("page", ["upload"])[0].lower() if query_params.get("page") else "upload"
     
     # Use session state current_page if it exists, otherwise use URL param
     if "current_page" in st.session_state and st.session_state.current_page:
@@ -1353,8 +1389,8 @@ def main():
     for page_id, page_title in pages.items():
         if st.sidebar.button(page_title, key=f"nav_{page_id}"):
             st.session_state.current_page = page_id
-            st.query_params.page = page_id
-            st.rerun()
+            set_query_param("page", page_id)
+            rerun()
     
     # Display current page
     if current_page == "upload":
@@ -1375,8 +1411,8 @@ def main():
         qa_page()
     else:
         st.warning("Page not found. Redirecting to Upload page...")
-        st.query_params.page = "upload"
-        st.rerun()
+        set_query_param("page", "upload")
+        rerun()
 
 if __name__ == "__main__":
     main()

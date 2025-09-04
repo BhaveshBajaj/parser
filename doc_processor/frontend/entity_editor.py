@@ -16,6 +16,14 @@ import pandas as pd
 # Configuration
 API_BASE_URL = os.getenv("API_BASE_URL", "http://localhost:8000")
 
+# Helper function for rerun compatibility
+def rerun():
+    """Rerun the app with compatibility for different Streamlit versions."""
+    try:
+        st.rerun()
+    except AttributeError:
+        st.experimental_rerun()
+
 
 class EntityEditor:
     """Interactive entity editor with approval workflow."""
@@ -105,7 +113,7 @@ class EntityEditor:
                         editor_state["rejected_entities"].remove(entity_id)
                     approved_count += 1
                 st.success(f"Approved {approved_count} entities")
-                st.rerun()
+                rerun()
         
         with col2:
             if st.button("❌ Reject All Visible", use_container_width=True):
@@ -117,7 +125,7 @@ class EntityEditor:
                         editor_state["approved_entities"].remove(entity_id)
                     rejected_count += 1
                 st.success(f"Rejected {rejected_count} entities")
-                st.rerun()
+                rerun()
         
         with col3:
             if st.button("🔄 Reset All", use_container_width=True):
@@ -125,7 +133,7 @@ class EntityEditor:
                 editor_state["rejected_entities"].clear()
                 editor_state["edited_entities"].clear()
                 st.success("Reset all approvals")
-                st.rerun()
+                rerun()
         
         # Entity editing interface
         st.markdown("### Entity Review & Editing")
@@ -214,7 +222,7 @@ class EntityEditor:
                         }
                         editor_state["edited_entities"][entity_id] = edited_entity
                         st.success("Changes saved!")
-                        st.rerun()
+                        rerun()
                 
                 with col2:
                     if st.button("✅ Approve", key=f"approve_{entity_id}"):
@@ -222,7 +230,7 @@ class EntityEditor:
                         if entity_id in editor_state["rejected_entities"]:
                             editor_state["rejected_entities"].remove(entity_id)
                         st.success("Entity approved!")
-                        st.rerun()
+                        rerun()
                 
                 with col3:
                     if st.button("❌ Reject", key=f"reject_{entity_id}"):
@@ -230,7 +238,7 @@ class EntityEditor:
                         if entity_id in editor_state["approved_entities"]:
                             editor_state["approved_entities"].remove(entity_id)
                         st.success("Entity rejected!")
-                        st.rerun()
+                        rerun()
                 
                 with col4:
                     if st.button("🗑️ Delete", key=f"delete_{entity_id}"):
@@ -238,7 +246,7 @@ class EntityEditor:
                         if entity_id in editor_state["approved_entities"]:
                             editor_state["approved_entities"].remove(entity_id)
                         st.success("Entity marked for deletion!")
-                        st.rerun()
+                        rerun()
         
         # Add new entity section
         st.markdown("### Add New Entity")
@@ -271,7 +279,7 @@ class EntityEditor:
                         }
                         editor_state["new_entities"].append(new_entity)
                         st.success("New entity added!")
-                        st.rerun()
+                        rerun()
                     else:
                         st.error("End position must be greater than start position")
                 else:
@@ -478,7 +486,7 @@ class SummaryEditor:
                     
                     summary = generated_summary
                     st.success("✅ Generated basic summary from document sections!")
-                    st.rerun()
+                    rerun()
         
         # Initialize session state for this document
         if f"summary_editor_{document_id}" not in st.session_state:
@@ -517,24 +525,24 @@ class SummaryEditor:
                     if ai_summary:
                         st.session_state[f"summary_editor_{document_id}"]["edited_summary"] = ai_summary
                         st.success("✅ AI summary generated!")
-                        st.rerun()
+                        rerun()
                     else:
                         st.error("❌ Failed to generate AI summary")
         with col2:
             if st.button("📝 Create Template", key=f"new_summary_{document_id}"):
                 template = "This document discusses:\n\n• Key Point 1: \n• Key Point 2: \n• Key Point 3: \n\nConclusion: "
                 st.session_state[f"summary_editor_{document_id}"]["edited_summary"] = template
-                st.rerun()
+                rerun()
         with col3:
             if st.button("🔄 Reset to Original", key=f"reset_original_{document_id}"):
                 st.session_state[f"summary_editor_{document_id}"]["edited_summary"] = summary
-                st.rerun()
+                rerun()
         with col4:
             if st.button("✨ Enhance Summary", key=f"enhance_summary_{document_id}"):
                 current = st.session_state[f"summary_editor_{document_id}"]["edited_summary"]
                 enhanced = f"Enhanced Summary:\n\n{current}\n\n[Add more details, context, or analysis here]"
                 st.session_state[f"summary_editor_{document_id}"]["edited_summary"] = enhanced
-                st.rerun()
+                rerun()
         
         # Editable summary
         st.markdown("### ✏️ Edit Summary")
@@ -568,7 +576,7 @@ class SummaryEditor:
         if alternative_summary and st.button("📝 Use This Summary", key=f"use_alt_{document_id}"):
             st.session_state[f"summary_editor_{document_id}"]["edited_summary"] = alternative_summary
             st.success("✅ Summary updated from alternative input!")
-            st.rerun()
+            rerun()
         
         # Section context (if available)
         if sections:
@@ -588,21 +596,21 @@ class SummaryEditor:
             if st.button("💾 Save Changes", key=f"save_summary_{document_id}"):
                 editor_state["edited_summary"] = edited_summary
                 st.success("Summary saved!")
-                st.rerun()
+                rerun()
         
         with col2:
             if st.button("✅ Approve", key=f"approve_summary_{document_id}"):
                 editor_state["edited_summary"] = edited_summary
                 editor_state["is_approved"] = True
                 st.success("Summary approved!")
-                st.rerun()
+                rerun()
         
         with col3:
             if st.button("🔄 Reset", key=f"reset_approval_{document_id}"):
                 editor_state["edited_summary"] = editor_state["original_summary"]
                 editor_state["is_approved"] = False
                 st.success("Summary reset to original!")
-                st.rerun()
+                rerun()
         
         with col4:
             if st.button("📤 Export", key=f"export_summary_{document_id}"):
