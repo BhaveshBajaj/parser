@@ -814,3 +814,1471 @@ Me' (start=1001, end=1042)
 2025-09-04 15:34:40,332 - doc_processor.app.services.embedding_service - INFO - Azure OpenAI client initialized for embeddings
 2025-09-04 15:36:59,701 - doc_processor.app.services.embedding_service - INFO - Azure OpenAI client initialized for embeddings
 2025-09-04 15:37:17,633 - doc_processor.app.services.embedding_service - INFO - Azure OpenAI client initialized for embeddings
+2025-09-04 21:10:03,038 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-mpnet-base-v2
+2025-09-04 21:10:03,038 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-mpnet-base-v2
+2025-09-04 21:10:06,404 - doc_processor.app.services.embedding_service - INFO - LangChain components initialized with model: sentence-transformers/all-mpnet-base-v2
+2025-09-04 21:10:06,692 - doc_processor.app.services.embedding_service - INFO - LangChain components initialized with model: sentence-transformers/all-mpnet-base-v2
+2025-09-04 21:10:13,292 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-mpnet-base-v2
+2025-09-04 21:10:16,861 - doc_processor.app.services.embedding_service - INFO - LangChain components initialized with model: sentence-transformers/all-mpnet-base-v2
+2025-09-04 21:11:24,326 - doc_processor.app.main - INFO - [b001e798-0195-424d-b824-f94898922ac7] Received document upload: test_upload.txt
+2025-09-04 21:11:24,326 - doc_processor.app.main - INFO - [b001e798-0195-424d-b824-f94898922ac7] Creating document: test_upload.txt
+2025-09-04 21:11:24,342 - doc_processor.app.services.document_processor - INFO - Using LangChain parser for text/plain
+2025-09-04 21:11:24,342 - doc_processor.app.services.langchain_parsers - INFO - Parsed text file into 1 sections using LangChain
+2025-09-04 21:11:25,997 - httpx - INFO - HTTP Request: POST https://hashedinhu-openai.openai.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2025-01-01-preview "HTTP/1.1 200 OK"
+2025-09-04 21:11:26,001 - doc_processor.app.services.entity_extractor - INFO - Extracted 0 entities
+2025-09-04 21:11:26,060 - doc_processor.app.services.document_processor - INFO - Generated embeddings for 1 sections
+2025-09-04 21:11:30,077 - httpx - INFO - HTTP Request: POST https://hashedinhu-openai.openai.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2025-01-01-preview "HTTP/1.1 200 OK"
+2025-09-04 21:11:30,077 - doc_processor.app.services.document_processor - INFO - Generated LLM summary of length: 717
+2025-09-04 21:11:30,093 - doc_processor.app.main - INFO - [b001e798-0195-424d-b824-f94898922ac7] Document created: 0005d83c-6745-4df2-a350-fd7b73bd7c91
+2025-09-04 21:13:22,808 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-mpnet-base-v2
+2025-09-04 21:13:31,379 - doc_processor.app.services.embedding_service - INFO - LangChain components initialized with model: sentence-transformers/all-mpnet-base-v2
+2025-09-04 21:14:27,311 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-mpnet-base-v2
+2025-09-04 21:14:30,581 - doc_processor.app.services.embedding_service - INFO - LangChain components initialized with model: sentence-transformers/all-mpnet-base-v2
+2025-09-04 21:14:42,013 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-mpnet-base-v2
+2025-09-04 21:14:45,496 - doc_processor.app.services.embedding_service - INFO - LangChain components initialized with model: sentence-transformers/all-mpnet-base-v2
+2025-09-04 21:15:25,670 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-mpnet-base-v2
+2025-09-04 21:15:31,367 - doc_processor.app.services.embedding_service - INFO - LangChain components initialized with model: sentence-transformers/all-mpnet-base-v2
+2025-09-04 21:15:46,736 - doc_processor.app.main - INFO - [a930b4f1-4af7-4a0c-af8c-4a5be9900b2f] Received document upload: test_cleanup.txt
+2025-09-04 21:15:46,736 - doc_processor.app.main - INFO - [a930b4f1-4af7-4a0c-af8c-4a5be9900b2f] Creating document: test_cleanup.txt
+2025-09-04 21:15:46,753 - doc_processor.app.services.document_processor - INFO - Using LangChain parser for text/plain
+2025-09-04 21:15:46,754 - doc_processor.app.services.langchain_parsers - INFO - Parsed text file into 1 sections using LangChain
+2025-09-04 21:15:48,942 - httpx - INFO - HTTP Request: POST https://hashedinhu-openai.openai.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2025-01-01-preview "HTTP/1.1 200 OK"
+2025-09-04 21:15:48,945 - doc_processor.app.services.entity_extractor - INFO - Extracted 0 entities
+2025-09-04 21:15:48,998 - doc_processor.app.services.document_processor - INFO - Generated embeddings for 1 sections
+2025-09-04 21:15:54,414 - httpx - INFO - HTTP Request: POST https://hashedinhu-openai.openai.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2025-01-01-preview "HTTP/1.1 200 OK"
+2025-09-04 21:15:54,415 - doc_processor.app.services.document_processor - INFO - Generated LLM summary of length: 707
+2025-09-04 21:15:54,431 - doc_processor.app.main - INFO - [a930b4f1-4af7-4a0c-af8c-4a5be9900b2f] Document created: 89722246-a4bf-4473-8a78-518054035adc
+2025-09-04 21:16:20,677 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-mpnet-base-v2
+2025-09-04 21:16:24,836 - doc_processor.app.services.embedding_service - INFO - LangChain components initialized with model: sentence-transformers/all-mpnet-base-v2
+2025-09-04 21:19:13,839 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-mpnet-base-v2
+2025-09-04 21:19:17,100 - doc_processor.app.services.embedding_service - INFO - LangChain components initialized with model: sentence-transformers/all-mpnet-base-v2
+2025-09-04 21:19:27,773 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-mpnet-base-v2
+2025-09-04 21:19:45,991 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-mpnet-base-v2
+2025-09-04 21:19:49,573 - doc_processor.app.services.embedding_service - INFO - LangChain components initialized with model: sentence-transformers/all-mpnet-base-v2
+2025-09-04 21:20:09,148 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-mpnet-base-v2
+2025-09-04 21:20:14,500 - doc_processor.app.services.embedding_service - INFO - LangChain components initialized with model: sentence-transformers/all-mpnet-base-v2
+2025-09-04 21:28:28,320 - doc_processor.app.main - INFO - [bab6cbe2-216f-440c-ba6a-66393a503cbf] Received document upload: test_document.txt
+2025-09-04 21:28:28,327 - doc_processor.app.main - INFO - [bab6cbe2-216f-440c-ba6a-66393a503cbf] Creating document: test_document.txt
+2025-09-04 21:28:28,381 - doc_processor.app.services.document_processor - INFO - Using LangChain parser for text/plain
+2025-09-04 21:28:28,383 - doc_processor.app.services.langchain_parsers - INFO - Parsed text file into 4 sections using LangChain
+2025-09-04 21:28:28,383 - doc_processor.app.services.agents.autogen_agents - INFO - Starting AutoGen workflow 1eee0f7e-7015-4e74-991e-fffb3cbb87d6 for document 34cce887-630c-4d9f-a784-86655b25599f
+2025-09-04 21:28:29,857 - httpx - INFO - HTTP Request: POST https://hashedinhu-openai.openai.azure.com/openai/deployments/gpt-41/chat/completions?api-version=2025-01-01-preview "HTTP/1.1 404 DeploymentNotFound"
+2025-09-04 21:28:29,858 - doc_processor.app.services.agents.autogen_agents - ERROR - Entity extraction workflow failed: Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}
+2025-09-04 21:28:29,858 - doc_processor.app.services.agents.autogen_agents - ERROR - AutoGen workflow 1eee0f7e-7015-4e74-991e-fffb3cbb87d6 failed: Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}
+Traceback (most recent call last):
+  File "/Users/bhavesh/Desktop/parser/doc_processor/app/services/agents/autogen_agents.py", line 561, in execute_document_workflow
+    result = await self._execute_entity_workflow_with_validation(document, workflow_id, context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/doc_processor/app/services/agents/autogen_agents.py", line 734, in _execute_entity_workflow_with_validation
+    result = await self._execute_entity_workflow(document, workflow_id, context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/doc_processor/app/services/agents/autogen_agents.py", line 755, in _execute_entity_workflow
+    response = await asyncio.to_thread(
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/autogen/agentchat/conversable_agent.py", line 1018, in initiate_chat
+    self.send(msg2send, recipient, silent=silent)
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/autogen/agentchat/conversable_agent.py", line 655, in send
+    recipient.receive(message, self, request_reply, silent)
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/autogen/agentchat/conversable_agent.py", line 818, in receive
+    reply = self.generate_reply(messages=self.chat_messages[sender], sender=sender)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/autogen/agentchat/conversable_agent.py", line 1972, in generate_reply
+    final, reply = reply_func(self, messages=messages, sender=sender, config=reply_func_tuple["config"])
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/autogen/agentchat/conversable_agent.py", line 1340, in generate_oai_reply
+    extracted_response = self._generate_oai_reply_from_client(
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/autogen/agentchat/conversable_agent.py", line 1359, in _generate_oai_reply_from_client
+    response = llm_client.create(
+               ^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/autogen/oai/client.py", line 722, in create
+    response = client.create(params)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/autogen/oai/client.py", line 320, in create
+    response = completions.create(**params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/openai/_utils/_utils.py", line 287, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/openai/resources/chat/completions/completions.py", line 1147, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/openai/_base_client.py", line 1259, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/openai/_base_client.py", line 1047, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.NotFoundError: Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}
+2025-09-04 21:28:29,864 - doc_processor.app.services.document_service - INFO - Looking for document with ID: 34cce887-630c-4d9f-a784-86655b25599f
+2025-09-04 21:28:29,864 - doc_processor.app.services.document_service - INFO - Available document IDs: [UUID('c3193786-98f0-4054-a258-d3178579312d'), UUID('dd4afa76-4294-41f0-918f-aebd2f83d37e'), UUID('e887033d-813f-4293-b95e-5a2014255921'), UUID('6030b6fd-c98a-4d86-9009-3b1d58d20c77'), UUID('fc8adbf1-deb2-4e6f-9066-93368d8183cc'), UUID('c72b38bf-9a6b-4575-a5af-b99ecfb8bf8f'), UUID('04c3ed9d-42d9-4ce2-a4e7-47737a4714c1'), UUID('04b3910c-3177-4f0d-b6cc-0598dc510a62'), UUID('b3b22705-6fb1-49e3-9ce9-b2ad3df4d29b'), UUID('8585f82e-88bb-4bd4-bf7f-c4e2a67a6d17'), UUID('9487ee42-8745-40f8-9e87-b21d36d53b46'), UUID('a3671c5b-d5ad-431d-9cbd-8412af4d446d'), UUID('c2cfd1fe-50f8-4fae-b9b6-20932da1113c'), UUID('b72f855b-8533-435f-bbdf-8febb6d62135'), UUID('0d4091bf-917f-4df3-a4a4-2a11ac8f1a55'), UUID('e4de8288-c0a4-4d26-8f49-74e5a34e1418'), UUID('789b1907-6de2-4aae-b1d5-873f38a34fa6'), UUID('5c9a8bd8-c407-47c2-8aac-346e03cf1a55'), UUID('2f45c732-7905-4399-8461-ea8cfd020c58'), UUID('3fdc8276-69a9-4e8a-8962-c65be8f841ec'), UUID('e0d72359-bb7e-4d9b-aaa2-7c62dd8f9f12'), UUID('89467920-4184-4006-a5a9-44f4df8d74d6'), UUID('1fb56c3c-c6ad-4833-ac96-516515331ef0'), UUID('7e2211df-a6e1-4da0-a3ce-8ae105377af1'), UUID('f085fdbb-f611-44bf-89d0-ebd064d3bfb4'), UUID('7169bed0-8359-4ca4-bb97-52e217db2a0d'), UUID('c37ea8a0-8b95-4142-93d1-b96b79a042c9'), UUID('f4c6a368-2d53-433c-960f-876d5c33f04d'), UUID('23f24ef6-afc3-465c-bfd2-9ccadf9d7989'), UUID('5a371a47-d201-4ad2-9a9a-e6a46f83fff1'), UUID('db5d79a4-c300-4ff2-832c-5bb136e3bd2d'), UUID('93c82254-9c6b-4b6e-8404-637eff22c46e'), UUID('579e692d-842e-4f5d-9240-3eccc419c130'), UUID('593c4494-7e15-4fab-a728-cf74ccfc4681'), UUID('f111a697-3a67-4c3c-9965-3215fbbc9314'), UUID('ba1b79a0-1f42-4ec0-a3e0-7bcebef3be87'), UUID('3f1f86df-9d1f-46e1-b239-4970c061bbfa'), UUID('1a001435-da01-42c5-ad2d-686741d6825a'), UUID('ad8ed5a9-1915-4e52-ae39-96b751437f68'), UUID('7add610f-ef73-4a2b-8579-ddf72cd57bf5'), UUID('0005d83c-6745-4df2-a350-fd7b73bd7c91'), UUID('89722246-a4bf-4473-8a78-518054035adc'), UUID('2999d942-7873-4aea-b86f-b7108ee0e880')]
+2025-09-04 21:28:29,864 - doc_processor.app.services.document_service - INFO - Total documents loaded: 43
+2025-09-04 21:28:29,864 - doc_processor.app.services.document_service - WARNING - Document not found: 34cce887-630c-4d9f-a784-86655b25599f
+2025-09-04 21:28:29,864 - doc_processor.app.services.document_service - INFO - Checking if document exists as string key: 34cce887-630c-4d9f-a784-86655b25599f
+2025-09-04 21:28:29,864 - doc_processor.app.services.document_processor - WARNING - No entity agent results found in AutoGen workflow
+2025-09-04 21:28:30,264 - doc_processor.app.services.document_processor - INFO - Generated embeddings for 4 sections
+2025-09-04 21:28:30,291 - doc_processor.app.main - INFO - [bab6cbe2-216f-440c-ba6a-66393a503cbf] Document created: 2999d942-7873-4aea-b86f-b7108ee0e880
+2025-09-04 21:28:41,590 - doc_processor.app.main - INFO - [8848432f-3676-4446-a949-d6f61f28a192] Listing documents (status=None, page=1, page_size=10)
+2025-09-04 21:28:52,287 - doc_processor.app.main - INFO - [3db5f143-924f-49f0-a317-256d9efb485c] Asking question about document: 0005d83c-6745-4df2-a350-fd7b73bd7c91
+2025-09-04 21:28:52,287 - doc_processor.app.services.document_service - INFO - Looking for document with ID: 0005d83c-6745-4df2-a350-fd7b73bd7c91
+2025-09-04 21:28:52,287 - doc_processor.app.services.document_service - INFO - Available document IDs: [UUID('c3193786-98f0-4054-a258-d3178579312d'), UUID('dd4afa76-4294-41f0-918f-aebd2f83d37e'), UUID('e887033d-813f-4293-b95e-5a2014255921'), UUID('6030b6fd-c98a-4d86-9009-3b1d58d20c77'), UUID('fc8adbf1-deb2-4e6f-9066-93368d8183cc'), UUID('c72b38bf-9a6b-4575-a5af-b99ecfb8bf8f'), UUID('04c3ed9d-42d9-4ce2-a4e7-47737a4714c1'), UUID('04b3910c-3177-4f0d-b6cc-0598dc510a62'), UUID('b3b22705-6fb1-49e3-9ce9-b2ad3df4d29b'), UUID('8585f82e-88bb-4bd4-bf7f-c4e2a67a6d17'), UUID('9487ee42-8745-40f8-9e87-b21d36d53b46'), UUID('a3671c5b-d5ad-431d-9cbd-8412af4d446d'), UUID('c2cfd1fe-50f8-4fae-b9b6-20932da1113c'), UUID('b72f855b-8533-435f-bbdf-8febb6d62135'), UUID('0d4091bf-917f-4df3-a4a4-2a11ac8f1a55'), UUID('e4de8288-c0a4-4d26-8f49-74e5a34e1418'), UUID('789b1907-6de2-4aae-b1d5-873f38a34fa6'), UUID('5c9a8bd8-c407-47c2-8aac-346e03cf1a55'), UUID('2f45c732-7905-4399-8461-ea8cfd020c58'), UUID('3fdc8276-69a9-4e8a-8962-c65be8f841ec'), UUID('e0d72359-bb7e-4d9b-aaa2-7c62dd8f9f12'), UUID('89467920-4184-4006-a5a9-44f4df8d74d6'), UUID('1fb56c3c-c6ad-4833-ac96-516515331ef0'), UUID('7e2211df-a6e1-4da0-a3ce-8ae105377af1'), UUID('f085fdbb-f611-44bf-89d0-ebd064d3bfb4'), UUID('7169bed0-8359-4ca4-bb97-52e217db2a0d'), UUID('c37ea8a0-8b95-4142-93d1-b96b79a042c9'), UUID('f4c6a368-2d53-433c-960f-876d5c33f04d'), UUID('23f24ef6-afc3-465c-bfd2-9ccadf9d7989'), UUID('5a371a47-d201-4ad2-9a9a-e6a46f83fff1'), UUID('db5d79a4-c300-4ff2-832c-5bb136e3bd2d'), UUID('93c82254-9c6b-4b6e-8404-637eff22c46e'), UUID('579e692d-842e-4f5d-9240-3eccc419c130'), UUID('593c4494-7e15-4fab-a728-cf74ccfc4681'), UUID('f111a697-3a67-4c3c-9965-3215fbbc9314'), UUID('ba1b79a0-1f42-4ec0-a3e0-7bcebef3be87'), UUID('3f1f86df-9d1f-46e1-b239-4970c061bbfa'), UUID('1a001435-da01-42c5-ad2d-686741d6825a'), UUID('ad8ed5a9-1915-4e52-ae39-96b751437f68'), UUID('7add610f-ef73-4a2b-8579-ddf72cd57bf5'), UUID('0005d83c-6745-4df2-a350-fd7b73bd7c91'), UUID('89722246-a4bf-4473-8a78-518054035adc'), UUID('2999d942-7873-4aea-b86f-b7108ee0e880')]
+2025-09-04 21:28:52,287 - doc_processor.app.services.document_service - INFO - Total documents loaded: 43
+2025-09-04 21:28:52,287 - doc_processor.app.services.document_service - INFO - Found document: test_upload.txt
+2025-09-04 21:28:52,288 - doc_processor.app.services.langchain_qa - INFO - Indexed document test_upload.txt with 1 chunks
+2025-09-04 21:29:02,559 - doc_processor.app.main - INFO - [c99d9a83-cb24-46fe-b5a8-334cbd85f335] Asking question about document: 7add610f-ef73-4a2b-8579-ddf72cd57bf5
+2025-09-04 21:29:02,559 - doc_processor.app.services.document_service - INFO - Looking for document with ID: 7add610f-ef73-4a2b-8579-ddf72cd57bf5
+2025-09-04 21:29:02,559 - doc_processor.app.services.document_service - INFO - Available document IDs: [UUID('c3193786-98f0-4054-a258-d3178579312d'), UUID('dd4afa76-4294-41f0-918f-aebd2f83d37e'), UUID('e887033d-813f-4293-b95e-5a2014255921'), UUID('6030b6fd-c98a-4d86-9009-3b1d58d20c77'), UUID('fc8adbf1-deb2-4e6f-9066-93368d8183cc'), UUID('c72b38bf-9a6b-4575-a5af-b99ecfb8bf8f'), UUID('04c3ed9d-42d9-4ce2-a4e7-47737a4714c1'), UUID('04b3910c-3177-4f0d-b6cc-0598dc510a62'), UUID('b3b22705-6fb1-49e3-9ce9-b2ad3df4d29b'), UUID('8585f82e-88bb-4bd4-bf7f-c4e2a67a6d17'), UUID('9487ee42-8745-40f8-9e87-b21d36d53b46'), UUID('a3671c5b-d5ad-431d-9cbd-8412af4d446d'), UUID('c2cfd1fe-50f8-4fae-b9b6-20932da1113c'), UUID('b72f855b-8533-435f-bbdf-8febb6d62135'), UUID('0d4091bf-917f-4df3-a4a4-2a11ac8f1a55'), UUID('e4de8288-c0a4-4d26-8f49-74e5a34e1418'), UUID('789b1907-6de2-4aae-b1d5-873f38a34fa6'), UUID('5c9a8bd8-c407-47c2-8aac-346e03cf1a55'), UUID('2f45c732-7905-4399-8461-ea8cfd020c58'), UUID('3fdc8276-69a9-4e8a-8962-c65be8f841ec'), UUID('e0d72359-bb7e-4d9b-aaa2-7c62dd8f9f12'), UUID('89467920-4184-4006-a5a9-44f4df8d74d6'), UUID('1fb56c3c-c6ad-4833-ac96-516515331ef0'), UUID('7e2211df-a6e1-4da0-a3ce-8ae105377af1'), UUID('f085fdbb-f611-44bf-89d0-ebd064d3bfb4'), UUID('7169bed0-8359-4ca4-bb97-52e217db2a0d'), UUID('c37ea8a0-8b95-4142-93d1-b96b79a042c9'), UUID('f4c6a368-2d53-433c-960f-876d5c33f04d'), UUID('23f24ef6-afc3-465c-bfd2-9ccadf9d7989'), UUID('5a371a47-d201-4ad2-9a9a-e6a46f83fff1'), UUID('db5d79a4-c300-4ff2-832c-5bb136e3bd2d'), UUID('93c82254-9c6b-4b6e-8404-637eff22c46e'), UUID('579e692d-842e-4f5d-9240-3eccc419c130'), UUID('593c4494-7e15-4fab-a728-cf74ccfc4681'), UUID('f111a697-3a67-4c3c-9965-3215fbbc9314'), UUID('ba1b79a0-1f42-4ec0-a3e0-7bcebef3be87'), UUID('3f1f86df-9d1f-46e1-b239-4970c061bbfa'), UUID('1a001435-da01-42c5-ad2d-686741d6825a'), UUID('ad8ed5a9-1915-4e52-ae39-96b751437f68'), UUID('7add610f-ef73-4a2b-8579-ddf72cd57bf5'), UUID('0005d83c-6745-4df2-a350-fd7b73bd7c91'), UUID('89722246-a4bf-4473-8a78-518054035adc'), UUID('2999d942-7873-4aea-b86f-b7108ee0e880')]
+2025-09-04 21:29:02,560 - doc_processor.app.services.document_service - INFO - Total documents loaded: 43
+2025-09-04 21:29:02,560 - doc_processor.app.services.document_service - INFO - Found document: October 26, 2025.docx
+2025-09-04 21:29:03,190 - doc_processor.app.services.langchain_qa - INFO - Indexed document October 26, 2025.docx with 15 chunks
+2025-09-04 21:29:10,152 - doc_processor.app.main - INFO - [1aac59ab-d765-4b84-8aa5-bc32633c420c] Extracting entities from text using AutoGen (length: 110)
+2025-09-04 21:29:10,152 - doc_processor.app.services.agents.autogen_agents - INFO - Starting AutoGen workflow 12e7987e-dcdd-41fe-8e9d-1dee93f2d55c for document 0303902c-53cb-4829-8e5d-a7c1ca37e195
+2025-09-04 21:29:11,172 - httpx - INFO - HTTP Request: POST https://hashedinhu-openai.openai.azure.com/openai/deployments/gpt-41/chat/completions?api-version=2025-01-01-preview "HTTP/1.1 404 DeploymentNotFound"
+2025-09-04 21:29:11,172 - doc_processor.app.services.agents.autogen_agents - ERROR - Entity extraction workflow failed: Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}
+2025-09-04 21:29:11,172 - doc_processor.app.services.agents.autogen_agents - ERROR - AutoGen workflow 12e7987e-dcdd-41fe-8e9d-1dee93f2d55c failed: Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}
+Traceback (most recent call last):
+  File "/Users/bhavesh/Desktop/parser/doc_processor/app/services/agents/autogen_agents.py", line 561, in execute_document_workflow
+    result = await self._execute_entity_workflow_with_validation(document, workflow_id, context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/doc_processor/app/services/agents/autogen_agents.py", line 734, in _execute_entity_workflow_with_validation
+    result = await self._execute_entity_workflow(document, workflow_id, context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/doc_processor/app/services/agents/autogen_agents.py", line 755, in _execute_entity_workflow
+    response = await asyncio.to_thread(
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/autogen/agentchat/conversable_agent.py", line 1018, in initiate_chat
+    self.send(msg2send, recipient, silent=silent)
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/autogen/agentchat/conversable_agent.py", line 655, in send
+    recipient.receive(message, self, request_reply, silent)
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/autogen/agentchat/conversable_agent.py", line 818, in receive
+    reply = self.generate_reply(messages=self.chat_messages[sender], sender=sender)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/autogen/agentchat/conversable_agent.py", line 1972, in generate_reply
+    final, reply = reply_func(self, messages=messages, sender=sender, config=reply_func_tuple["config"])
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/autogen/agentchat/conversable_agent.py", line 1340, in generate_oai_reply
+    extracted_response = self._generate_oai_reply_from_client(
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/autogen/agentchat/conversable_agent.py", line 1359, in _generate_oai_reply_from_client
+    response = llm_client.create(
+               ^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/autogen/oai/client.py", line 722, in create
+    response = client.create(params)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/autogen/oai/client.py", line 320, in create
+    response = completions.create(**params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/openai/_utils/_utils.py", line 287, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/openai/resources/chat/completions/completions.py", line 1147, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/openai/_base_client.py", line 1259, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/openai/_base_client.py", line 1047, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.NotFoundError: Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}
+2025-09-04 21:29:11,173 - doc_processor.app.services.document_service - INFO - Looking for document with ID: 0303902c-53cb-4829-8e5d-a7c1ca37e195
+2025-09-04 21:29:11,173 - doc_processor.app.services.document_service - INFO - Available document IDs: [UUID('c3193786-98f0-4054-a258-d3178579312d'), UUID('dd4afa76-4294-41f0-918f-aebd2f83d37e'), UUID('e887033d-813f-4293-b95e-5a2014255921'), UUID('6030b6fd-c98a-4d86-9009-3b1d58d20c77'), UUID('fc8adbf1-deb2-4e6f-9066-93368d8183cc'), UUID('c72b38bf-9a6b-4575-a5af-b99ecfb8bf8f'), UUID('04c3ed9d-42d9-4ce2-a4e7-47737a4714c1'), UUID('04b3910c-3177-4f0d-b6cc-0598dc510a62'), UUID('b3b22705-6fb1-49e3-9ce9-b2ad3df4d29b'), UUID('8585f82e-88bb-4bd4-bf7f-c4e2a67a6d17'), UUID('9487ee42-8745-40f8-9e87-b21d36d53b46'), UUID('a3671c5b-d5ad-431d-9cbd-8412af4d446d'), UUID('c2cfd1fe-50f8-4fae-b9b6-20932da1113c'), UUID('b72f855b-8533-435f-bbdf-8febb6d62135'), UUID('0d4091bf-917f-4df3-a4a4-2a11ac8f1a55'), UUID('e4de8288-c0a4-4d26-8f49-74e5a34e1418'), UUID('789b1907-6de2-4aae-b1d5-873f38a34fa6'), UUID('5c9a8bd8-c407-47c2-8aac-346e03cf1a55'), UUID('2f45c732-7905-4399-8461-ea8cfd020c58'), UUID('3fdc8276-69a9-4e8a-8962-c65be8f841ec'), UUID('e0d72359-bb7e-4d9b-aaa2-7c62dd8f9f12'), UUID('89467920-4184-4006-a5a9-44f4df8d74d6'), UUID('1fb56c3c-c6ad-4833-ac96-516515331ef0'), UUID('7e2211df-a6e1-4da0-a3ce-8ae105377af1'), UUID('f085fdbb-f611-44bf-89d0-ebd064d3bfb4'), UUID('7169bed0-8359-4ca4-bb97-52e217db2a0d'), UUID('c37ea8a0-8b95-4142-93d1-b96b79a042c9'), UUID('f4c6a368-2d53-433c-960f-876d5c33f04d'), UUID('23f24ef6-afc3-465c-bfd2-9ccadf9d7989'), UUID('5a371a47-d201-4ad2-9a9a-e6a46f83fff1'), UUID('db5d79a4-c300-4ff2-832c-5bb136e3bd2d'), UUID('93c82254-9c6b-4b6e-8404-637eff22c46e'), UUID('579e692d-842e-4f5d-9240-3eccc419c130'), UUID('593c4494-7e15-4fab-a728-cf74ccfc4681'), UUID('f111a697-3a67-4c3c-9965-3215fbbc9314'), UUID('ba1b79a0-1f42-4ec0-a3e0-7bcebef3be87'), UUID('3f1f86df-9d1f-46e1-b239-4970c061bbfa'), UUID('1a001435-da01-42c5-ad2d-686741d6825a'), UUID('ad8ed5a9-1915-4e52-ae39-96b751437f68'), UUID('7add610f-ef73-4a2b-8579-ddf72cd57bf5'), UUID('0005d83c-6745-4df2-a350-fd7b73bd7c91'), UUID('89722246-a4bf-4473-8a78-518054035adc'), UUID('2999d942-7873-4aea-b86f-b7108ee0e880')]
+2025-09-04 21:29:11,173 - doc_processor.app.services.document_service - INFO - Total documents loaded: 43
+2025-09-04 21:29:11,173 - doc_processor.app.services.document_service - WARNING - Document not found: 0303902c-53cb-4829-8e5d-a7c1ca37e195
+2025-09-04 21:29:11,173 - doc_processor.app.services.document_service - INFO - Checking if document exists as string key: 0303902c-53cb-4829-8e5d-a7c1ca37e195
+2025-09-04 21:29:18,822 - doc_processor.app.main - INFO - [251662d5-6b33-492f-b886-74e6f91bd2e6] Asking corpus question across 2 documents
+2025-09-04 21:29:18,822 - doc_processor.app.services.document_service - INFO - Looking for document with ID: 7add610f-ef73-4a2b-8579-ddf72cd57bf5
+2025-09-04 21:29:18,823 - doc_processor.app.services.document_service - INFO - Available document IDs: [UUID('c3193786-98f0-4054-a258-d3178579312d'), UUID('dd4afa76-4294-41f0-918f-aebd2f83d37e'), UUID('e887033d-813f-4293-b95e-5a2014255921'), UUID('6030b6fd-c98a-4d86-9009-3b1d58d20c77'), UUID('fc8adbf1-deb2-4e6f-9066-93368d8183cc'), UUID('c72b38bf-9a6b-4575-a5af-b99ecfb8bf8f'), UUID('04c3ed9d-42d9-4ce2-a4e7-47737a4714c1'), UUID('04b3910c-3177-4f0d-b6cc-0598dc510a62'), UUID('b3b22705-6fb1-49e3-9ce9-b2ad3df4d29b'), UUID('8585f82e-88bb-4bd4-bf7f-c4e2a67a6d17'), UUID('9487ee42-8745-40f8-9e87-b21d36d53b46'), UUID('a3671c5b-d5ad-431d-9cbd-8412af4d446d'), UUID('c2cfd1fe-50f8-4fae-b9b6-20932da1113c'), UUID('b72f855b-8533-435f-bbdf-8febb6d62135'), UUID('0d4091bf-917f-4df3-a4a4-2a11ac8f1a55'), UUID('e4de8288-c0a4-4d26-8f49-74e5a34e1418'), UUID('789b1907-6de2-4aae-b1d5-873f38a34fa6'), UUID('5c9a8bd8-c407-47c2-8aac-346e03cf1a55'), UUID('2f45c732-7905-4399-8461-ea8cfd020c58'), UUID('3fdc8276-69a9-4e8a-8962-c65be8f841ec'), UUID('e0d72359-bb7e-4d9b-aaa2-7c62dd8f9f12'), UUID('89467920-4184-4006-a5a9-44f4df8d74d6'), UUID('1fb56c3c-c6ad-4833-ac96-516515331ef0'), UUID('7e2211df-a6e1-4da0-a3ce-8ae105377af1'), UUID('f085fdbb-f611-44bf-89d0-ebd064d3bfb4'), UUID('7169bed0-8359-4ca4-bb97-52e217db2a0d'), UUID('c37ea8a0-8b95-4142-93d1-b96b79a042c9'), UUID('f4c6a368-2d53-433c-960f-876d5c33f04d'), UUID('23f24ef6-afc3-465c-bfd2-9ccadf9d7989'), UUID('5a371a47-d201-4ad2-9a9a-e6a46f83fff1'), UUID('db5d79a4-c300-4ff2-832c-5bb136e3bd2d'), UUID('93c82254-9c6b-4b6e-8404-637eff22c46e'), UUID('579e692d-842e-4f5d-9240-3eccc419c130'), UUID('593c4494-7e15-4fab-a728-cf74ccfc4681'), UUID('f111a697-3a67-4c3c-9965-3215fbbc9314'), UUID('ba1b79a0-1f42-4ec0-a3e0-7bcebef3be87'), UUID('3f1f86df-9d1f-46e1-b239-4970c061bbfa'), UUID('1a001435-da01-42c5-ad2d-686741d6825a'), UUID('ad8ed5a9-1915-4e52-ae39-96b751437f68'), UUID('7add610f-ef73-4a2b-8579-ddf72cd57bf5'), UUID('0005d83c-6745-4df2-a350-fd7b73bd7c91'), UUID('89722246-a4bf-4473-8a78-518054035adc'), UUID('2999d942-7873-4aea-b86f-b7108ee0e880')]
+2025-09-04 21:29:18,823 - doc_processor.app.services.document_service - INFO - Total documents loaded: 43
+2025-09-04 21:29:18,823 - doc_processor.app.services.document_service - INFO - Found document: October 26, 2025.docx
+2025-09-04 21:29:18,823 - doc_processor.app.services.document_service - INFO - Looking for document with ID: 1a001435-da01-42c5-ad2d-686741d6825a
+2025-09-04 21:29:18,823 - doc_processor.app.services.document_service - INFO - Available document IDs: [UUID('c3193786-98f0-4054-a258-d3178579312d'), UUID('dd4afa76-4294-41f0-918f-aebd2f83d37e'), UUID('e887033d-813f-4293-b95e-5a2014255921'), UUID('6030b6fd-c98a-4d86-9009-3b1d58d20c77'), UUID('fc8adbf1-deb2-4e6f-9066-93368d8183cc'), UUID('c72b38bf-9a6b-4575-a5af-b99ecfb8bf8f'), UUID('04c3ed9d-42d9-4ce2-a4e7-47737a4714c1'), UUID('04b3910c-3177-4f0d-b6cc-0598dc510a62'), UUID('b3b22705-6fb1-49e3-9ce9-b2ad3df4d29b'), UUID('8585f82e-88bb-4bd4-bf7f-c4e2a67a6d17'), UUID('9487ee42-8745-40f8-9e87-b21d36d53b46'), UUID('a3671c5b-d5ad-431d-9cbd-8412af4d446d'), UUID('c2cfd1fe-50f8-4fae-b9b6-20932da1113c'), UUID('b72f855b-8533-435f-bbdf-8febb6d62135'), UUID('0d4091bf-917f-4df3-a4a4-2a11ac8f1a55'), UUID('e4de8288-c0a4-4d26-8f49-74e5a34e1418'), UUID('789b1907-6de2-4aae-b1d5-873f38a34fa6'), UUID('5c9a8bd8-c407-47c2-8aac-346e03cf1a55'), UUID('2f45c732-7905-4399-8461-ea8cfd020c58'), UUID('3fdc8276-69a9-4e8a-8962-c65be8f841ec'), UUID('e0d72359-bb7e-4d9b-aaa2-7c62dd8f9f12'), UUID('89467920-4184-4006-a5a9-44f4df8d74d6'), UUID('1fb56c3c-c6ad-4833-ac96-516515331ef0'), UUID('7e2211df-a6e1-4da0-a3ce-8ae105377af1'), UUID('f085fdbb-f611-44bf-89d0-ebd064d3bfb4'), UUID('7169bed0-8359-4ca4-bb97-52e217db2a0d'), UUID('c37ea8a0-8b95-4142-93d1-b96b79a042c9'), UUID('f4c6a368-2d53-433c-960f-876d5c33f04d'), UUID('23f24ef6-afc3-465c-bfd2-9ccadf9d7989'), UUID('5a371a47-d201-4ad2-9a9a-e6a46f83fff1'), UUID('db5d79a4-c300-4ff2-832c-5bb136e3bd2d'), UUID('93c82254-9c6b-4b6e-8404-637eff22c46e'), UUID('579e692d-842e-4f5d-9240-3eccc419c130'), UUID('593c4494-7e15-4fab-a728-cf74ccfc4681'), UUID('f111a697-3a67-4c3c-9965-3215fbbc9314'), UUID('ba1b79a0-1f42-4ec0-a3e0-7bcebef3be87'), UUID('3f1f86df-9d1f-46e1-b239-4970c061bbfa'), UUID('1a001435-da01-42c5-ad2d-686741d6825a'), UUID('ad8ed5a9-1915-4e52-ae39-96b751437f68'), UUID('7add610f-ef73-4a2b-8579-ddf72cd57bf5'), UUID('0005d83c-6745-4df2-a350-fd7b73bd7c91'), UUID('89722246-a4bf-4473-8a78-518054035adc'), UUID('2999d942-7873-4aea-b86f-b7108ee0e880')]
+2025-09-04 21:29:18,823 - doc_processor.app.services.document_service - INFO - Total documents loaded: 43
+2025-09-04 21:29:18,823 - doc_processor.app.services.document_service - INFO - Found document: The Last Train (1).docx
+2025-09-04 21:29:19,057 - doc_processor.app.services.langchain_qa - INFO - Indexed document The Last Train (1).docx with 5 chunks
+2025-09-04 22:09:47,336 - doc_processor.app.main - INFO - [2a01f3ef-25db-4585-808a-86a7adcd0705] Received document upload: The Last Train.docx
+2025-09-04 22:09:47,337 - doc_processor.app.main - INFO - [2a01f3ef-25db-4585-808a-86a7adcd0705] Creating document: The Last Train.docx
+2025-09-04 22:09:47,383 - doc_processor.app.services.document_processor - INFO - Using LangChain parser for application/vnd.openxmlformats-officedocument.wordprocessingml.document
+2025-09-04 22:09:47,383 - doc_processor.app.services.langchain_parsers - ERROR - Failed to extract DOCX metadata with LangChain: No module named 'docx2txt'
+2025-09-04 22:09:47,383 - doc_processor.app.services.langchain_parsers - ERROR - LangChain DOCX parsing failed: No module named 'docx2txt'
+2025-09-04 22:09:47,383 - doc_processor.app.services.document_processor - ERROR - Error processing document: Failed to parse DOCX with LangChain: No module named 'docx2txt'
+Traceback (most recent call last):
+  File "/Users/bhavesh/Desktop/parser/doc_processor/app/services/langchain_parsers.py", line 133, in parse
+    documents = loader.load()
+                ^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/langchain_community/document_loaders/word_document.py", line 57, in load
+    import docx2txt
+ModuleNotFoundError: No module named 'docx2txt'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/bhavesh/Desktop/parser/doc_processor/app/services/document_processor.py", line 49, in process_document
+    sections = await parser.parse(file_path)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/doc_processor/app/services/langchain_parsers.py", line 163, in parse
+    raise ValueError(f"Failed to parse DOCX with LangChain: {str(e)}")
+ValueError: Failed to parse DOCX with LangChain: No module named 'docx2txt'
+2025-09-04 22:09:47,385 - doc_processor.app.services.document_service - ERROR - Error processing document 6bd69c1f-22eb-49d7-b708-0802063f02f6: Failed to parse DOCX with LangChain: No module named 'docx2txt'
+Traceback (most recent call last):
+  File "/Users/bhavesh/Desktop/parser/doc_processor/app/services/langchain_parsers.py", line 133, in parse
+    documents = loader.load()
+                ^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/langchain_community/document_loaders/word_document.py", line 57, in load
+    import docx2txt
+ModuleNotFoundError: No module named 'docx2txt'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/bhavesh/Desktop/parser/doc_processor/app/services/document_service.py", line 192, in _process_document
+    processed_doc = await self.processor.process_document(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/doc_processor/app/services/document_processor.py", line 49, in process_document
+    sections = await parser.parse(file_path)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/doc_processor/app/services/langchain_parsers.py", line 163, in parse
+    raise ValueError(f"Failed to parse DOCX with LangChain: {str(e)}")
+ValueError: Failed to parse DOCX with LangChain: No module named 'docx2txt'
+2025-09-04 22:09:47,398 - doc_processor.app.main - INFO - [2a01f3ef-25db-4585-808a-86a7adcd0705] Document created: 6bd69c1f-22eb-49d7-b708-0802063f02f6
+2025-09-04 22:09:47,401 - doc_processor.app.main - INFO - [2f628db8-09a2-4535-bb5f-f47690fda407] Getting status for document: 6bd69c1f-22eb-49d7-b708-0802063f02f6
+2025-09-04 22:10:43,407 - doc_processor.app.main - INFO - [a2dc3812-232f-4ae6-a291-fcecbb3b1b82] Listing documents (status=None, page=1, page_size=10)
+2025-09-04 22:11:04,124 - doc_processor.app.main - INFO - [c76f3442-c14e-4806-ab0c-9861926b08f9] Received document upload: The Last Train.docx
+2025-09-04 22:11:04,125 - doc_processor.app.main - INFO - [c76f3442-c14e-4806-ab0c-9861926b08f9] Creating document: The Last Train.docx
+2025-09-04 22:11:04,156 - doc_processor.app.services.document_processor - INFO - Using LangChain parser for application/vnd.openxmlformats-officedocument.wordprocessingml.document
+2025-09-04 22:11:04,164 - doc_processor.app.services.langchain_parsers - INFO - Parsed DOCX into 2 sections using LangChain
+2025-09-04 22:11:04,164 - doc_processor.app.services.agents.workflow_orchestrator - INFO - Starting AutoGen workflow c15a11cb-3b49-4aa6-8010-c6730f4997bc for document 9449816b-d087-4d7c-b945-4650cb05bb5d
+2025-09-04 22:11:05,149 - httpx - INFO - HTTP Request: POST https://hashedinhu-openai.openai.azure.com/openai/deployments/gpt-41/chat/completions?api-version=2025-01-01-preview "HTTP/1.1 404 DeploymentNotFound"
+2025-09-04 22:11:05,150 - doc_processor.app.services.agents.workflow_orchestrator - ERROR - AutoGen workflow c15a11cb-3b49-4aa6-8010-c6730f4997bc failed: Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}
+Traceback (most recent call last):
+  File "/Users/bhavesh/Desktop/parser/doc_processor/app/services/agents/workflow_orchestrator.py", line 85, in execute_document_workflow
+    result = await self._execute_entity_workflow(document, workflow_id, context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/doc_processor/app/services/agents/workflow_orchestrator.py", line 221, in _execute_entity_workflow
+    response = await asyncio.to_thread(
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/autogen/agentchat/conversable_agent.py", line 1018, in initiate_chat
+    self.send(msg2send, recipient, silent=silent)
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/autogen/agentchat/conversable_agent.py", line 655, in send
+    recipient.receive(message, self, request_reply, silent)
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/autogen/agentchat/conversable_agent.py", line 818, in receive
+    reply = self.generate_reply(messages=self.chat_messages[sender], sender=sender)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/autogen/agentchat/conversable_agent.py", line 1972, in generate_reply
+    final, reply = reply_func(self, messages=messages, sender=sender, config=reply_func_tuple["config"])
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/autogen/agentchat/conversable_agent.py", line 1340, in generate_oai_reply
+    extracted_response = self._generate_oai_reply_from_client(
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/autogen/agentchat/conversable_agent.py", line 1359, in _generate_oai_reply_from_client
+    response = llm_client.create(
+               ^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/autogen/oai/client.py", line 722, in create
+    response = client.create(params)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/autogen/oai/client.py", line 320, in create
+    response = completions.create(**params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/openai/_utils/_utils.py", line 287, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/openai/resources/chat/completions/completions.py", line 1147, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/openai/_base_client.py", line 1259, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/openai/_base_client.py", line 1047, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.NotFoundError: Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}
+2025-09-04 22:11:05,155 - doc_processor.app.services.document_processor - WARNING - No entity agent results found in AutoGen workflow
+2025-09-04 22:11:05,362 - doc_processor.app.services.document_processor - INFO - Generated embeddings for 2 sections
+2025-09-04 22:11:05,378 - doc_processor.app.main - INFO - [c76f3442-c14e-4806-ab0c-9861926b08f9] Document created: 54aac4dd-2660-46a7-9aa1-edfddb5103af
+2025-09-04 22:11:05,395 - doc_processor.app.main - INFO - [4af66724-95f6-4e80-bdff-5c5b43e5c25e] Getting status for document: 54aac4dd-2660-46a7-9aa1-edfddb5103af
+2025-09-04 22:11:05,397 - doc_processor.app.main - INFO - [83daf3d6-06b5-4c4e-8ec0-534e494ab0a0] Getting document: 54aac4dd-2660-46a7-9aa1-edfddb5103af
+2025-09-04 22:11:05,397 - doc_processor.app.main - INFO - [83daf3d6-06b5-4c4e-8ec0-534e494ab0a0] Attempting to parse UUID: '54aac4dd-2660-46a7-9aa1-edfddb5103af'
+2025-09-04 22:11:05,397 - doc_processor.app.main - INFO - [83daf3d6-06b5-4c4e-8ec0-534e494ab0a0] Successfully parsed document ID: 54aac4dd-2660-46a7-9aa1-edfddb5103af
+2025-09-04 22:11:11,647 - doc_processor.app.main - INFO - [b6909f79-45c0-41e9-9ed3-46a2c2f75df4] Getting document: 54aac4dd-2660-46a7-9aa1-edfddb5103af
+2025-09-04 22:11:11,647 - doc_processor.app.main - INFO - [b6909f79-45c0-41e9-9ed3-46a2c2f75df4] Attempting to parse UUID: '54aac4dd-2660-46a7-9aa1-edfddb5103af'
+2025-09-04 22:11:11,647 - doc_processor.app.main - INFO - [b6909f79-45c0-41e9-9ed3-46a2c2f75df4] Successfully parsed document ID: 54aac4dd-2660-46a7-9aa1-edfddb5103af
+2025-09-04 22:11:11,661 - doc_processor.app.main - INFO - [c0380d0b-a7f8-4f6f-b0f8-127edeef7fed] Getting feedback for document: 54aac4dd-2660-46a7-9aa1-edfddb5103af
+2025-09-04 22:11:40,484 - doc_processor.app.main - INFO - [da1ae001-14b7-435f-9f63-846e4146b873] Getting document: 54aac4dd-2660-46a7-9aa1-edfddb5103af
+2025-09-04 22:11:40,484 - doc_processor.app.main - INFO - [da1ae001-14b7-435f-9f63-846e4146b873] Attempting to parse UUID: '54aac4dd-2660-46a7-9aa1-edfddb5103af'
+2025-09-04 22:11:40,484 - doc_processor.app.main - INFO - [da1ae001-14b7-435f-9f63-846e4146b873] Successfully parsed document ID: 54aac4dd-2660-46a7-9aa1-edfddb5103af
+2025-09-04 22:11:45,764 - doc_processor.app.main - INFO - [772afc40-4793-44ae-8b5f-785395957b31] Getting document: 54aac4dd-2660-46a7-9aa1-edfddb5103af
+2025-09-04 22:11:45,764 - doc_processor.app.main - INFO - [772afc40-4793-44ae-8b5f-785395957b31] Attempting to parse UUID: '54aac4dd-2660-46a7-9aa1-edfddb5103af'
+2025-09-04 22:11:45,764 - doc_processor.app.main - INFO - [772afc40-4793-44ae-8b5f-785395957b31] Successfully parsed document ID: 54aac4dd-2660-46a7-9aa1-edfddb5103af
+2025-09-04 22:11:50,093 - doc_processor.app.main - INFO - [6acfc90e-5f04-4de3-80c5-c3e926630a96] Getting document: 54aac4dd-2660-46a7-9aa1-edfddb5103af
+2025-09-04 22:11:50,093 - doc_processor.app.main - INFO - [6acfc90e-5f04-4de3-80c5-c3e926630a96] Attempting to parse UUID: '54aac4dd-2660-46a7-9aa1-edfddb5103af'
+2025-09-04 22:11:50,093 - doc_processor.app.main - INFO - [6acfc90e-5f04-4de3-80c5-c3e926630a96] Successfully parsed document ID: 54aac4dd-2660-46a7-9aa1-edfddb5103af
+2025-09-04 22:11:51,333 - doc_processor.app.main - INFO - [bdff7288-d918-49b3-a74e-343d5bf7243a] Getting document: 54aac4dd-2660-46a7-9aa1-edfddb5103af
+2025-09-04 22:11:51,333 - doc_processor.app.main - INFO - [bdff7288-d918-49b3-a74e-343d5bf7243a] Attempting to parse UUID: '54aac4dd-2660-46a7-9aa1-edfddb5103af'
+2025-09-04 22:11:51,333 - doc_processor.app.main - INFO - [bdff7288-d918-49b3-a74e-343d5bf7243a] Successfully parsed document ID: 54aac4dd-2660-46a7-9aa1-edfddb5103af
+2025-09-04 22:11:51,349 - doc_processor.app.main - INFO - [95808bed-803d-49ec-8602-9db149e15446] Getting feedback for document: 54aac4dd-2660-46a7-9aa1-edfddb5103af
+2025-09-04 22:13:48,848 - doc_processor.app.main - INFO - [8545ea54-0ebf-42e0-b8a7-60ebe6cf05c4] Received document upload: The Last Train.docx
+2025-09-04 22:13:48,849 - doc_processor.app.main - INFO - [8545ea54-0ebf-42e0-b8a7-60ebe6cf05c4] Creating document: The Last Train.docx
+2025-09-04 22:13:48,879 - doc_processor.app.services.document_processor - INFO - Using LangChain parser for application/vnd.openxmlformats-officedocument.wordprocessingml.document
+2025-09-04 22:13:48,888 - doc_processor.app.services.langchain_parsers - INFO - Parsed DOCX into 2 sections using LangChain
+2025-09-04 22:13:48,888 - doc_processor.app.services.agents.workflow_orchestrator - INFO - Starting AutoGen workflow ee7921e1-1caf-4c75-b412-a2db806ebac6 for document 1eae0b1f-6981-4da8-b83a-5ff07ff367c7
+2025-09-04 22:13:50,622 - httpx - INFO - HTTP Request: POST https://hashedinhu-openai.openai.azure.com/openai/deployments/gpt-41/chat/completions?api-version=2025-01-01-preview "HTTP/1.1 404 DeploymentNotFound"
+2025-09-04 22:13:50,623 - doc_processor.app.services.agents.workflow_orchestrator - ERROR - AutoGen workflow ee7921e1-1caf-4c75-b412-a2db806ebac6 failed: Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}
+Traceback (most recent call last):
+  File "/Users/bhavesh/Desktop/parser/doc_processor/app/services/agents/workflow_orchestrator.py", line 85, in execute_document_workflow
+    result = await self._execute_entity_workflow(document, workflow_id, context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/doc_processor/app/services/agents/workflow_orchestrator.py", line 221, in _execute_entity_workflow
+    response = await asyncio.to_thread(
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/autogen/agentchat/conversable_agent.py", line 1018, in initiate_chat
+    self.send(msg2send, recipient, silent=silent)
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/autogen/agentchat/conversable_agent.py", line 655, in send
+    recipient.receive(message, self, request_reply, silent)
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/autogen/agentchat/conversable_agent.py", line 818, in receive
+    reply = self.generate_reply(messages=self.chat_messages[sender], sender=sender)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/autogen/agentchat/conversable_agent.py", line 1972, in generate_reply
+    final, reply = reply_func(self, messages=messages, sender=sender, config=reply_func_tuple["config"])
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/autogen/agentchat/conversable_agent.py", line 1340, in generate_oai_reply
+    extracted_response = self._generate_oai_reply_from_client(
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/autogen/agentchat/conversable_agent.py", line 1359, in _generate_oai_reply_from_client
+    response = llm_client.create(
+               ^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/autogen/oai/client.py", line 722, in create
+    response = client.create(params)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/autogen/oai/client.py", line 320, in create
+    response = completions.create(**params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/openai/_utils/_utils.py", line 287, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/openai/resources/chat/completions/completions.py", line 1147, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/openai/_base_client.py", line 1259, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/openai/_base_client.py", line 1047, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.NotFoundError: Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}
+2025-09-04 22:13:50,628 - doc_processor.app.services.document_processor - WARNING - No entity agent results found in AutoGen workflow
+2025-09-04 22:13:50,630 - doc_processor.app.services.document_processor - INFO - Generated embeddings for 2 sections
+2025-09-04 22:13:50,648 - doc_processor.app.main - INFO - [8545ea54-0ebf-42e0-b8a7-60ebe6cf05c4] Document created: 40632f54-74dd-42fb-b825-bc5f871ef7e8
+2025-09-04 22:13:50,664 - doc_processor.app.main - INFO - [688238a0-eab0-48a9-b8a5-6ed2de0b1ce6] Getting status for document: 40632f54-74dd-42fb-b825-bc5f871ef7e8
+2025-09-04 22:13:50,666 - doc_processor.app.main - INFO - [4d89b281-5364-4cf8-8ef4-ab53ad93e107] Getting document: 40632f54-74dd-42fb-b825-bc5f871ef7e8
+2025-09-04 22:13:50,666 - doc_processor.app.main - INFO - [4d89b281-5364-4cf8-8ef4-ab53ad93e107] Attempting to parse UUID: '40632f54-74dd-42fb-b825-bc5f871ef7e8'
+2025-09-04 22:13:50,666 - doc_processor.app.main - INFO - [4d89b281-5364-4cf8-8ef4-ab53ad93e107] Successfully parsed document ID: 40632f54-74dd-42fb-b825-bc5f871ef7e8
+2025-09-04 22:13:57,761 - doc_processor.app.main - INFO - [01f6b358-0fca-4589-ada4-6dc2113f0416] Extracting entities from text using AutoGen (length: 88)
+2025-09-04 22:13:57,761 - doc_processor.app.services.agents.workflow_orchestrator - INFO - Starting AutoGen workflow 1da9e7ad-e7ab-4d35-85f4-d83f96886860 for document b2fa01e2-9e81-45d0-91c8-f213c2af3d25
+2025-09-04 22:13:58,770 - httpx - INFO - HTTP Request: POST https://hashedinhu-openai.openai.azure.com/openai/deployments/gpt-41/chat/completions?api-version=2025-01-01-preview "HTTP/1.1 404 DeploymentNotFound"
+2025-09-04 22:13:58,770 - doc_processor.app.services.agents.workflow_orchestrator - ERROR - AutoGen workflow 1da9e7ad-e7ab-4d35-85f4-d83f96886860 failed: Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}
+Traceback (most recent call last):
+  File "/Users/bhavesh/Desktop/parser/doc_processor/app/services/agents/workflow_orchestrator.py", line 85, in execute_document_workflow
+    result = await self._execute_entity_workflow(document, workflow_id, context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/doc_processor/app/services/agents/workflow_orchestrator.py", line 221, in _execute_entity_workflow
+    response = await asyncio.to_thread(
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/autogen/agentchat/conversable_agent.py", line 1018, in initiate_chat
+    self.send(msg2send, recipient, silent=silent)
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/autogen/agentchat/conversable_agent.py", line 655, in send
+    recipient.receive(message, self, request_reply, silent)
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/autogen/agentchat/conversable_agent.py", line 818, in receive
+    reply = self.generate_reply(messages=self.chat_messages[sender], sender=sender)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/autogen/agentchat/conversable_agent.py", line 1972, in generate_reply
+    final, reply = reply_func(self, messages=messages, sender=sender, config=reply_func_tuple["config"])
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/autogen/agentchat/conversable_agent.py", line 1340, in generate_oai_reply
+    extracted_response = self._generate_oai_reply_from_client(
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/autogen/agentchat/conversable_agent.py", line 1359, in _generate_oai_reply_from_client
+    response = llm_client.create(
+               ^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/autogen/oai/client.py", line 722, in create
+    response = client.create(params)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/autogen/oai/client.py", line 320, in create
+    response = completions.create(**params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/openai/_utils/_utils.py", line 287, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/openai/resources/chat/completions/completions.py", line 1147, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/openai/_base_client.py", line 1259, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/openai/_base_client.py", line 1047, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.NotFoundError: Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}
+2025-09-04 22:17:43,046 - doc_processor.app.main - INFO - [57a871d7-8d41-4f89-82e9-895e4ac1a72c] Received document upload: The Last Train.docx
+2025-09-04 22:17:43,047 - doc_processor.app.main - INFO - [57a871d7-8d41-4f89-82e9-895e4ac1a72c] Creating document: The Last Train.docx
+2025-09-04 22:17:43,083 - doc_processor.app.services.document_processor - INFO - Using LangChain parser for application/vnd.openxmlformats-officedocument.wordprocessingml.document
+2025-09-04 22:17:43,091 - doc_processor.app.services.langchain_parsers - INFO - Parsed DOCX into 2 sections using LangChain
+2025-09-04 22:17:43,091 - doc_processor.app.services.agents.workflow_orchestrator - INFO - Starting AutoGen workflow 0c14747e-3ec6-45ff-8d58-10548a6a4a60 for document e6f46fc5-c2df-4ab1-b7f0-e909a9f574a9
+2025-09-04 22:17:44,375 - httpx - INFO - HTTP Request: POST https://hashedinhu-openai.openai.azure.com/openai/deployments/gpt-4/chat/completions?api-version=2025-01-01-preview "HTTP/1.1 404 DeploymentNotFound"
+2025-09-04 22:17:44,376 - doc_processor.app.services.agents.workflow_orchestrator - ERROR - AutoGen workflow 0c14747e-3ec6-45ff-8d58-10548a6a4a60 failed: Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}
+Traceback (most recent call last):
+  File "/Users/bhavesh/Desktop/parser/doc_processor/app/services/agents/workflow_orchestrator.py", line 85, in execute_document_workflow
+    result = await self._execute_entity_workflow(document, workflow_id, context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/doc_processor/app/services/agents/workflow_orchestrator.py", line 221, in _execute_entity_workflow
+    response = await asyncio.to_thread(
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/autogen/agentchat/conversable_agent.py", line 1018, in initiate_chat
+    self.send(msg2send, recipient, silent=silent)
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/autogen/agentchat/conversable_agent.py", line 655, in send
+    recipient.receive(message, self, request_reply, silent)
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/autogen/agentchat/conversable_agent.py", line 818, in receive
+    reply = self.generate_reply(messages=self.chat_messages[sender], sender=sender)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/autogen/agentchat/conversable_agent.py", line 1972, in generate_reply
+    final, reply = reply_func(self, messages=messages, sender=sender, config=reply_func_tuple["config"])
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/autogen/agentchat/conversable_agent.py", line 1340, in generate_oai_reply
+    extracted_response = self._generate_oai_reply_from_client(
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/autogen/agentchat/conversable_agent.py", line 1359, in _generate_oai_reply_from_client
+    response = llm_client.create(
+               ^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/autogen/oai/client.py", line 722, in create
+    response = client.create(params)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/autogen/oai/client.py", line 320, in create
+    response = completions.create(**params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/openai/_utils/_utils.py", line 287, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/openai/resources/chat/completions/completions.py", line 1147, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/openai/_base_client.py", line 1259, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/openai/_base_client.py", line 1047, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.NotFoundError: Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}
+2025-09-04 22:17:44,382 - doc_processor.app.services.document_processor - WARNING - No entity agent results found in AutoGen workflow
+2025-09-04 22:17:44,383 - doc_processor.app.services.document_processor - INFO - Generated embeddings for 2 sections
+2025-09-04 22:17:44,405 - doc_processor.app.main - INFO - [57a871d7-8d41-4f89-82e9-895e4ac1a72c] Document created: e734cf64-eb87-44ec-a6f9-8b58b77dad4a
+2025-09-04 22:17:44,421 - doc_processor.app.main - INFO - [466f118f-9417-40c2-b7d8-da40851260bc] Getting status for document: e734cf64-eb87-44ec-a6f9-8b58b77dad4a
+2025-09-04 22:17:44,423 - doc_processor.app.main - INFO - [807c1ec9-2ff1-4373-bfab-ef4ed6bc22a6] Getting document: e734cf64-eb87-44ec-a6f9-8b58b77dad4a
+2025-09-04 22:17:44,423 - doc_processor.app.main - INFO - [807c1ec9-2ff1-4373-bfab-ef4ed6bc22a6] Attempting to parse UUID: 'e734cf64-eb87-44ec-a6f9-8b58b77dad4a'
+2025-09-04 22:17:44,423 - doc_processor.app.main - INFO - [807c1ec9-2ff1-4373-bfab-ef4ed6bc22a6] Successfully parsed document ID: e734cf64-eb87-44ec-a6f9-8b58b77dad4a
+2025-09-04 22:21:27,136 - doc_processor.app.main - INFO - [14ef1d43-8c3c-4634-b5cd-2735d53a7cf1] Received document upload: The Last Train.docx
+2025-09-04 22:21:27,136 - doc_processor.app.main - INFO - [14ef1d43-8c3c-4634-b5cd-2735d53a7cf1] Creating document: The Last Train.docx
+2025-09-04 22:21:27,185 - doc_processor.app.services.document_processor - INFO - Using LangChain parser for application/vnd.openxmlformats-officedocument.wordprocessingml.document
+2025-09-04 22:21:27,195 - doc_processor.app.services.langchain_parsers - INFO - Parsed DOCX into 2 sections using LangChain
+2025-09-04 22:21:27,195 - doc_processor.app.services.agents.workflow_orchestrator - INFO - Starting AutoGen workflow 7b1fb822-4a50-450c-a244-f9bd1edbc5de for document 55be5b0e-9309-42ed-be92-a88534f56a88
+2025-09-04 22:21:28,194 - httpx - INFO - HTTP Request: POST https://hashedinhu-openai.openai.azure.com/openai/deployments/gpt-41/chat/completions?api-version=2025-01-01-preview "HTTP/1.1 404 DeploymentNotFound"
+2025-09-04 22:21:28,194 - doc_processor.app.services.agents.workflow_orchestrator - ERROR - AutoGen workflow 7b1fb822-4a50-450c-a244-f9bd1edbc5de failed: Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}
+Traceback (most recent call last):
+  File "/Users/bhavesh/Desktop/parser/doc_processor/app/services/agents/workflow_orchestrator.py", line 85, in execute_document_workflow
+    result = await self._execute_entity_workflow(document, workflow_id, context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/doc_processor/app/services/agents/workflow_orchestrator.py", line 221, in _execute_entity_workflow
+    response = await asyncio.to_thread(
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/autogen/agentchat/conversable_agent.py", line 1018, in initiate_chat
+    self.send(msg2send, recipient, silent=silent)
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/autogen/agentchat/conversable_agent.py", line 655, in send
+    recipient.receive(message, self, request_reply, silent)
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/autogen/agentchat/conversable_agent.py", line 818, in receive
+    reply = self.generate_reply(messages=self.chat_messages[sender], sender=sender)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/autogen/agentchat/conversable_agent.py", line 1972, in generate_reply
+    final, reply = reply_func(self, messages=messages, sender=sender, config=reply_func_tuple["config"])
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/autogen/agentchat/conversable_agent.py", line 1340, in generate_oai_reply
+    extracted_response = self._generate_oai_reply_from_client(
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/autogen/agentchat/conversable_agent.py", line 1359, in _generate_oai_reply_from_client
+    response = llm_client.create(
+               ^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/autogen/oai/client.py", line 722, in create
+    response = client.create(params)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/autogen/oai/client.py", line 320, in create
+    response = completions.create(**params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/openai/_utils/_utils.py", line 287, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/openai/resources/chat/completions/completions.py", line 1147, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/openai/_base_client.py", line 1259, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/openai/_base_client.py", line 1047, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.NotFoundError: Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}
+2025-09-04 22:21:28,200 - doc_processor.app.services.document_processor - WARNING - No entity agent results found in AutoGen workflow
+2025-09-04 22:21:28,201 - doc_processor.app.services.document_processor - INFO - Generated embeddings for 2 sections
+2025-09-04 22:21:28,224 - doc_processor.app.main - INFO - [14ef1d43-8c3c-4634-b5cd-2735d53a7cf1] Document created: 8b7bc50e-d9ef-4e4b-9982-13d0219e0243
+2025-09-04 22:21:28,240 - doc_processor.app.main - INFO - [7e31b10b-4063-4b05-a605-408d9d2e2dc4] Getting status for document: 8b7bc50e-d9ef-4e4b-9982-13d0219e0243
+2025-09-04 22:21:28,241 - doc_processor.app.main - INFO - [7606359c-06c5-4ae3-9873-8af4ca3d7c3f] Getting document: 8b7bc50e-d9ef-4e4b-9982-13d0219e0243
+2025-09-04 22:21:28,242 - doc_processor.app.main - INFO - [7606359c-06c5-4ae3-9873-8af4ca3d7c3f] Attempting to parse UUID: '8b7bc50e-d9ef-4e4b-9982-13d0219e0243'
+2025-09-04 22:21:28,242 - doc_processor.app.main - INFO - [7606359c-06c5-4ae3-9873-8af4ca3d7c3f] Successfully parsed document ID: 8b7bc50e-d9ef-4e4b-9982-13d0219e0243
+2025-09-04 22:25:55,200 - doc_processor.app.main - INFO - [62d9af90-a2fd-43fa-9b13-7c51480fac81] Extracting entities from text using AutoGen (length: 41)
+2025-09-04 22:25:55,200 - doc_processor.app.services.agents.workflow_orchestrator - INFO - Starting AutoGen workflow 2f40a7d2-cabb-471c-a6b0-ea3dea5ecf73 for document 24919e58-9dd0-46c3-823f-2d90043bb9c2
+2025-09-04 22:25:56,159 - httpx - INFO - HTTP Request: POST https://hashedinhu-openai.openai.azure.com/openai/deployments/gpt-41/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 404 DeploymentNotFound"
+2025-09-04 22:25:56,160 - doc_processor.app.services.agents.workflow_orchestrator - ERROR - AutoGen workflow 2f40a7d2-cabb-471c-a6b0-ea3dea5ecf73 failed: Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}
+Traceback (most recent call last):
+  File "/Users/bhavesh/Desktop/parser/doc_processor/app/services/agents/workflow_orchestrator.py", line 85, in execute_document_workflow
+    result = await self._execute_entity_workflow(document, workflow_id, context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/doc_processor/app/services/agents/workflow_orchestrator.py", line 221, in _execute_entity_workflow
+    response = await asyncio.to_thread(
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/autogen/agentchat/conversable_agent.py", line 1018, in initiate_chat
+    self.send(msg2send, recipient, silent=silent)
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/autogen/agentchat/conversable_agent.py", line 655, in send
+    recipient.receive(message, self, request_reply, silent)
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/autogen/agentchat/conversable_agent.py", line 818, in receive
+    reply = self.generate_reply(messages=self.chat_messages[sender], sender=sender)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/autogen/agentchat/conversable_agent.py", line 1972, in generate_reply
+    final, reply = reply_func(self, messages=messages, sender=sender, config=reply_func_tuple["config"])
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/autogen/agentchat/conversable_agent.py", line 1340, in generate_oai_reply
+    extracted_response = self._generate_oai_reply_from_client(
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/autogen/agentchat/conversable_agent.py", line 1359, in _generate_oai_reply_from_client
+    response = llm_client.create(
+               ^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/autogen/oai/client.py", line 722, in create
+    response = client.create(params)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/autogen/oai/client.py", line 320, in create
+    response = completions.create(**params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/openai/_utils/_utils.py", line 287, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/openai/resources/chat/completions/completions.py", line 1147, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/openai/_base_client.py", line 1259, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/openai/_base_client.py", line 1047, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.NotFoundError: Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}
+2025-09-04 22:29:50,488 - doc_processor.app.main - INFO - [1b68fbe0-4847-49a7-b5ce-ff1821d84d43] Extracting entities from text using AutoGen (length: 88)
+2025-09-04 22:29:50,489 - doc_processor.app.services.agents.workflow_orchestrator - INFO - Starting AutoGen workflow ae5ec1c3-ed2e-474d-81e6-3cc7bb29f3b1 for document c85b9f4e-47b1-4970-85b5-b8a22956418f
+2025-09-04 22:29:51,392 - httpx - INFO - HTTP Request: POST https://hashedinhu-openai.openai.azure.com/openai/deployments/gpt-41/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 404 DeploymentNotFound"
+2025-09-04 22:29:51,393 - doc_processor.app.services.agents.workflow_orchestrator - ERROR - AutoGen workflow ae5ec1c3-ed2e-474d-81e6-3cc7bb29f3b1 failed: Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}
+Traceback (most recent call last):
+  File "/Users/bhavesh/Desktop/parser/doc_processor/app/services/agents/workflow_orchestrator.py", line 85, in execute_document_workflow
+    result = await self._execute_entity_workflow(document, workflow_id, context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/doc_processor/app/services/agents/workflow_orchestrator.py", line 221, in _execute_entity_workflow
+    response = await asyncio.to_thread(
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/autogen/agentchat/conversable_agent.py", line 1018, in initiate_chat
+    self.send(msg2send, recipient, silent=silent)
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/autogen/agentchat/conversable_agent.py", line 655, in send
+    recipient.receive(message, self, request_reply, silent)
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/autogen/agentchat/conversable_agent.py", line 818, in receive
+    reply = self.generate_reply(messages=self.chat_messages[sender], sender=sender)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/autogen/agentchat/conversable_agent.py", line 1972, in generate_reply
+    final, reply = reply_func(self, messages=messages, sender=sender, config=reply_func_tuple["config"])
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/autogen/agentchat/conversable_agent.py", line 1340, in generate_oai_reply
+    extracted_response = self._generate_oai_reply_from_client(
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/autogen/agentchat/conversable_agent.py", line 1359, in _generate_oai_reply_from_client
+    response = llm_client.create(
+               ^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/autogen/oai/client.py", line 722, in create
+    response = client.create(params)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/autogen/oai/client.py", line 320, in create
+    response = completions.create(**params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/openai/_utils/_utils.py", line 287, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/openai/resources/chat/completions/completions.py", line 1147, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/openai/_base_client.py", line 1259, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/openai/_base_client.py", line 1047, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.NotFoundError: Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}
+2025-09-04 22:30:22,167 - doc_processor.app.main - INFO - [ed97f559-933e-4f08-96db-7d9df1391947] Extracting entities from text using AutoGen (length: 88)
+2025-09-04 22:30:22,167 - doc_processor.app.services.agents.workflow_orchestrator - INFO - Starting AutoGen workflow 391f04de-005e-4cf9-9722-4c16550e8ef6 for document 10b3634e-a385-4b26-918f-a261976cfe03
+2025-09-04 22:30:23,077 - httpx - INFO - HTTP Request: POST https://hashedinhu-openai.openai.azure.com/openai/deployments/gpt-41/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 404 DeploymentNotFound"
+2025-09-04 22:30:23,077 - doc_processor.app.services.agents.workflow_orchestrator - ERROR - AutoGen workflow 391f04de-005e-4cf9-9722-4c16550e8ef6 failed: Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}
+Traceback (most recent call last):
+  File "/Users/bhavesh/Desktop/parser/doc_processor/app/services/agents/workflow_orchestrator.py", line 85, in execute_document_workflow
+    result = await self._execute_entity_workflow(document, workflow_id, context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/doc_processor/app/services/agents/workflow_orchestrator.py", line 221, in _execute_entity_workflow
+    response = await asyncio.to_thread(
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/autogen/agentchat/conversable_agent.py", line 1018, in initiate_chat
+    self.send(msg2send, recipient, silent=silent)
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/autogen/agentchat/conversable_agent.py", line 655, in send
+    recipient.receive(message, self, request_reply, silent)
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/autogen/agentchat/conversable_agent.py", line 818, in receive
+    reply = self.generate_reply(messages=self.chat_messages[sender], sender=sender)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/autogen/agentchat/conversable_agent.py", line 1972, in generate_reply
+    final, reply = reply_func(self, messages=messages, sender=sender, config=reply_func_tuple["config"])
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/autogen/agentchat/conversable_agent.py", line 1340, in generate_oai_reply
+    extracted_response = self._generate_oai_reply_from_client(
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/autogen/agentchat/conversable_agent.py", line 1359, in _generate_oai_reply_from_client
+    response = llm_client.create(
+               ^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/autogen/oai/client.py", line 722, in create
+    response = client.create(params)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/autogen/oai/client.py", line 320, in create
+    response = completions.create(**params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/openai/_utils/_utils.py", line 287, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/openai/resources/chat/completions/completions.py", line 1147, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/openai/_base_client.py", line 1259, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/openai/_base_client.py", line 1047, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.NotFoundError: Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}
+2025-09-04 22:31:29,000 - doc_processor.app.main - INFO - [efac3eee-26e2-405c-a703-01e89985a659] Extracting entities from text using AutoGen (length: 88)
+2025-09-04 22:31:29,000 - doc_processor.app.services.agents.workflow_orchestrator - INFO - Starting AutoGen workflow ac7c75ee-ca44-4d8f-9901-eac1f6d85620 for document fdb19b8c-a1fa-4fe5-81a4-7b945e0f6057
+2025-09-04 22:31:36,870 - httpx - INFO - HTTP Request: POST https://hashedinhu-openai.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-09-04 22:31:36,873 - autogen.oai.client - WARNING - Model gpt-4o-2024-11-20 is not found. The cost will be 0. In your config_list, add field {"price" : [prompt_price_per_1k, completion_token_price_per_1k]} for customized pricing.
+2025-09-04 22:31:38,134 - httpx - INFO - HTTP Request: POST https://hashedinhu-openai.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-09-04 22:31:38,134 - autogen.oai.client - WARNING - Model gpt-4o-2024-11-20 is not found. The cost will be 0. In your config_list, add field {"price" : [prompt_price_per_1k, completion_token_price_per_1k]} for customized pricing.
+2025-09-04 22:31:45,300 - httpx - INFO - HTTP Request: POST https://hashedinhu-openai.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-09-04 22:31:45,301 - autogen.oai.client - WARNING - Model gpt-4o-2024-11-20 is not found. The cost will be 0. In your config_list, add field {"price" : [prompt_price_per_1k, completion_token_price_per_1k]} for customized pricing.
+2025-09-04 22:31:46,411 - httpx - INFO - HTTP Request: POST https://hashedinhu-openai.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-09-04 22:31:46,412 - autogen.oai.client - WARNING - Model gpt-4o-2024-11-20 is not found. The cost will be 0. In your config_list, add field {"price" : [prompt_price_per_1k, completion_token_price_per_1k]} for customized pricing.
+2025-09-04 22:33:41,402 - doc_processor.app.main - INFO - [1ae87912-958a-4ee9-9cd2-d687ad4a344c] Extracting entities from text using AutoGen (length: 88)
+2025-09-04 22:33:41,403 - doc_processor.app.services.agents.workflow_orchestrator - INFO - Starting AutoGen workflow e1749f55-c79c-43f7-a74f-077b186af50a for document 32f06787-5ff5-483e-aa43-1d9bf4fbeae0
+2025-09-04 22:34:11,189 - doc_processor.app.main - INFO - [d4144c79-2806-4779-a4d5-58ea72fd8d7a] Extracting entities from text using AutoGen (length: 88)
+2025-09-04 22:34:11,189 - doc_processor.app.services.agents.workflow_orchestrator - INFO - Starting AutoGen workflow a527785d-8552-46b9-95dc-60e4dc4484e3 for document 39698ab9-28be-43b2-b7de-719f347023c5
+2025-09-04 22:35:44,839 - doc_processor.app.main - INFO - [dbbe5760-e43c-443b-9ebb-0b4f2faac5bf] Extracting entities from text using AutoGen (length: 41)
+2025-09-04 22:35:44,839 - doc_processor.app.services.agents.workflow_orchestrator - INFO - Starting AutoGen workflow fb0e9f4f-e7f5-4a5d-ba81-cfd15fa223d3 for document 05bb35a8-5e6c-4d9a-a7b6-b581d2a5ec68
+2025-09-04 22:35:49,935 - httpx - INFO - HTTP Request: POST https://hashedinhu-openai.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-09-04 22:35:49,938 - autogen.oai.client - WARNING - Model gpt-4o-2024-11-20 is not found. The cost will be 0. In your config_list, add field {"price" : [prompt_price_per_1k, completion_token_price_per_1k]} for customized pricing.
+2025-09-04 22:35:56,011 - httpx - INFO - HTTP Request: POST https://hashedinhu-openai.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-09-04 22:35:56,012 - autogen.oai.client - WARNING - Model gpt-4o-2024-11-20 is not found. The cost will be 0. In your config_list, add field {"price" : [prompt_price_per_1k, completion_token_price_per_1k]} for customized pricing.
+2025-09-04 22:36:00,346 - httpx - INFO - HTTP Request: POST https://hashedinhu-openai.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-09-04 22:36:00,346 - autogen.oai.client - WARNING - Model gpt-4o-2024-11-20 is not found. The cost will be 0. In your config_list, add field {"price" : [prompt_price_per_1k, completion_token_price_per_1k]} for customized pricing.
+2025-09-04 22:36:05,867 - httpx - INFO - HTTP Request: POST https://hashedinhu-openai.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-09-04 22:36:05,867 - autogen.oai.client - WARNING - Model gpt-4o-2024-11-20 is not found. The cost will be 0. In your config_list, add field {"price" : [prompt_price_per_1k, completion_token_price_per_1k]} for customized pricing.
+2025-09-04 22:36:37,530 - doc_processor.app.main - INFO - [a68c3c0c-d285-4b64-87ec-41b610f80f63] Received document upload: The Last Train.docx
+2025-09-04 22:36:37,530 - doc_processor.app.main - INFO - [a68c3c0c-d285-4b64-87ec-41b610f80f63] Creating document: The Last Train.docx
+2025-09-04 22:36:37,594 - doc_processor.app.services.document_processor - INFO - Using LangChain parser for application/vnd.openxmlformats-officedocument.wordprocessingml.document
+2025-09-04 22:36:37,603 - doc_processor.app.services.langchain_parsers - INFO - Parsed DOCX into 2 sections using LangChain
+2025-09-04 22:36:37,603 - doc_processor.app.services.agents.workflow_orchestrator - INFO - Starting AutoGen workflow 6e5ce1ed-029d-464d-8ce4-d00c9ddf0a52 for document 2797f4e8-c8b9-4548-8c56-5df58141726c
+2025-09-04 22:36:39,599 - httpx - INFO - HTTP Request: POST https://hashedinhu-openai.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-09-04 22:36:39,602 - autogen.oai.client - WARNING - Model gpt-4o-2024-11-20 is not found. The cost will be 0. In your config_list, add field {"price" : [prompt_price_per_1k, completion_token_price_per_1k]} for customized pricing.
+2025-09-04 22:36:40,872 - httpx - INFO - HTTP Request: POST https://hashedinhu-openai.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-09-04 22:36:40,873 - autogen.oai.client - WARNING - Model gpt-4o-2024-11-20 is not found. The cost will be 0. In your config_list, add field {"price" : [prompt_price_per_1k, completion_token_price_per_1k]} for customized pricing.
+2025-09-04 22:36:47,619 - httpx - INFO - HTTP Request: POST https://hashedinhu-openai.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-09-04 22:36:47,620 - autogen.oai.client - WARNING - Model gpt-4o-2024-11-20 is not found. The cost will be 0. In your config_list, add field {"price" : [prompt_price_per_1k, completion_token_price_per_1k]} for customized pricing.
+2025-09-04 22:36:53,305 - httpx - INFO - HTTP Request: POST https://hashedinhu-openai.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-09-04 22:36:53,305 - autogen.oai.client - WARNING - Model gpt-4o-2024-11-20 is not found. The cost will be 0. In your config_list, add field {"price" : [prompt_price_per_1k, completion_token_price_per_1k]} for customized pricing.
+2025-09-04 22:36:53,307 - doc_processor.app.services.agents.workflow_orchestrator - WARNING - Validation failed for workflow 6e5ce1ed-029d-464d-8ce4-d00c9ddf0a52, triggering rollback
+2025-09-04 22:36:53,307 - doc_processor.app.services.document_processor - INFO - Extracted 0 entities from AutoGen workflow
+2025-09-04 22:36:53,309 - doc_processor.app.services.document_processor - INFO - Generated embeddings for 2 sections
+2025-09-04 22:36:53,338 - doc_processor.app.main - INFO - [a68c3c0c-d285-4b64-87ec-41b610f80f63] Document created: caa03c81-772c-4193-ba25-32d3a3044a79
+2025-09-04 22:36:53,354 - doc_processor.app.main - INFO - [f25e2914-5870-45f8-894b-881098bb1009] Getting status for document: caa03c81-772c-4193-ba25-32d3a3044a79
+2025-09-04 22:36:53,355 - doc_processor.app.main - INFO - [74f4760d-1d4a-4a04-91b3-63a08ed5f099] Getting document: caa03c81-772c-4193-ba25-32d3a3044a79
+2025-09-04 22:36:53,356 - doc_processor.app.main - INFO - [74f4760d-1d4a-4a04-91b3-63a08ed5f099] Attempting to parse UUID: 'caa03c81-772c-4193-ba25-32d3a3044a79'
+2025-09-04 22:36:53,356 - doc_processor.app.main - INFO - [74f4760d-1d4a-4a04-91b3-63a08ed5f099] Successfully parsed document ID: caa03c81-772c-4193-ba25-32d3a3044a79
+2025-09-04 22:36:56,268 - doc_processor.app.main - INFO - [dae381f5-013d-44bb-970c-c50a1e6cfc87] Getting document: caa03c81-772c-4193-ba25-32d3a3044a79
+2025-09-04 22:36:56,268 - doc_processor.app.main - INFO - [dae381f5-013d-44bb-970c-c50a1e6cfc87] Attempting to parse UUID: 'caa03c81-772c-4193-ba25-32d3a3044a79'
+2025-09-04 22:36:56,268 - doc_processor.app.main - INFO - [dae381f5-013d-44bb-970c-c50a1e6cfc87] Successfully parsed document ID: caa03c81-772c-4193-ba25-32d3a3044a79
+2025-09-04 22:36:56,299 - doc_processor.app.main - INFO - [04edcd5b-d618-474c-a3ad-cbf5dadf39c2] Getting feedback for document: caa03c81-772c-4193-ba25-32d3a3044a79
+2025-09-04 22:49:36,236 - doc_processor.app.main - INFO - [b279b290-c837-420a-a6bd-aede3cb3d795] Received document upload: The Last Train.docx
+2025-09-04 22:49:36,237 - doc_processor.app.main - INFO - [b279b290-c837-420a-a6bd-aede3cb3d795] Creating document: The Last Train.docx
+2025-09-04 22:49:36,296 - doc_processor.app.services.document_processor - INFO - Using LangChain parser for application/vnd.openxmlformats-officedocument.wordprocessingml.document
+2025-09-04 22:49:36,305 - doc_processor.app.services.langchain_parsers - INFO - Parsed DOCX into 2 sections using LangChain
+2025-09-04 22:49:36,305 - doc_processor.app.services.agents.workflow_orchestrator - INFO - Starting AutoGen workflow f7859594-5308-4032-9398-28097fe007bf for document 6382b740-1284-4d82-92f6-080670f23d4d
+2025-09-04 22:49:37,270 - httpx - INFO - HTTP Request: POST https://hashedinhu-openai.openai.azure.com/openai/deployments/gpt-41/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 404 DeploymentNotFound"
+2025-09-04 22:49:37,271 - doc_processor.app.services.agents.workflow_orchestrator - ERROR - AutoGen workflow f7859594-5308-4032-9398-28097fe007bf failed: Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}
+Traceback (most recent call last):
+  File "/Users/bhavesh/Desktop/parser/doc_processor/app/services/agents/workflow_orchestrator.py", line 85, in execute_document_workflow
+    result = await self._execute_entity_workflow(document, workflow_id, context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/doc_processor/app/services/agents/workflow_orchestrator.py", line 221, in _execute_entity_workflow
+    response = await asyncio.to_thread(
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/autogen/agentchat/conversable_agent.py", line 1018, in initiate_chat
+    self.send(msg2send, recipient, silent=silent)
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/autogen/agentchat/conversable_agent.py", line 655, in send
+    recipient.receive(message, self, request_reply, silent)
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/autogen/agentchat/conversable_agent.py", line 818, in receive
+    reply = self.generate_reply(messages=self.chat_messages[sender], sender=sender)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/autogen/agentchat/conversable_agent.py", line 1972, in generate_reply
+    final, reply = reply_func(self, messages=messages, sender=sender, config=reply_func_tuple["config"])
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/autogen/agentchat/conversable_agent.py", line 1340, in generate_oai_reply
+    extracted_response = self._generate_oai_reply_from_client(
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/autogen/agentchat/conversable_agent.py", line 1359, in _generate_oai_reply_from_client
+    response = llm_client.create(
+               ^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/autogen/oai/client.py", line 722, in create
+    response = client.create(params)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/autogen/oai/client.py", line 320, in create
+    response = completions.create(**params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/openai/_utils/_utils.py", line 287, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/openai/resources/chat/completions/completions.py", line 1147, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/openai/_base_client.py", line 1259, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/venv/lib/python3.12/site-packages/openai/_base_client.py", line 1047, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.NotFoundError: Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}
+2025-09-04 22:49:37,276 - doc_processor.app.services.document_processor - WARNING - No entity agent results found in AutoGen workflow
+2025-09-04 22:49:37,277 - doc_processor.app.services.document_processor - INFO - Generated embeddings for 2 sections
+2025-09-04 22:49:37,306 - doc_processor.app.main - INFO - [b279b290-c837-420a-a6bd-aede3cb3d795] Document created: 73bcd0dd-6b29-4556-a648-92e156d753ba
+2025-09-04 22:49:37,322 - doc_processor.app.main - INFO - [55afa469-2238-469d-85f1-0206f9b5fd7b] Getting status for document: 73bcd0dd-6b29-4556-a648-92e156d753ba
+2025-09-04 22:49:37,323 - doc_processor.app.main - INFO - [b5242bc1-f1f9-4b8a-a999-57537d559cc2] Getting document: 73bcd0dd-6b29-4556-a648-92e156d753ba
+2025-09-04 22:49:37,323 - doc_processor.app.main - INFO - [b5242bc1-f1f9-4b8a-a999-57537d559cc2] Attempting to parse UUID: '73bcd0dd-6b29-4556-a648-92e156d753ba'
+2025-09-04 22:49:37,323 - doc_processor.app.main - INFO - [b5242bc1-f1f9-4b8a-a999-57537d559cc2] Successfully parsed document ID: 73bcd0dd-6b29-4556-a648-92e156d753ba
+2025-09-04 22:53:05,945 - doc_processor.app.main - INFO - [93337710-7778-486d-9d9a-b67ee5fdcf91] Received document upload: test_document.txt
+2025-09-04 22:53:05,946 - doc_processor.app.main - INFO - [93337710-7778-486d-9d9a-b67ee5fdcf91] Creating document: test_document.txt
+2025-09-04 22:53:06,007 - doc_processor.app.services.document_processor - INFO - Using LangChain parser for text/plain
+2025-09-04 22:53:06,008 - doc_processor.app.services.langchain_parsers - INFO - Parsed text file into 4 sections using LangChain
+2025-09-04 22:53:06,008 - doc_processor.app.services.agents.workflow_orchestrator - INFO - Starting AutoGen workflow 97d45509-4387-4cc5-9349-117d38a3836c for document 8adaf6fd-08e8-4f92-bad4-ebb1bcd0f64e
+2025-09-04 22:53:06,118 - watchfiles.main - INFO - 7 changes detected
+2025-09-04 22:53:06,960 - httpx - INFO - HTTP Request: POST https://hashedinhu-openai.openai.azure.com/openai/deployments/gpt-41/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 404 DeploymentNotFound"
+2025-09-04 22:53:06,961 - doc_processor.app.services.agents.workflow_orchestrator - ERROR - AutoGen workflow 97d45509-4387-4cc5-9349-117d38a3836c failed: Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}
+Traceback (most recent call last):
+  File "/Users/bhavesh/Desktop/parser/doc_processor/app/services/agents/workflow_orchestrator.py", line 85, in execute_document_workflow
+    result = await self._execute_entity_workflow(document, workflow_id, context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/doc_processor/app/services/agents/workflow_orchestrator.py", line 221, in _execute_entity_workflow
+    response = await asyncio.to_thread(
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/autogen/agentchat/conversable_agent.py", line 1102, in initiate_chat
+    self.send(msg2send, recipient, silent=silent)
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/autogen/agentchat/conversable_agent.py", line 738, in send
+    recipient.receive(message, self, request_reply, silent)
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/autogen/agentchat/conversable_agent.py", line 902, in receive
+    reply = self.generate_reply(messages=self.chat_messages[sender], sender=sender)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/autogen/agentchat/conversable_agent.py", line 2056, in generate_reply
+    final, reply = reply_func(self, messages=messages, sender=sender, config=reply_func_tuple["config"])
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/autogen/agentchat/conversable_agent.py", line 1424, in generate_oai_reply
+    extracted_response = self._generate_oai_reply_from_client(
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/autogen/agentchat/conversable_agent.py", line 1443, in _generate_oai_reply_from_client
+    response = llm_client.create(
+               ^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/autogen/oai/client.py", line 832, in create
+    response = client.create(params)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/autogen/oai/client.py", line 401, in create
+    response = completions.create(**params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/openai/resources/chat/completions/completions.py", line 1147, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/openai/_base_client.py", line 1259, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/openai/_base_client.py", line 1047, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.NotFoundError: Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}
+2025-09-04 22:53:06,967 - doc_processor.app.services.document_processor - WARNING - No entity agent results found in AutoGen workflow
+2025-09-04 22:53:06,971 - doc_processor.app.services.document_processor - INFO - Generated embeddings for 4 sections
+2025-09-04 22:53:07,011 - doc_processor.app.main - INFO - [93337710-7778-486d-9d9a-b67ee5fdcf91] Document created: bfebd212-35fb-41e6-bdda-395691757fe1
+2025-09-04 22:53:07,076 - watchfiles.main - INFO - 1 change detected
+2025-09-04 22:53:59,391 - doc_processor.app.main - INFO - [75815803-2b16-4151-854e-12a74e7fa830] Received document upload: test_document.txt
+2025-09-04 22:53:59,392 - doc_processor.app.main - INFO - [75815803-2b16-4151-854e-12a74e7fa830] Creating document: test_document.txt
+2025-09-04 22:53:59,475 - doc_processor.app.services.document_processor - INFO - Using LangChain parser for text/plain
+2025-09-04 22:53:59,475 - doc_processor.app.services.langchain_parsers - INFO - Parsed text file into 4 sections using LangChain
+2025-09-04 22:53:59,475 - doc_processor.app.services.agents.workflow_orchestrator - INFO - Starting AutoGen workflow 636f132a-f0df-4c13-a642-a2ad31e0e3c3 for document 28027544-97b1-4157-a267-f8c24029f3d9
+2025-09-04 22:53:59,567 - watchfiles.main - INFO - 7 changes detected
+2025-09-04 22:54:00,377 - httpx - INFO - HTTP Request: POST https://hashedinhu-openai.openai.azure.com/openai/deployments/gpt-41/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 404 DeploymentNotFound"
+2025-09-04 22:54:00,378 - doc_processor.app.services.agents.workflow_orchestrator - ERROR - AutoGen workflow 636f132a-f0df-4c13-a642-a2ad31e0e3c3 failed: Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}
+Traceback (most recent call last):
+  File "/Users/bhavesh/Desktop/parser/doc_processor/app/services/agents/workflow_orchestrator.py", line 85, in execute_document_workflow
+    result = await self._execute_entity_workflow(document, workflow_id, context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/doc_processor/app/services/agents/workflow_orchestrator.py", line 221, in _execute_entity_workflow
+    response = await asyncio.to_thread(
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/autogen/agentchat/conversable_agent.py", line 1102, in initiate_chat
+    self.send(msg2send, recipient, silent=silent)
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/autogen/agentchat/conversable_agent.py", line 738, in send
+    recipient.receive(message, self, request_reply, silent)
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/autogen/agentchat/conversable_agent.py", line 902, in receive
+    reply = self.generate_reply(messages=self.chat_messages[sender], sender=sender)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/autogen/agentchat/conversable_agent.py", line 2056, in generate_reply
+    final, reply = reply_func(self, messages=messages, sender=sender, config=reply_func_tuple["config"])
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/autogen/agentchat/conversable_agent.py", line 1424, in generate_oai_reply
+    extracted_response = self._generate_oai_reply_from_client(
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/autogen/agentchat/conversable_agent.py", line 1443, in _generate_oai_reply_from_client
+    response = llm_client.create(
+               ^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/autogen/oai/client.py", line 832, in create
+    response = client.create(params)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/autogen/oai/client.py", line 401, in create
+    response = completions.create(**params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/openai/resources/chat/completions/completions.py", line 1147, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/openai/_base_client.py", line 1259, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/openai/_base_client.py", line 1047, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.NotFoundError: Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}
+2025-09-04 22:54:00,380 - doc_processor.app.services.document_processor - WARNING - No entity agent results found in AutoGen workflow
+2025-09-04 22:54:00,388 - doc_processor.app.services.document_processor - INFO - Generated embeddings for 4 sections
+2025-09-04 22:54:00,450 - doc_processor.app.main - INFO - [75815803-2b16-4151-854e-12a74e7fa830] Document created: 7ff639f6-968c-4425-b883-12d0cbea6761
+2025-09-04 22:54:00,560 - watchfiles.main - INFO - 1 change detected
+2025-09-04 22:54:49,265 - doc_processor.app.main - INFO - [cf56fecd-ec2d-4371-a5b8-cfdfbafab1ea] Received document upload: test_document.txt
+2025-09-04 22:54:49,266 - doc_processor.app.main - INFO - [cf56fecd-ec2d-4371-a5b8-cfdfbafab1ea] Creating document: test_document.txt
+2025-09-04 22:54:49,355 - doc_processor.app.services.document_processor - INFO - Using LangChain parser for text/plain
+2025-09-04 22:54:49,356 - doc_processor.app.services.langchain_parsers - INFO - Parsed text file into 4 sections using LangChain
+2025-09-04 22:54:49,356 - doc_processor.app.services.agents.workflow_orchestrator - INFO - Starting AutoGen workflow 6d0e66b8-afa1-4897-9dfa-6e3fda61ffa3 for document 52353ea1-5c26-4ecf-94fd-249ea8516ff6
+2025-09-04 22:54:49,416 - watchfiles.main - INFO - 7 changes detected
+2025-09-04 22:54:50,296 - httpx - INFO - HTTP Request: POST https://hashedinhu-openai.openai.azure.com/openai/deployments/gpt-41/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 404 DeploymentNotFound"
+2025-09-04 22:54:50,297 - doc_processor.app.services.agents.workflow_orchestrator - ERROR - AutoGen workflow 6d0e66b8-afa1-4897-9dfa-6e3fda61ffa3 failed: Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}
+Traceback (most recent call last):
+  File "/Users/bhavesh/Desktop/parser/doc_processor/app/services/agents/workflow_orchestrator.py", line 85, in execute_document_workflow
+    result = await self._execute_entity_workflow(document, workflow_id, context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/doc_processor/app/services/agents/workflow_orchestrator.py", line 221, in _execute_entity_workflow
+    response = await asyncio.to_thread(
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/autogen/agentchat/conversable_agent.py", line 1102, in initiate_chat
+    self.send(msg2send, recipient, silent=silent)
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/autogen/agentchat/conversable_agent.py", line 738, in send
+    recipient.receive(message, self, request_reply, silent)
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/autogen/agentchat/conversable_agent.py", line 902, in receive
+    reply = self.generate_reply(messages=self.chat_messages[sender], sender=sender)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/autogen/agentchat/conversable_agent.py", line 2056, in generate_reply
+    final, reply = reply_func(self, messages=messages, sender=sender, config=reply_func_tuple["config"])
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/autogen/agentchat/conversable_agent.py", line 1424, in generate_oai_reply
+    extracted_response = self._generate_oai_reply_from_client(
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/autogen/agentchat/conversable_agent.py", line 1443, in _generate_oai_reply_from_client
+    response = llm_client.create(
+               ^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/autogen/oai/client.py", line 832, in create
+    response = client.create(params)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/autogen/oai/client.py", line 401, in create
+    response = completions.create(**params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/openai/resources/chat/completions/completions.py", line 1147, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/openai/_base_client.py", line 1259, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/openai/_base_client.py", line 1047, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.NotFoundError: Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}
+2025-09-04 22:54:50,298 - doc_processor.app.services.document_processor - WARNING - No entity agent results found in AutoGen workflow
+2025-09-04 22:54:50,305 - doc_processor.app.services.document_processor - INFO - Generated embeddings for 4 sections
+2025-09-04 22:54:50,359 - doc_processor.app.main - INFO - [cf56fecd-ec2d-4371-a5b8-cfdfbafab1ea] Document created: d98f2f85-3184-481d-8b2a-734cd9b4bef3
+2025-09-04 22:54:50,471 - watchfiles.main - INFO - 1 change detected
+2025-09-04 22:55:39,197 - doc_processor.app.main - INFO - [fa62fb64-95e1-463a-8546-8a72ed515894] Received document upload: test_document.txt
+2025-09-04 22:55:39,197 - doc_processor.app.main - INFO - [fa62fb64-95e1-463a-8546-8a72ed515894] Creating document: test_document.txt
+2025-09-04 22:55:39,293 - doc_processor.app.services.document_processor - INFO - Using LangChain parser for text/plain
+2025-09-04 22:55:39,293 - doc_processor.app.services.langchain_parsers - INFO - Parsed text file into 4 sections using LangChain
+2025-09-04 22:55:39,293 - doc_processor.app.services.agents.workflow_orchestrator - INFO - Starting AutoGen workflow 188409e9-7750-4502-9fa7-ddcb2f32dcaf for document 25c2ac1e-b7fe-4f48-a16c-52c446b78aae
+2025-09-04 22:55:39,378 - watchfiles.main - INFO - 7 changes detected
+2025-09-04 22:55:40,207 - httpx - INFO - HTTP Request: POST https://hashedinhu-openai.openai.azure.com/openai/deployments/gpt-41/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 404 DeploymentNotFound"
+2025-09-04 22:55:40,207 - doc_processor.app.services.agents.workflow_orchestrator - ERROR - AutoGen workflow 188409e9-7750-4502-9fa7-ddcb2f32dcaf failed: Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}
+Traceback (most recent call last):
+  File "/Users/bhavesh/Desktop/parser/doc_processor/app/services/agents/workflow_orchestrator.py", line 85, in execute_document_workflow
+    result = await self._execute_entity_workflow(document, workflow_id, context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/doc_processor/app/services/agents/workflow_orchestrator.py", line 221, in _execute_entity_workflow
+    response = await asyncio.to_thread(
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/autogen/agentchat/conversable_agent.py", line 1102, in initiate_chat
+    self.send(msg2send, recipient, silent=silent)
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/autogen/agentchat/conversable_agent.py", line 738, in send
+    recipient.receive(message, self, request_reply, silent)
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/autogen/agentchat/conversable_agent.py", line 902, in receive
+    reply = self.generate_reply(messages=self.chat_messages[sender], sender=sender)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/autogen/agentchat/conversable_agent.py", line 2056, in generate_reply
+    final, reply = reply_func(self, messages=messages, sender=sender, config=reply_func_tuple["config"])
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/autogen/agentchat/conversable_agent.py", line 1424, in generate_oai_reply
+    extracted_response = self._generate_oai_reply_from_client(
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/autogen/agentchat/conversable_agent.py", line 1443, in _generate_oai_reply_from_client
+    response = llm_client.create(
+               ^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/autogen/oai/client.py", line 832, in create
+    response = client.create(params)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/autogen/oai/client.py", line 401, in create
+    response = completions.create(**params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/openai/resources/chat/completions/completions.py", line 1147, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/openai/_base_client.py", line 1259, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/openai/_base_client.py", line 1047, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.NotFoundError: Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}
+2025-09-04 22:55:40,208 - doc_processor.app.services.document_processor - WARNING - No entity agent results found in AutoGen workflow
+2025-09-04 22:55:40,213 - doc_processor.app.services.document_processor - INFO - Generated embeddings for 4 sections
+2025-09-04 22:55:40,269 - doc_processor.app.main - INFO - [fa62fb64-95e1-463a-8546-8a72ed515894] Document created: 401e8d8f-fa6a-43b2-97f0-b8b9da418a11
+2025-09-04 22:55:40,378 - watchfiles.main - INFO - 1 change detected
+2025-09-04 22:56:27,795 - doc_processor.app.main - INFO - [1e131f86-495e-4f32-935f-abf5005955a7] Received document upload: test_document.txt
+2025-09-04 22:56:27,796 - doc_processor.app.main - INFO - [1e131f86-495e-4f32-935f-abf5005955a7] Creating document: test_document.txt
+2025-09-04 22:56:27,900 - doc_processor.app.services.document_processor - INFO - Using LangChain parser for text/plain
+2025-09-04 22:56:27,900 - doc_processor.app.services.langchain_parsers - INFO - Parsed text file into 4 sections using LangChain
+2025-09-04 22:56:27,900 - doc_processor.app.services.agents.workflow_orchestrator - INFO - Starting AutoGen workflow ba9399d4-4606-4330-9295-30b87550eed2 for document b3d0c694-2311-48e9-b14c-b5e4cde3f22e
+2025-09-04 22:56:28,007 - watchfiles.main - INFO - 7 changes detected
+2025-09-04 22:56:28,820 - httpx - INFO - HTTP Request: POST https://hashedinhu-openai.openai.azure.com/openai/deployments/gpt-41/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 404 DeploymentNotFound"
+2025-09-04 22:56:28,821 - doc_processor.app.services.agents.workflow_orchestrator - ERROR - AutoGen workflow ba9399d4-4606-4330-9295-30b87550eed2 failed: Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}
+Traceback (most recent call last):
+  File "/Users/bhavesh/Desktop/parser/doc_processor/app/services/agents/workflow_orchestrator.py", line 85, in execute_document_workflow
+    result = await self._execute_entity_workflow(document, workflow_id, context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/doc_processor/app/services/agents/workflow_orchestrator.py", line 221, in _execute_entity_workflow
+    response = await asyncio.to_thread(
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/autogen/agentchat/conversable_agent.py", line 1102, in initiate_chat
+    self.send(msg2send, recipient, silent=silent)
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/autogen/agentchat/conversable_agent.py", line 738, in send
+    recipient.receive(message, self, request_reply, silent)
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/autogen/agentchat/conversable_agent.py", line 902, in receive
+    reply = self.generate_reply(messages=self.chat_messages[sender], sender=sender)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/autogen/agentchat/conversable_agent.py", line 2056, in generate_reply
+    final, reply = reply_func(self, messages=messages, sender=sender, config=reply_func_tuple["config"])
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/autogen/agentchat/conversable_agent.py", line 1424, in generate_oai_reply
+    extracted_response = self._generate_oai_reply_from_client(
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/autogen/agentchat/conversable_agent.py", line 1443, in _generate_oai_reply_from_client
+    response = llm_client.create(
+               ^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/autogen/oai/client.py", line 832, in create
+    response = client.create(params)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/autogen/oai/client.py", line 401, in create
+    response = completions.create(**params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/openai/resources/chat/completions/completions.py", line 1147, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/openai/_base_client.py", line 1259, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/openai/_base_client.py", line 1047, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.NotFoundError: Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}
+2025-09-04 22:56:28,822 - doc_processor.app.services.document_processor - WARNING - No entity agent results found in AutoGen workflow
+2025-09-04 22:56:28,826 - doc_processor.app.services.document_processor - INFO - Generated embeddings for 4 sections
+2025-09-04 22:56:28,883 - doc_processor.app.main - INFO - [1e131f86-495e-4f32-935f-abf5005955a7] Document created: c92f7165-a522-49b7-87cd-8a9f7f0e7551
+2025-09-04 22:56:28,945 - watchfiles.main - INFO - 1 change detected
+2025-09-04 22:57:17,911 - doc_processor.app.main - INFO - [a5cba0ae-20ca-4ef1-a6f8-0ae7959b68ed] Received document upload: test_document.txt
+2025-09-04 22:57:17,911 - doc_processor.app.main - INFO - [a5cba0ae-20ca-4ef1-a6f8-0ae7959b68ed] Creating document: test_document.txt
+2025-09-04 22:57:18,031 - doc_processor.app.services.document_processor - INFO - Using LangChain parser for text/plain
+2025-09-04 22:57:18,031 - doc_processor.app.services.langchain_parsers - INFO - Parsed text file into 4 sections using LangChain
+2025-09-04 22:57:18,031 - doc_processor.app.services.agents.workflow_orchestrator - INFO - Starting AutoGen workflow 8b6f4346-a71c-4468-b8c2-81f4c5bf2a2b for document 3104256f-00e0-4509-91f9-202acdce4501
+2025-09-04 22:57:18,034 - watchfiles.main - INFO - 2 changes detected
+2025-09-04 22:57:18,397 - watchfiles.main - INFO - 6 changes detected
+2025-09-04 22:57:19,286 - httpx - INFO - HTTP Request: POST https://hashedinhu-openai.openai.azure.com/openai/deployments/gpt-41/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 404 DeploymentNotFound"
+2025-09-04 22:57:19,298 - doc_processor.app.services.agents.workflow_orchestrator - ERROR - AutoGen workflow 8b6f4346-a71c-4468-b8c2-81f4c5bf2a2b failed: Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}
+Traceback (most recent call last):
+  File "/Users/bhavesh/Desktop/parser/doc_processor/app/services/agents/workflow_orchestrator.py", line 85, in execute_document_workflow
+    result = await self._execute_entity_workflow(document, workflow_id, context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/doc_processor/app/services/agents/workflow_orchestrator.py", line 221, in _execute_entity_workflow
+    response = await asyncio.to_thread(
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/autogen/agentchat/conversable_agent.py", line 1102, in initiate_chat
+    self.send(msg2send, recipient, silent=silent)
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/autogen/agentchat/conversable_agent.py", line 738, in send
+    recipient.receive(message, self, request_reply, silent)
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/autogen/agentchat/conversable_agent.py", line 902, in receive
+    reply = self.generate_reply(messages=self.chat_messages[sender], sender=sender)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/autogen/agentchat/conversable_agent.py", line 2056, in generate_reply
+    final, reply = reply_func(self, messages=messages, sender=sender, config=reply_func_tuple["config"])
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/autogen/agentchat/conversable_agent.py", line 1424, in generate_oai_reply
+    extracted_response = self._generate_oai_reply_from_client(
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/autogen/agentchat/conversable_agent.py", line 1443, in _generate_oai_reply_from_client
+    response = llm_client.create(
+               ^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/autogen/oai/client.py", line 832, in create
+    response = client.create(params)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/autogen/oai/client.py", line 401, in create
+    response = completions.create(**params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/openai/resources/chat/completions/completions.py", line 1147, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/openai/_base_client.py", line 1259, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/openai/_base_client.py", line 1047, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.NotFoundError: Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}
+2025-09-04 22:57:19,308 - doc_processor.app.services.document_processor - WARNING - No entity agent results found in AutoGen workflow
+2025-09-04 22:57:19,312 - doc_processor.app.services.document_processor - INFO - Generated embeddings for 4 sections
+2025-09-04 22:57:19,376 - doc_processor.app.main - INFO - [a5cba0ae-20ca-4ef1-a6f8-0ae7959b68ed] Document created: 78a9c68c-0deb-4491-9ccc-d448b88c0840
+2025-09-04 22:57:19,457 - watchfiles.main - INFO - 1 change detected
+2025-09-04 22:57:49,155 - watchfiles.main - INFO - 1 change detected
+2025-09-04 22:57:50,180 - watchfiles.main - INFO - 4 changes detected
+2025-09-04 22:57:51,528 - watchfiles.main - INFO - 3 changes detected
+2025-09-04 22:57:51,998 - watchfiles.main - INFO - 2 changes detected
+2025-09-04 22:58:02,285 - watchfiles.main - INFO - 1 change detected
+2025-09-04 22:58:06,299 - watchfiles.main - INFO - 1 change detected
+2025-09-04 22:58:07,532 - watchfiles.main - INFO - 3 changes detected
+2025-09-04 22:58:51,998 - watchfiles.main - INFO - 2 changes detected
+2025-09-04 22:59:19,770 - watchfiles.main - INFO - 2 changes detected
+2025-09-04 22:59:42,790 - watchfiles.main - INFO - 1 change detected
+2025-09-04 22:59:44,104 - watchfiles.main - INFO - 3 changes detected
+2025-09-04 23:01:30,502 - watchfiles.main - INFO - 1 change detected
+2025-09-04 23:01:31,857 - watchfiles.main - INFO - 3 changes detected
+2025-09-04 23:01:39,710 - watchfiles.main - INFO - 1 change detected
+2025-09-04 23:01:40,416 - watchfiles.main - INFO - 3 changes detected
+2025-09-04 23:01:44,236 - watchfiles.main - INFO - 1 change detected
+2025-09-04 23:01:44,609 - watchfiles.main - INFO - 3 changes detected
+2025-09-04 23:02:05,349 - watchfiles.main - INFO - 1 change detected
+2025-09-04 23:02:29,180 - watchfiles.main - INFO - 5 changes detected
+2025-09-04 23:02:37,343 - watchfiles.main - INFO - 1 change detected
+2025-09-04 23:02:38,423 - watchfiles.main - INFO - 3 changes detected
+2025-09-04 23:02:44,992 - watchfiles.main - INFO - 1 change detected
+2025-09-04 23:02:45,540 - watchfiles.main - INFO - 3 changes detected
+2025-09-04 23:02:49,559 - watchfiles.main - INFO - 1 change detected
+2025-09-04 23:02:49,943 - watchfiles.main - INFO - 3 changes detected
+2025-09-04 23:02:57,629 - watchfiles.main - INFO - 1 change detected
+2025-09-04 23:02:58,823 - watchfiles.main - INFO - 3 changes detected
+2025-09-04 23:03:05,372 - watchfiles.main - INFO - 5 changes detected
+2025-09-04 23:03:45,073 - watchfiles.main - INFO - 1 change detected
+2025-09-04 23:03:46,159 - watchfiles.main - INFO - 3 changes detected
+2025-09-04 23:03:47,812 - watchfiles.main - INFO - 1 change detected
+2025-09-04 23:03:48,514 - watchfiles.main - INFO - 3 changes detected
+2025-09-04 23:03:55,053 - watchfiles.main - INFO - 5 changes detected
+2025-09-04 23:04:09,407 - watchfiles.main - INFO - 1 change detected
+2025-09-04 23:04:10,548 - watchfiles.main - INFO - 1 change detected
+2025-09-04 23:04:29,591 - watchfiles.main - INFO - 1 change detected
+2025-09-04 23:04:30,713 - watchfiles.main - INFO - 3 changes detected
+2025-09-04 23:04:32,851 - watchfiles.main - INFO - 1 change detected
+2025-09-04 23:04:33,490 - watchfiles.main - INFO - 3 changes detected
+2025-09-04 23:05:02,576 - watchfiles.main - INFO - 5 changes detected
+2025-09-04 23:05:15,013 - watchfiles.main - INFO - 5 changes detected
+2025-09-04 23:05:25,951 - watchfiles.main - INFO - 5 changes detected
+2025-09-04 23:05:31,945 - watchfiles.main - INFO - 5 changes detected
+2025-09-04 23:05:38,402 - watchfiles.main - INFO - 5 changes detected
+2025-09-04 23:05:46,565 - watchfiles.main - INFO - 2 changes detected
+2025-09-04 23:05:48,020 - watchfiles.main - INFO - 2 changes detected
+2025-09-04 23:05:56,815 - watchfiles.main - INFO - 2 changes detected
+2025-09-04 23:05:57,863 - watchfiles.main - INFO - 3 changes detected
+2025-09-04 23:05:58,225 - watchfiles.main - INFO - 3 changes detected
+2025-09-04 23:06:18,401 - doc_processor.app.main - INFO - [da54718f-65e5-4bad-8cb0-b2ad4d1776cc] Received document upload: The Last Train (1).docx
+2025-09-04 23:06:18,402 - doc_processor.app.main - INFO - [da54718f-65e5-4bad-8cb0-b2ad4d1776cc] Creating document: The Last Train (1).docx
+2025-09-04 23:06:18,498 - watchfiles.main - INFO - 1 change detected
+2025-09-04 23:06:18,554 - doc_processor.app.services.document_processor - INFO - Using LangChain parser for application/vnd.openxmlformats-officedocument.wordprocessingml.document
+2025-09-04 23:06:18,554 - doc_processor.app.services.langchain_parsers - ERROR - Failed to extract DOCX metadata with LangChain: No module named 'docx2txt'
+2025-09-04 23:06:18,554 - doc_processor.app.services.langchain_parsers - ERROR - LangChain DOCX parsing failed: No module named 'docx2txt'
+2025-09-04 23:06:18,554 - doc_processor.app.services.document_processor - ERROR - Error processing document: Failed to parse DOCX with LangChain: No module named 'docx2txt'
+Traceback (most recent call last):
+  File "/Users/bhavesh/Desktop/parser/doc_processor/app/services/langchain_parsers.py", line 133, in parse
+    documents = loader.load()
+                ^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/langchain_community/document_loaders/word_document.py", line 52, in load
+    import docx2txt
+ModuleNotFoundError: No module named 'docx2txt'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/bhavesh/Desktop/parser/doc_processor/app/services/document_processor.py", line 49, in process_document
+    sections = await parser.parse(file_path)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/doc_processor/app/services/langchain_parsers.py", line 163, in parse
+    raise ValueError(f"Failed to parse DOCX with LangChain: {str(e)}")
+ValueError: Failed to parse DOCX with LangChain: No module named 'docx2txt'
+2025-09-04 23:06:18,556 - doc_processor.app.services.document_service - ERROR - Error processing document 72b2a4cd-c91b-4057-ae2e-839b9d3c45b8: Failed to parse DOCX with LangChain: No module named 'docx2txt'
+Traceback (most recent call last):
+  File "/Users/bhavesh/Desktop/parser/doc_processor/app/services/langchain_parsers.py", line 133, in parse
+    documents = loader.load()
+                ^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/langchain_community/document_loaders/word_document.py", line 52, in load
+    import docx2txt
+ModuleNotFoundError: No module named 'docx2txt'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/bhavesh/Desktop/parser/doc_processor/app/services/document_service.py", line 192, in _process_document
+    processed_doc = await self.processor.process_document(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/doc_processor/app/services/document_processor.py", line 49, in process_document
+    sections = await parser.parse(file_path)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/doc_processor/app/services/langchain_parsers.py", line 163, in parse
+    raise ValueError(f"Failed to parse DOCX with LangChain: {str(e)}")
+ValueError: Failed to parse DOCX with LangChain: No module named 'docx2txt'
+2025-09-04 23:06:18,622 - doc_processor.app.main - INFO - [da54718f-65e5-4bad-8cb0-b2ad4d1776cc] Document created: 72b2a4cd-c91b-4057-ae2e-839b9d3c45b8
+2025-09-04 23:06:18,625 - doc_processor.app.main - INFO - [8d19cd24-7905-40b8-92a1-f1802f186ccc] Getting status for document: 72b2a4cd-c91b-4057-ae2e-839b9d3c45b8
+2025-09-04 23:06:18,861 - watchfiles.main - INFO - 1 change detected
+2025-09-04 23:06:30,699 - watchfiles.main - INFO - 1 change detected
+2025-09-04 23:06:34,239 - watchfiles.main - INFO - 1 change detected
+2025-09-04 23:06:39,197 - watchfiles.main - INFO - 1 change detected
+2025-09-04 23:06:42,152 - watchfiles.main - INFO - 1 change detected
+2025-09-04 23:06:43,421 - watchfiles.main - INFO - 1 change detected
+2025-09-04 23:08:37,938 - doc_processor.app.main - INFO - [ee7aaf8d-d813-4d17-98ad-0d030d3b092a] Received document upload: The Last Train (1).docx
+2025-09-04 23:08:37,939 - doc_processor.app.main - INFO - [ee7aaf8d-d813-4d17-98ad-0d030d3b092a] Creating document: The Last Train (1).docx
+2025-09-04 23:08:38,076 - doc_processor.app.services.document_processor - INFO - Using LangChain parser for application/vnd.openxmlformats-officedocument.wordprocessingml.document
+2025-09-04 23:08:38,088 - doc_processor.app.services.langchain_parsers - INFO - Parsed DOCX into 3 sections using LangChain
+2025-09-04 23:08:38,088 - doc_processor.app.services.agents.workflow_orchestrator - INFO - Starting AutoGen workflow cc2ba561-43f0-464b-b71d-d91dba906413 for document aed5558a-8218-4efb-ad8e-0df7b8bfd881
+2025-09-04 23:08:39,848 - httpx - INFO - HTTP Request: POST https://hashedinhu-openai.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-09-04 23:08:39,851 - autogen.oai.client - WARNING - Model gpt-4o-2024-11-20 is not found. The cost will be 0. In your config_list, add field {"price" : [prompt_price_per_1k, completion_token_price_per_1k]} for customized pricing.
+2025-09-04 23:08:40,945 - httpx - INFO - HTTP Request: POST https://hashedinhu-openai.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-09-04 23:08:40,945 - autogen.oai.client - WARNING - Model gpt-4o-2024-11-20 is not found. The cost will be 0. In your config_list, add field {"price" : [prompt_price_per_1k, completion_token_price_per_1k]} for customized pricing.
+2025-09-04 23:08:46,591 - httpx - INFO - HTTP Request: POST https://hashedinhu-openai.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-09-04 23:08:46,594 - autogen.oai.client - WARNING - Model gpt-4o-2024-11-20 is not found. The cost will be 0. In your config_list, add field {"price" : [prompt_price_per_1k, completion_token_price_per_1k]} for customized pricing.
+2025-09-04 23:08:47,653 - httpx - INFO - HTTP Request: POST https://hashedinhu-openai.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-09-04 23:08:47,654 - autogen.oai.client - WARNING - Model gpt-4o-2024-11-20 is not found. The cost will be 0. In your config_list, add field {"price" : [prompt_price_per_1k, completion_token_price_per_1k]} for customized pricing.
+2025-09-04 23:08:47,662 - doc_processor.app.services.document_processor - INFO - Extracted 0 entities from AutoGen workflow
+2025-09-04 23:08:47,894 - doc_processor.app.services.document_processor - INFO - Generated embeddings for 3 sections
+2025-09-04 23:08:47,957 - doc_processor.app.main - INFO - [ee7aaf8d-d813-4d17-98ad-0d030d3b092a] Document created: a9fd80aa-36f7-4a54-9bda-ff1eca233290
+2025-09-04 23:08:47,980 - doc_processor.app.main - INFO - [dfc9ab19-369e-4e0a-9b4d-5df0f473983f] Getting status for document: a9fd80aa-36f7-4a54-9bda-ff1eca233290
+2025-09-04 23:08:47,981 - doc_processor.app.main - INFO - [f354b977-c06c-4566-a441-8c260c1525d5] Getting document: a9fd80aa-36f7-4a54-9bda-ff1eca233290
+2025-09-04 23:08:47,981 - doc_processor.app.main - INFO - [f354b977-c06c-4566-a441-8c260c1525d5] Attempting to parse UUID: 'a9fd80aa-36f7-4a54-9bda-ff1eca233290'
+2025-09-04 23:08:47,981 - doc_processor.app.main - INFO - [f354b977-c06c-4566-a441-8c260c1525d5] Successfully parsed document ID: a9fd80aa-36f7-4a54-9bda-ff1eca233290
+2025-09-04 23:10:33,093 - doc_processor.app.main - INFO - [b7bb3a56-249c-4b84-9cbf-f424285c06de] Received document upload: The Last Train.docx
+2025-09-04 23:10:33,093 - doc_processor.app.main - INFO - [b7bb3a56-249c-4b84-9cbf-f424285c06de] Creating document: The Last Train.docx
+2025-09-04 23:10:33,233 - doc_processor.app.services.document_processor - INFO - Using LangChain parser for application/vnd.openxmlformats-officedocument.wordprocessingml.document
+2025-09-04 23:10:33,234 - doc_processor.app.services.langchain_parsers - INFO - Parsed DOCX into 2 sections using LangChain
+2025-09-04 23:10:33,234 - doc_processor.app.services.agents.workflow_orchestrator - INFO - Starting AutoGen workflow f6cfad8c-294c-456d-832f-edc1011d743a for document 7427d082-029a-4fbf-9e54-a26cf6c49432
+2025-09-04 23:10:33,243 - doc_processor.app.services.agents.workflow_orchestrator - WARNING - Validation failed for workflow f6cfad8c-294c-456d-832f-edc1011d743a, triggering rollback
+2025-09-04 23:10:33,243 - doc_processor.app.services.document_processor - INFO - Extracted 0 entities from AutoGen workflow
+2025-09-04 23:10:33,245 - doc_processor.app.services.document_processor - INFO - Generated embeddings for 2 sections
+2025-09-04 23:10:33,313 - doc_processor.app.main - INFO - [b7bb3a56-249c-4b84-9cbf-f424285c06de] Document created: ea3f6fa8-0d06-4a86-927e-56d5ec41a1be
+2025-09-04 23:10:33,329 - doc_processor.app.main - INFO - [5889791a-3078-47e4-8d9c-c5ed9491690e] Getting status for document: ea3f6fa8-0d06-4a86-927e-56d5ec41a1be
+2025-09-04 23:10:33,330 - doc_processor.app.main - INFO - [b05c9cbf-a134-4289-9387-a4565f187c16] Getting document: ea3f6fa8-0d06-4a86-927e-56d5ec41a1be
+2025-09-04 23:10:33,330 - doc_processor.app.main - INFO - [b05c9cbf-a134-4289-9387-a4565f187c16] Attempting to parse UUID: 'ea3f6fa8-0d06-4a86-927e-56d5ec41a1be'
+2025-09-04 23:10:33,330 - doc_processor.app.main - INFO - [b05c9cbf-a134-4289-9387-a4565f187c16] Successfully parsed document ID: ea3f6fa8-0d06-4a86-927e-56d5ec41a1be
+2025-09-04 23:10:43,545 - doc_processor.app.main - INFO - [0ff7f4df-9dfa-4aa3-841d-57620db30292] Received document upload: The Last Train (1).docx
+2025-09-04 23:10:43,545 - doc_processor.app.main - INFO - [0ff7f4df-9dfa-4aa3-841d-57620db30292] Creating document: The Last Train (1).docx
+2025-09-04 23:10:43,695 - doc_processor.app.services.document_processor - INFO - Using LangChain parser for application/vnd.openxmlformats-officedocument.wordprocessingml.document
+2025-09-04 23:10:43,696 - doc_processor.app.services.langchain_parsers - INFO - Parsed DOCX into 3 sections using LangChain
+2025-09-04 23:10:43,696 - doc_processor.app.services.agents.workflow_orchestrator - INFO - Starting AutoGen workflow 9b50f14f-e6ba-4873-8b1a-ffa4425e90f5 for document 81619c64-550a-4eff-b46e-a48145ab7769
+2025-09-04 23:10:43,704 - doc_processor.app.services.document_processor - INFO - Extracted 0 entities from AutoGen workflow
+2025-09-04 23:10:43,706 - doc_processor.app.services.document_processor - INFO - Generated embeddings for 3 sections
+2025-09-04 23:10:43,776 - doc_processor.app.main - INFO - [0ff7f4df-9dfa-4aa3-841d-57620db30292] Document created: 72ae2ae5-ceda-4080-ba0b-c01c839b00ee
+2025-09-04 23:10:43,797 - doc_processor.app.main - INFO - [73882f73-2c15-4d42-884a-46b634d30c60] Getting status for document: 72ae2ae5-ceda-4080-ba0b-c01c839b00ee
+2025-09-04 23:10:43,799 - doc_processor.app.main - INFO - [d6a5017b-1417-4bfc-900b-5fdd7e4c00fc] Getting document: 72ae2ae5-ceda-4080-ba0b-c01c839b00ee
+2025-09-04 23:10:43,799 - doc_processor.app.main - INFO - [d6a5017b-1417-4bfc-900b-5fdd7e4c00fc] Attempting to parse UUID: '72ae2ae5-ceda-4080-ba0b-c01c839b00ee'
+2025-09-04 23:10:43,799 - doc_processor.app.main - INFO - [d6a5017b-1417-4bfc-900b-5fdd7e4c00fc] Successfully parsed document ID: 72ae2ae5-ceda-4080-ba0b-c01c839b00ee
+2025-09-04 23:16:06,251 - doc_processor.app.main - INFO - [ae17173d-e849-4dcf-89d0-4aca1a91d511] Received document upload: The Last Train (1).docx
+2025-09-04 23:16:06,251 - doc_processor.app.main - INFO - [ae17173d-e849-4dcf-89d0-4aca1a91d511] Creating document: The Last Train (1).docx
+2025-09-04 23:16:06,386 - doc_processor.app.services.document_processor - INFO - Using LangChain parser for application/vnd.openxmlformats-officedocument.wordprocessingml.document
+2025-09-04 23:16:06,397 - doc_processor.app.services.langchain_parsers - INFO - Parsed DOCX into 3 sections using LangChain
+2025-09-04 23:16:06,397 - doc_processor.app.services.agents.workflow_orchestrator - INFO - Starting AutoGen workflow a0de857e-6959-40ef-b200-2c606f2222c7 for document 23ec3303-ec63-4b00-853c-dfe7a963161c
+2025-09-04 23:16:30,779 - httpx - INFO - HTTP Request: POST https://hashedinhu-openai.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-09-04 23:16:30,785 - autogen.oai.client - WARNING - Model gpt-4o-2024-11-20 is not found. The cost will be 0. In your config_list, add field {"price" : [prompt_price_per_1k, completion_token_price_per_1k]} for customized pricing.
+2025-09-04 23:16:32,049 - httpx - INFO - HTTP Request: POST https://hashedinhu-openai.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-09-04 23:16:32,049 - autogen.oai.client - WARNING - Model gpt-4o-2024-11-20 is not found. The cost will be 0. In your config_list, add field {"price" : [prompt_price_per_1k, completion_token_price_per_1k]} for customized pricing.
+2025-09-04 23:16:38,469 - httpx - INFO - HTTP Request: POST https://hashedinhu-openai.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-09-04 23:16:38,470 - autogen.oai.client - WARNING - Model gpt-4o-2024-11-20 is not found. The cost will be 0. In your config_list, add field {"price" : [prompt_price_per_1k, completion_token_price_per_1k]} for customized pricing.
+2025-09-04 23:16:39,989 - httpx - INFO - HTTP Request: POST https://hashedinhu-openai.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-09-04 23:16:39,989 - autogen.oai.client - WARNING - Model gpt-4o-2024-11-20 is not found. The cost will be 0. In your config_list, add field {"price" : [prompt_price_per_1k, completion_token_price_per_1k]} for customized pricing.
+2025-09-04 23:16:39,991 - doc_processor.app.services.document_processor - INFO - Extracted 0 entities from AutoGen workflow
+2025-09-04 23:16:39,994 - doc_processor.app.services.document_processor - INFO - Generated embeddings for 3 sections
+2025-09-04 23:16:40,068 - doc_processor.app.main - INFO - [ae17173d-e849-4dcf-89d0-4aca1a91d511] Document created: e636c97c-bc33-4dbb-ab14-3b1512df0028
+2025-09-04 23:16:40,090 - doc_processor.app.main - INFO - [60471827-c5a7-4dc2-ac32-accd86d36848] Getting status for document: e636c97c-bc33-4dbb-ab14-3b1512df0028
+2025-09-04 23:16:40,092 - doc_processor.app.main - INFO - [a79bdba0-2996-48ca-bc2c-fcbf03744142] Getting document: e636c97c-bc33-4dbb-ab14-3b1512df0028
+2025-09-04 23:16:40,092 - doc_processor.app.main - INFO - [a79bdba0-2996-48ca-bc2c-fcbf03744142] Attempting to parse UUID: 'e636c97c-bc33-4dbb-ab14-3b1512df0028'
+2025-09-04 23:16:40,092 - doc_processor.app.main - INFO - [a79bdba0-2996-48ca-bc2c-fcbf03744142] Successfully parsed document ID: e636c97c-bc33-4dbb-ab14-3b1512df0028
+2025-09-04 23:20:39,676 - doc_processor.app.main - INFO - [77674e96-ce3b-4b53-a2a8-2063a6ef4e7e] Received document upload: The Last Train (1).docx
+2025-09-04 23:20:39,677 - doc_processor.app.main - INFO - [77674e96-ce3b-4b53-a2a8-2063a6ef4e7e] Creating document: The Last Train (1).docx
+2025-09-04 23:20:39,838 - doc_processor.app.services.document_processor - INFO - Using LangChain parser for application/vnd.openxmlformats-officedocument.wordprocessingml.document
+2025-09-04 23:20:39,849 - doc_processor.app.services.langchain_parsers - INFO - Parsed DOCX into 3 sections using LangChain
+2025-09-04 23:20:39,849 - doc_processor.app.services.agents.workflow_orchestrator - INFO - Starting AutoGen workflow 71e1837f-2a8c-4262-854b-c43ab4f4e709 for document 6fe7af89-e005-4d9b-9b33-23f72de07bbb
+2025-09-04 23:20:52,107 - httpx - INFO - HTTP Request: POST https://hashedinhu-openai.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-09-04 23:20:52,110 - autogen.oai.client - WARNING - Model gpt-4o-2024-11-20 is not found. The cost will be 0. In your config_list, add field {"price" : [prompt_price_per_1k, completion_token_price_per_1k]} for customized pricing.
+2025-09-04 23:20:53,096 - httpx - INFO - HTTP Request: POST https://hashedinhu-openai.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-09-04 23:20:53,096 - autogen.oai.client - WARNING - Model gpt-4o-2024-11-20 is not found. The cost will be 0. In your config_list, add field {"price" : [prompt_price_per_1k, completion_token_price_per_1k]} for customized pricing.
+2025-09-04 23:21:02,324 - httpx - INFO - HTTP Request: POST https://hashedinhu-openai.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-09-04 23:21:02,324 - autogen.oai.client - WARNING - Model gpt-4o-2024-11-20 is not found. The cost will be 0. In your config_list, add field {"price" : [prompt_price_per_1k, completion_token_price_per_1k]} for customized pricing.
+2025-09-04 23:21:03,678 - httpx - INFO - HTTP Request: POST https://hashedinhu-openai.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-09-04 23:21:03,678 - autogen.oai.client - WARNING - Model gpt-4o-2024-11-20 is not found. The cost will be 0. In your config_list, add field {"price" : [prompt_price_per_1k, completion_token_price_per_1k]} for customized pricing.
+2025-09-04 23:21:03,680 - doc_processor.app.services.agents.workflow_orchestrator - WARNING - Failed to parse JSON response from validation_agent: Expecting value: line 1 column 1 (char 0)
+2025-09-04 23:21:03,680 - doc_processor.app.services.agents.workflow_orchestrator - WARNING - Raw response: It seems you haven't provided additional input or clarification. If you need further assistance or would like to validate another set of agent results, please provide the necessary details, and I'll be happy to assist!...
+2025-09-04 23:21:03,681 - doc_processor.app.services.document_processor - WARNING - No entities found in entity agent result_data
+2025-09-04 23:21:03,683 - doc_processor.app.services.document_processor - INFO - Generated embeddings for 3 sections
+2025-09-04 23:21:03,761 - doc_processor.app.main - INFO - [77674e96-ce3b-4b53-a2a8-2063a6ef4e7e] Document created: 53ed1a4e-2c35-4b9d-ac27-6f23e499d4c6
+2025-09-04 23:21:03,784 - doc_processor.app.main - INFO - [6dcad8ac-24d7-416d-8269-e7ddbbc92e31] Getting status for document: 53ed1a4e-2c35-4b9d-ac27-6f23e499d4c6
+2025-09-04 23:21:03,787 - doc_processor.app.main - INFO - [182acb9e-2984-4d74-904d-26f71dfb370a] Getting document: 53ed1a4e-2c35-4b9d-ac27-6f23e499d4c6
+2025-09-04 23:21:03,787 - doc_processor.app.main - INFO - [182acb9e-2984-4d74-904d-26f71dfb370a] Attempting to parse UUID: '53ed1a4e-2c35-4b9d-ac27-6f23e499d4c6'
+2025-09-04 23:21:03,787 - doc_processor.app.main - INFO - [182acb9e-2984-4d74-904d-26f71dfb370a] Successfully parsed document ID: 53ed1a4e-2c35-4b9d-ac27-6f23e499d4c6
+2025-09-04 23:26:23,539 - doc_processor.app.main - INFO - [b5cec140-8e83-4502-a2dd-67f88c1d38bc] Received document upload: The Last Train.docx
+2025-09-04 23:26:23,539 - doc_processor.app.main - INFO - [b5cec140-8e83-4502-a2dd-67f88c1d38bc] Creating document: The Last Train.docx
+2025-09-04 23:26:23,707 - doc_processor.app.services.document_processor - INFO - Using LangChain parser for application/vnd.openxmlformats-officedocument.wordprocessingml.document
+2025-09-04 23:26:23,720 - doc_processor.app.services.langchain_parsers - INFO - Parsed DOCX into 2 sections using LangChain
+2025-09-04 23:26:23,720 - doc_processor.app.services.agents.workflow_orchestrator - INFO - Starting AutoGen workflow e24f6c54-d27b-4620-87f3-e355af8454c3 for document 64065828-215e-4572-bd85-30cbd4b6fdc3
+2025-09-04 23:26:23,720 - doc_processor.app.services.agents.workflow_orchestrator - INFO - Entity extraction prompt length: 2286 characters
+2025-09-04 23:26:31,633 - httpx - INFO - HTTP Request: POST https://hashedinhu-openai.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-09-04 23:26:31,636 - autogen.oai.client - WARNING - Model gpt-4o-2024-11-20 is not found. The cost will be 0. In your config_list, add field {"price" : [prompt_price_per_1k, completion_token_price_per_1k]} for customized pricing.
+2025-09-04 23:26:39,027 - httpx - INFO - HTTP Request: POST https://hashedinhu-openai.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-09-04 23:26:39,027 - autogen.oai.client - WARNING - Model gpt-4o-2024-11-20 is not found. The cost will be 0. In your config_list, add field {"price" : [prompt_price_per_1k, completion_token_price_per_1k]} for customized pricing.
+2025-09-04 23:26:56,299 - httpx - INFO - HTTP Request: POST https://hashedinhu-openai.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-09-04 23:26:56,299 - autogen.oai.client - WARNING - Model gpt-4o-2024-11-20 is not found. The cost will be 0. In your config_list, add field {"price" : [prompt_price_per_1k, completion_token_price_per_1k]} for customized pricing.
+2025-09-04 23:27:04,815 - httpx - INFO - HTTP Request: POST https://hashedinhu-openai.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-09-04 23:27:04,816 - autogen.oai.client - WARNING - Model gpt-4o-2024-11-20 is not found. The cost will be 0. In your config_list, add field {"price" : [prompt_price_per_1k, completion_token_price_per_1k]} for customized pricing.
+2025-09-04 23:27:04,817 - doc_processor.app.services.document_processor - INFO - Extracted 10 entities from AutoGen workflow
+2025-09-04 23:27:04,819 - doc_processor.app.services.document_processor - INFO - Generated embeddings for 2 sections
+2025-09-04 23:27:04,819 - doc_processor.app.services.document_processor - ERROR - Error processing document: 'dict' object has no attribute 'to_dict'
+Traceback (most recent call last):
+  File "/Users/bhavesh/Desktop/parser/doc_processor/app/services/document_processor.py", line 83, in process_document
+    "all_entities": [e.to_dict() for e in entities],
+                     ^^^^^^^^^
+AttributeError: 'dict' object has no attribute 'to_dict'
+2025-09-04 23:27:04,820 - doc_processor.app.services.document_service - ERROR - Error processing document bf3d173e-247e-42b9-b95f-891161909ed6: 'dict' object has no attribute 'to_dict'
+Traceback (most recent call last):
+  File "/Users/bhavesh/Desktop/parser/doc_processor/app/services/document_service.py", line 192, in _process_document
+    processed_doc = await self.processor.process_document(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhavesh/Desktop/parser/doc_processor/app/services/document_processor.py", line 83, in process_document
+    "all_entities": [e.to_dict() for e in entities],
+                     ^^^^^^^^^
+AttributeError: 'dict' object has no attribute 'to_dict'
+2025-09-04 23:27:04,899 - doc_processor.app.main - INFO - [b5cec140-8e83-4502-a2dd-67f88c1d38bc] Document created: bf3d173e-247e-42b9-b95f-891161909ed6
+2025-09-04 23:27:04,902 - doc_processor.app.main - INFO - [ff0e7dbc-7810-46ce-af4f-bb2266ee0ad5] Getting status for document: bf3d173e-247e-42b9-b95f-891161909ed6
+2025-09-04 23:28:02,759 - doc_processor.app.main - INFO - [cd1c0b9e-3d4b-43af-81a6-f04ccaee0e1b] Received document upload: The Last Train.docx
+2025-09-04 23:28:02,759 - doc_processor.app.main - INFO - [cd1c0b9e-3d4b-43af-81a6-f04ccaee0e1b] Creating document: The Last Train.docx
+2025-09-04 23:28:02,935 - doc_processor.app.services.document_processor - INFO - Using LangChain parser for application/vnd.openxmlformats-officedocument.wordprocessingml.document
+2025-09-04 23:28:02,945 - doc_processor.app.services.langchain_parsers - INFO - Parsed DOCX into 2 sections using LangChain
+2025-09-04 23:28:02,945 - doc_processor.app.services.agents.workflow_orchestrator - INFO - Starting AutoGen workflow 695c044c-64e3-4e46-b29b-38b653786c7d for document df1a01a8-8d6f-4312-8377-4cb83b5b4974
+2025-09-04 23:28:02,945 - doc_processor.app.services.agents.workflow_orchestrator - INFO - Entity extraction prompt length: 2286 characters
+2025-09-04 23:28:02,955 - doc_processor.app.services.document_processor - INFO - Extracted 10 entities from AutoGen workflow
+2025-09-04 23:28:02,957 - doc_processor.app.services.document_processor - INFO - Generated embeddings for 2 sections
+2025-09-04 23:28:03,040 - doc_processor.app.main - INFO - [cd1c0b9e-3d4b-43af-81a6-f04ccaee0e1b] Document created: 26386922-8a14-4d66-af21-262b1d244212
+2025-09-04 23:28:03,057 - doc_processor.app.main - INFO - [2c2630ca-ca36-4e57-9f9d-c9ea81b67c93] Getting status for document: 26386922-8a14-4d66-af21-262b1d244212
+2025-09-04 23:28:03,058 - doc_processor.app.main - INFO - [f36f884e-e86c-41d9-8c26-d67f7521d84e] Getting document: 26386922-8a14-4d66-af21-262b1d244212
+2025-09-04 23:28:03,059 - doc_processor.app.main - INFO - [f36f884e-e86c-41d9-8c26-d67f7521d84e] Attempting to parse UUID: '26386922-8a14-4d66-af21-262b1d244212'
+2025-09-04 23:28:03,059 - doc_processor.app.main - INFO - [f36f884e-e86c-41d9-8c26-d67f7521d84e] Successfully parsed document ID: 26386922-8a14-4d66-af21-262b1d244212
+2025-09-04 23:28:15,788 - doc_processor.app.main - INFO - [4246e777-f589-47b1-82f0-9e5ca226292c] Getting document: 26386922-8a14-4d66-af21-262b1d244212
+2025-09-04 23:28:15,788 - doc_processor.app.main - INFO - [4246e777-f589-47b1-82f0-9e5ca226292c] Attempting to parse UUID: '26386922-8a14-4d66-af21-262b1d244212'
+2025-09-04 23:28:15,788 - doc_processor.app.main - INFO - [4246e777-f589-47b1-82f0-9e5ca226292c] Successfully parsed document ID: 26386922-8a14-4d66-af21-262b1d244212
+2025-09-04 23:28:21,745 - doc_processor.app.main - INFO - [0eba5a86-0cbd-4708-8814-cd11f5730f08] Getting document: 26386922-8a14-4d66-af21-262b1d244212
+2025-09-04 23:28:21,745 - doc_processor.app.main - INFO - [0eba5a86-0cbd-4708-8814-cd11f5730f08] Attempting to parse UUID: '26386922-8a14-4d66-af21-262b1d244212'
+2025-09-04 23:28:21,745 - doc_processor.app.main - INFO - [0eba5a86-0cbd-4708-8814-cd11f5730f08] Successfully parsed document ID: 26386922-8a14-4d66-af21-262b1d244212
+2025-09-04 23:28:21,773 - doc_processor.app.main - INFO - [79a01ad9-4d2c-468f-8981-493920abb038] Getting feedback for document: 26386922-8a14-4d66-af21-262b1d244212
+2025-09-04 23:28:26,188 - doc_processor.app.main - INFO - [aef4c3a3-bf13-4a99-a7a4-774204ee44dc] Getting document: 26386922-8a14-4d66-af21-262b1d244212
+2025-09-04 23:28:26,188 - doc_processor.app.main - INFO - [aef4c3a3-bf13-4a99-a7a4-774204ee44dc] Attempting to parse UUID: '26386922-8a14-4d66-af21-262b1d244212'
+2025-09-04 23:28:26,188 - doc_processor.app.main - INFO - [aef4c3a3-bf13-4a99-a7a4-774204ee44dc] Successfully parsed document ID: 26386922-8a14-4d66-af21-262b1d244212
+2025-09-04 23:28:26,218 - doc_processor.app.main - INFO - [6b68ea59-ec20-435e-a3dd-6332c402b1c5] Getting feedback for document: 26386922-8a14-4d66-af21-262b1d244212
+2025-09-04 23:28:26,260 - doc_processor.app.main - INFO - [5b4e8ebc-ac09-4239-a116-bca8be7cab9a] Getting document: 26386922-8a14-4d66-af21-262b1d244212
+2025-09-04 23:28:26,260 - doc_processor.app.main - INFO - [5b4e8ebc-ac09-4239-a116-bca8be7cab9a] Attempting to parse UUID: '26386922-8a14-4d66-af21-262b1d244212'
+2025-09-04 23:28:26,260 - doc_processor.app.main - INFO - [5b4e8ebc-ac09-4239-a116-bca8be7cab9a] Successfully parsed document ID: 26386922-8a14-4d66-af21-262b1d244212
+2025-09-04 23:28:26,281 - doc_processor.app.main - INFO - [8879410e-5ade-4ef9-8397-f6ea14f3f5c5] Getting feedback for document: 26386922-8a14-4d66-af21-262b1d244212
+2025-09-04 23:29:52,461 - doc_processor.app.main - INFO - [c82d3b7d-114a-4970-b883-339019a56e1d] Getting document: 26386922-8a14-4d66-af21-262b1d244212
+2025-09-04 23:29:52,461 - doc_processor.app.main - INFO - [c82d3b7d-114a-4970-b883-339019a56e1d] Attempting to parse UUID: '26386922-8a14-4d66-af21-262b1d244212'
+2025-09-04 23:29:52,461 - doc_processor.app.main - INFO - [c82d3b7d-114a-4970-b883-339019a56e1d] Successfully parsed document ID: 26386922-8a14-4d66-af21-262b1d244212
+2025-09-04 23:29:55,756 - doc_processor.app.main - INFO - [1ba8e0bc-53e8-441e-9edd-d043a0fa0837] Getting document: 26386922-8a14-4d66-af21-262b1d244212
+2025-09-04 23:29:55,756 - doc_processor.app.main - INFO - [1ba8e0bc-53e8-441e-9edd-d043a0fa0837] Attempting to parse UUID: '26386922-8a14-4d66-af21-262b1d244212'
+2025-09-04 23:29:55,756 - doc_processor.app.main - INFO - [1ba8e0bc-53e8-441e-9edd-d043a0fa0837] Successfully parsed document ID: 26386922-8a14-4d66-af21-262b1d244212
+2025-09-04 23:29:55,778 - doc_processor.app.main - INFO - [ce9d4f53-d806-4768-bbf3-9c82cdbcd6c4] Getting feedback for document: 26386922-8a14-4d66-af21-262b1d244212
+2025-09-04 23:30:04,856 - doc_processor.app.main - INFO - [5ea517c8-d737-4f06-9b3e-5172dfafa810] Received document upload: The Last Train (1).docx
+2025-09-04 23:30:04,856 - doc_processor.app.main - INFO - [5ea517c8-d737-4f06-9b3e-5172dfafa810] Creating document: The Last Train (1).docx
+2025-09-04 23:30:05,037 - doc_processor.app.services.document_processor - INFO - Using LangChain parser for application/vnd.openxmlformats-officedocument.wordprocessingml.document
+2025-09-04 23:30:05,047 - doc_processor.app.services.langchain_parsers - INFO - Parsed DOCX into 3 sections using LangChain
+2025-09-04 23:30:05,047 - doc_processor.app.services.agents.workflow_orchestrator - INFO - Starting AutoGen workflow 7af70e84-c768-4d65-8d18-c554fc307892 for document f6429eca-c981-4168-9edd-0a4c1678c199
+2025-09-04 23:30:05,047 - doc_processor.app.services.agents.workflow_orchestrator - INFO - Starting simplified full workflow for document The Last Train (1).docx
+2025-09-04 23:30:05,047 - doc_processor.app.services.agents.workflow_orchestrator - INFO - Executing summarization step
+2025-09-04 23:30:05,047 - doc_processor.app.services.agents.workflow_orchestrator - INFO - Summarization prompt length: 2690 characters
+2025-09-04 23:30:11,519 - httpx - INFO - HTTP Request: POST https://hashedinhu-openai.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-09-04 23:30:11,522 - autogen.oai.client - WARNING - Model gpt-4o-2024-11-20 is not found. The cost will be 0. In your config_list, add field {"price" : [prompt_price_per_1k, completion_token_price_per_1k]} for customized pricing.
+2025-09-04 23:30:16,147 - httpx - INFO - HTTP Request: POST https://hashedinhu-openai.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-09-04 23:30:16,150 - autogen.oai.client - WARNING - Model gpt-4o-2024-11-20 is not found. The cost will be 0. In your config_list, add field {"price" : [prompt_price_per_1k, completion_token_price_per_1k]} for customized pricing.
+2025-09-04 23:30:16,161 - doc_processor.app.services.agents.workflow_orchestrator - INFO - Executing entity extraction step
+2025-09-04 23:30:16,161 - doc_processor.app.services.agents.workflow_orchestrator - INFO - Entity extraction prompt length: 3033 characters
+2025-09-04 23:30:29,011 - httpx - INFO - HTTP Request: POST https://hashedinhu-openai.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-09-04 23:30:29,012 - autogen.oai.client - WARNING - Model gpt-4o-2024-11-20 is not found. The cost will be 0. In your config_list, add field {"price" : [prompt_price_per_1k, completion_token_price_per_1k]} for customized pricing.
+2025-09-04 23:30:40,721 - httpx - INFO - HTTP Request: POST https://hashedinhu-openai.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-09-04 23:30:40,721 - autogen.oai.client - WARNING - Model gpt-4o-2024-11-20 is not found. The cost will be 0. In your config_list, add field {"price" : [prompt_price_per_1k, completion_token_price_per_1k]} for customized pricing.
+2025-09-04 23:30:40,723 - doc_processor.app.services.agents.workflow_orchestrator - INFO - Executing validation step
+2025-09-04 23:30:46,009 - httpx - INFO - HTTP Request: POST https://hashedinhu-openai.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-09-04 23:30:46,009 - autogen.oai.client - WARNING - Model gpt-4o-2024-11-20 is not found. The cost will be 0. In your config_list, add field {"price" : [prompt_price_per_1k, completion_token_price_per_1k]} for customized pricing.
+2025-09-04 23:30:50,929 - httpx - INFO - HTTP Request: POST https://hashedinhu-openai.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-09-04 23:30:50,929 - autogen.oai.client - WARNING - Model gpt-4o-2024-11-20 is not found. The cost will be 0. In your config_list, add field {"price" : [prompt_price_per_1k, completion_token_price_per_1k]} for customized pricing.
+2025-09-04 23:30:56,355 - httpx - INFO - HTTP Request: POST https://hashedinhu-openai.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-09-04 23:30:56,355 - autogen.oai.client - WARNING - Model gpt-4o-2024-11-20 is not found. The cost will be 0. In your config_list, add field {"price" : [prompt_price_per_1k, completion_token_price_per_1k]} for customized pricing.
+2025-09-04 23:31:01,120 - httpx - INFO - HTTP Request: POST https://hashedinhu-openai.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-09-04 23:31:01,120 - autogen.oai.client - WARNING - Model gpt-4o-2024-11-20 is not found. The cost will be 0. In your config_list, add field {"price" : [prompt_price_per_1k, completion_token_price_per_1k]} for customized pricing.
+2025-09-04 23:31:01,124 - doc_processor.app.services.document_processor - INFO - Extracted 17 entities from AutoGen workflow
+2025-09-04 23:31:01,124 - doc_processor.app.services.document_processor - INFO - Extracted summary from AutoGen workflow: 367 characters
+2025-09-04 23:31:01,126 - doc_processor.app.services.document_processor - INFO - Generated embeddings for 3 sections
+2025-09-04 23:31:01,211 - doc_processor.app.main - INFO - [5ea517c8-d737-4f06-9b3e-5172dfafa810] Document created: 6a3a5601-511e-4287-93c8-00de12e901b6
+2025-09-04 23:31:01,234 - doc_processor.app.main - INFO - [e418f90c-9ea2-4233-90cc-d8112c562a6e] Getting status for document: 6a3a5601-511e-4287-93c8-00de12e901b6
+2025-09-04 23:31:01,236 - doc_processor.app.main - INFO - [65543a6b-1822-469e-acca-8c90c667129a] Getting document: 6a3a5601-511e-4287-93c8-00de12e901b6
+2025-09-04 23:31:01,236 - doc_processor.app.main - INFO - [65543a6b-1822-469e-acca-8c90c667129a] Attempting to parse UUID: '6a3a5601-511e-4287-93c8-00de12e901b6'
+2025-09-04 23:31:01,236 - doc_processor.app.main - INFO - [65543a6b-1822-469e-acca-8c90c667129a] Successfully parsed document ID: 6a3a5601-511e-4287-93c8-00de12e901b6
+2025-09-04 23:31:05,724 - doc_processor.app.main - INFO - [6890ba7e-507a-4838-a07a-0734c3e34d0b] Getting document: 6a3a5601-511e-4287-93c8-00de12e901b6
+2025-09-04 23:31:05,724 - doc_processor.app.main - INFO - [6890ba7e-507a-4838-a07a-0734c3e34d0b] Attempting to parse UUID: '6a3a5601-511e-4287-93c8-00de12e901b6'
+2025-09-04 23:31:05,724 - doc_processor.app.main - INFO - [6890ba7e-507a-4838-a07a-0734c3e34d0b] Successfully parsed document ID: 6a3a5601-511e-4287-93c8-00de12e901b6
+2025-09-04 23:31:08,101 - doc_processor.app.main - INFO - [af5a96b7-64f2-4bbf-886a-e6e7ff0a123c] Getting document: 6a3a5601-511e-4287-93c8-00de12e901b6
+2025-09-04 23:31:08,102 - doc_processor.app.main - INFO - [af5a96b7-64f2-4bbf-886a-e6e7ff0a123c] Attempting to parse UUID: '6a3a5601-511e-4287-93c8-00de12e901b6'
+2025-09-04 23:31:08,102 - doc_processor.app.main - INFO - [af5a96b7-64f2-4bbf-886a-e6e7ff0a123c] Successfully parsed document ID: 6a3a5601-511e-4287-93c8-00de12e901b6
+2025-09-04 23:31:08,129 - doc_processor.app.main - INFO - [723df3fe-69ae-478f-8ed8-f51ac1c76fa7] Getting feedback for document: 6a3a5601-511e-4287-93c8-00de12e901b6

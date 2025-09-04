@@ -209,13 +209,9 @@ class DocumentService:
             document.updated_at = datetime.now(timezone.utc)
             
         finally:
+            # Store the document and save
+            self.documents[doc_id] = document
             self._save_documents()
-        
-        # Store the document
-        self.documents[doc_id] = document
-        self._save_documents()
-        
-        return document
     
     async def get_document(self, doc_id: UUID) -> Optional[Document]:
         """
@@ -227,19 +223,11 @@ class DocumentService:
         Returns:
             The Document instance, or None if not found
         """
-        logger.info(f"Looking for document with ID: {doc_id}")
-        logger.info(f"Available document IDs: {list(self.documents.keys())}")
-        logger.info(f"Total documents loaded: {len(self.documents)}")
         document = self.documents.get(doc_id)
         if document:
-            logger.info(f"Found document: {document.filename}")
+            logger.debug(f"Found document: {document.filename}")
         else:
             logger.warning(f"Document not found: {doc_id}")
-            # Check if the document exists as a string key
-            str_doc_id = str(doc_id)
-            logger.info(f"Checking if document exists as string key: {str_doc_id}")
-            if str_doc_id in {str(k) for k in self.documents.keys()}:
-                logger.warning(f"Document exists as string but not as UUID object")
         return document
     
     async def update_document(

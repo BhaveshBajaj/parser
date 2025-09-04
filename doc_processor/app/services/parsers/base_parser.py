@@ -61,20 +61,7 @@ class BaseParser(ABC):
     
     @classmethod
     def get_parser_for_type(cls, content_type: str) -> 'BaseParser':
-        """Get the appropriate parser for the given content type."""
-        from .pdf_parser import PDFParser
-        from .docx_parser import DOCXParser
-        from .html_parser import HTMLParser
-        from .text_parser import TextParser
+        """Get the appropriate parser for the given content type using LangChain."""
+        from ..langchain_parsers import LangChainParserFactory
         
-        content_type = content_type.lower()
-        if 'pdf' in content_type:
-            return PDFParser()
-        elif 'wordprocessingml.document' in content_type or 'docx' in content_type:
-            return DOCXParser()
-        elif 'html' in content_type:
-            return HTMLParser()
-        elif 'text/plain' in content_type or 'txt' in content_type:
-            return TextParser()
-        else:
-            raise ValueError(f"Unsupported content type: {content_type}")
+        return LangChainParserFactory.get_parser_for_type(content_type)

@@ -1,19 +1,17 @@
-"""AutoGen-based agent workflows for document processing."""
+"""AutoGen agents for document processing workflows."""
 
-from .autogen_agents import (
-    AutoGenDocumentAgent,
-    AutoGenSummarizationAgent,
-    AutoGenEntityAgent,
-    AutoGenQAAgent,
-    AutoGenValidationAgent,
-    AutoGenWorkflowOrchestrator
-)
+from .base_agent import BaseAutoGenAgent
+from .summarization_agent import SummarizationAgent
+from .entity_agent import EntityAgent
+from .qa_agent import QAAgent
+from .validation_agent import ValidationAgent
+from .workflow_orchestrator import WorkflowOrchestrator
 
 __all__ = [
-    "AutoGenDocumentAgent",
-    "AutoGenSummarizationAgent",
-    "AutoGenEntityAgent",
-    "AutoGenQAAgent",
-    "AutoGenValidationAgent",
-    "AutoGenWorkflowOrchestrator"
+    "BaseAutoGenAgent",
+    "SummarizationAgent", 
+    "EntityAgent",
+    "QAAgent",
+    "ValidationAgent",
+    "WorkflowOrchestrator"
 ]

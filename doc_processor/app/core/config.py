@@ -37,7 +37,7 @@ class Settings(BaseSettings):
     AZURE_OPENAI_ENDPOINT: Optional[str] = Field(None, description="Azure OpenAI endpoint URL")
     AZURE_OPENAI_API_KEY: Optional[str] = Field(None, description="Azure OpenAI API key")
     AZURE_OPENAI_API_VERSION: str = Field("2024-02-15-preview", description="Azure OpenAI API version")
-    AZURE_OPENAI_DEPLOYMENT: str = Field("gpt-4", description="Azure OpenAI deployment name")
+    AZURE_OPENAI_DEPLOYMENT: str = Field("gpt-4o", description="Azure OpenAI deployment name")
     
     # Entity extraction settings
     ENTITY_TYPES: List[str] = Field(

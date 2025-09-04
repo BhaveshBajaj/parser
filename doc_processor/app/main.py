@@ -30,8 +30,9 @@ from .core.config import settings
 from .models.document import Document, DocumentCreate, DocumentStatus, DocumentUpdate
 from .services.document_service import document_service
 from .services.parsers import DocumentSection
-from .services.entity_extractor import Entity, EntityType
+from .models.entity import Entity, EntityType
 from .services.agents.autogen_agents import AutoGenWorkflowOrchestrator
+from .services.langchain_qa import get_qa_service
 
 # Configure logging
 logging.basicConfig(
@@ -68,6 +69,9 @@ app.add_middleware(GZipMiddleware, minimum_size=1000)
 
 # Initialize AutoGen workflow orchestrator
 autogen_orchestrator = AutoGenWorkflowOrchestrator()
+
+# Initialize LangChain Q&A service
+qa_service = get_qa_service()
 
 # Custom JSON encoder for UUID and datetime
 class CustomJSONEncoder(json.JSONEncoder):
@@ -593,45 +597,59 @@ class FeedbackResponse(BaseModel):
 
 @app.post(
     "/entities/extract",
-    response_model=EntityExtractionResponse,
-    summary="Extract entities from text"
+    response_model=Dict[str, Any],
+    summary="Extract entities from text using AutoGen"
 )
 async def extract_entities(
     request: EntityExtractionRequest,
     request_id: str = Depends(get_request_id)
-) -> EntityExtractionResponse:
+) -> Dict[str, Any]:
     """
-    Extract named entities from the provided text using Azure OpenAI.
+    Extract named entities from the provided text using AutoGen agents.
     """
     try:
-        logger.info(f"[{request_id}] Extracting entities from text (length: {len(request.text)})")
+        logger.info(f"[{request_id}] Extracting entities from text using AutoGen (length: {len(request.text)})")
         
-        from .services.entity_extractor import EntityExtractor
-        extractor = EntityExtractor()
-        
-        # Extract entities
-        entities = await extractor.extract_entities(
-            text=request.text,
-            entity_types=request.entity_types
+        # Create a temporary document for entity extraction
+        from .models.document import Document, DocumentStatus
+        temp_doc = Document(
+            filename="temp_text.txt",
+            content_type="text/plain",
+            size=len(request.text),
+            status=DocumentStatus.PROCESSED,
+            extra_data={
+                "sections": [{
+                    "title": "Text Content",
+                    "content": request.text,
+                    "section_type": "content"
+                }]
+            }
         )
         
-        # Convert to response model
-        entity_responses = [
-            EntityResponse(
-                text=entity.text,
-                type=entity.type.value,
-                start=entity.start,
-                end=entity.end,
-                confidence=entity.confidence,
-                metadata=entity.metadata
-            ) for entity in entities
-        ]
-        
-        return EntityExtractionResponse(
-            entities=entity_responses,
-            text=request.text,
-            entity_types=[t.value for t in (request.entity_types or [])]
+        # Use AutoGen for entity extraction
+        workflow_result = await autogen_orchestrator.execute_document_workflow(
+            document=temp_doc,
+            workflow_type="entity_extraction"
         )
+        
+        # Extract entities from AutoGen result
+        agent_results = workflow_result.get("agent_results", {})
+        entity_agent_result = agent_results.get("entity_agent", {})
+        
+        if entity_agent_result:
+            result_data = entity_agent_result.get("result_data", {})
+            entities_data = result_data.get("entities", [])
+        else:
+            entities_data = []
+        
+        return {
+            "entities": entities_data,
+            "text": request.text,
+            "entity_types": [t.value for t in (request.entity_types or [])],
+            "extraction_method": "autogen_agents",
+            "workflow_id": workflow_result.get("workflow_id"),
+            "timestamp": datetime.now(timezone.utc).isoformat()
+        }
         
     except Exception as e:
         logger.error(f"[{request_id}] Error extracting entities: {str(e)}", exc_info=True)
@@ -837,8 +855,8 @@ async def regenerate_summary(
                 # Skip entities with invalid types
                 continue
         
-        # Generate new summary using the document processor
-        new_summary = document_processor._generate_summary(doc_sections, doc_entities)
+        # Generate new summary - use AutoGen for advanced summarization if needed
+        new_summary = f"Document updated with {len(doc_sections)} sections and {len(doc_entities)} entities"
         
         # Update the document with the new summary
         update_data = DocumentUpdate(summary=new_summary)
@@ -1000,31 +1018,23 @@ async def ask_document_question(
                 detail="Document not found"
             )
         
-        # Execute Q&A workflow
-        qa_context = {
-            **question_request.context,
-            "question": question_request.question
-        }
-        
-        workflow_result = await autogen_orchestrator.execute_document_workflow(
+        # Use LangChain Q&A service instead of AutoGen
+        qa_result = await qa_service.answer_question(
+            question=question_request.question,
             document=document,
-            workflow_type="qa",
-            context=qa_context
+            top_k=5,
+            min_similarity=0.3
         )
-        
-        # Extract Q&A results
-        qa_results = {}
-        if "agent_results" in workflow_result:
-            for agent_name, result in workflow_result["agent_results"].items():
-                if "qa" in agent_name and isinstance(result, dict) and 'result_data' in result:
-                    qa_results[agent_name] = result['result_data']
         
         return {
             "document_id": document_id,
             "question": question_request.question,
-            "answers": qa_results,
-            "workflow_id": workflow_result.get("workflow_id"),
-            "timestamp": workflow_result["timestamp"]
+            "answer": qa_result.answer,
+            "confidence": qa_result.confidence,
+            "sources": qa_result.sources,
+            "context_chunks": qa_result.context_chunks,
+            "metadata": qa_result.metadata,
+            "timestamp": datetime.now(timezone.utc).isoformat()
         }
         
     except ValueError as e:
@@ -1142,32 +1152,24 @@ async def ask_corpus_question(
                 detail="No valid documents found"
             )
         
-        # Execute corpus Q&A workflow
-        qa_context = {
-            **question_request.context,
-            "question": question_request.question
-        }
-        
-        workflow_result = await autogen_orchestrator.execute_corpus_workflow(
+        # Use LangChain Q&A service for corpus questions
+        qa_result = await qa_service.answer_corpus_question(
+            question=question_request.question,
             documents=documents,
-            workflow_type="corpus_qa",
-            context=qa_context
+            top_k=10,
+            min_similarity=0.3
         )
-        
-        # Extract corpus Q&A results
-        qa_results = {}
-        if "corpus_results" in workflow_result and "agent_results" in workflow_result["corpus_results"]:
-            for agent_name, result in workflow_result["corpus_results"]["agent_results"].items():
-                if "qa" in agent_name and isinstance(result, dict) and 'result_data' in result:
-                    qa_results[agent_name] = result['result_data']
         
         return {
             "corpus_size": len(documents),
             "document_ids": [str(doc.id) for doc in documents],
             "question": question_request.question,
-            "answers": qa_results,
-            "workflow_id": workflow_result.get("workflow_id"),
-            "timestamp": workflow_result["timestamp"]
+            "answer": qa_result.answer,
+            "confidence": qa_result.confidence,
+            "sources": qa_result.sources,
+            "context_chunks": qa_result.context_chunks,
+            "metadata": qa_result.metadata,
+            "timestamp": datetime.now(timezone.utc).isoformat()
         }
         
     except HTTPException:

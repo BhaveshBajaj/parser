@@ -1,25 +1,34 @@
-fastapi>=0.100.0,<0.101.0
-uvicorn>=0.23.0,<0.24.0
+fastapi>=0.104.0,<0.105.0
+uvicorn>=0.24.0,<0.25.0
 python-multipart>=0.0.6,<0.0.7
 python-dotenv>=1.0.0,<2.0.0
-pydantic>=2.0.0,<3.0.0
-pydantic-settings>=2.0.0,<3.0.0
+pydantic>=2.5.0,<3.0.0
+pydantic-settings>=2.1.0,<3.0.0
 python-magic>=0.4.24,<0.5.0
 streamlit>=1.25.0,<1.26.0
 requests>=2.31.0,<3.0.0
 pytest>=7.4.0,<8.0.0
 pytest-asyncio>=0.21.0,<1.0.0
 httpx>=0.24.0,<0.25.0
-langsmith>=0.0.32,<0.1.0  # Optional, for LangSmith integration
+langsmith>=0.1.17,<0.2.0  # Optional, for LangSmith integration
 
 # Parser dependencies
 PyMuPDF>=1.23.0,<2.0.0  # For PDF parsing
 python-docx>=0.8.11,<1.0.0  # For DOCX parsing
+docx2txt>=0.9,<1.0.0  # For DOCX text extraction
 beautifulsoup4>=4.12.0,<5.0.0  # For HTML parsing
 lxml>=4.9.0,<5.0.0  # HTML parser backend
 
 # Entity extraction dependencies
-openai>=1.0.0,<2.0.0  # For Azure OpenAI integration
+openai>=1.0.0,<2.0.0  # For Azure OpenAI integration (entity extraction and LLM summaries)
+
+# LangChain dependencies for document processing and embeddings
+langchain>=0.1.0,<0.2.0
+langchain-community>=0.0.20,<0.1.0
+langchain-openai>=0.0.5,<0.1.0
+langchain-text-splitters>=0.0.1,<0.1.0
+langchain-huggingface>=0.0.1,<0.1.0
+sentence-transformers>=2.2.0,<3.0.0
 
 # Additional utilities
 plotly>=5.15.0,<6.0.0  # For charts in Streamlit
