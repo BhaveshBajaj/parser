@@ -1,0 +1,24 @@
+{
+  "metrics": [
+    {
+      "workflow_id": "30789d35-cee6-4bd3-8cc8-d123cab8bbcb",
+      "timestamp": "2025-09-04T19:31:50.025778+00:00",
+      "metrics": {
+        "execution_time": 54.837494,
+        "workflow_type": "full",
+        "document_id": "9b2e17f3-0556-476e-bab6-6d1e990b9484",
+        "document_filename": "October 26, 2025.docx",
+        "status": "completed",
+        "agent_results_count": 3,
+        "validation_passed": true
+      }
+    }
+  ],
+  "summary": {
+    "total_workflows": 1,
+    "avg_execution_time": 54.837494,
+    "min_execution_time": 54.837494,
+    "max_execution_time": 54.837494,
+    "last_updated": "2025-09-04T19:31:50.025786+00:00"
+  }
+}

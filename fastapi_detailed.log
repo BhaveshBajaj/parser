@@ -2282,3 +2282,108 @@ AttributeError: 'dict' object has no attribute 'to_dict'
 2025-09-04 23:31:08,102 - doc_processor.app.main - INFO - [af5a96b7-64f2-4bbf-886a-e6e7ff0a123c] Attempting to parse UUID: '6a3a5601-511e-4287-93c8-00de12e901b6'
 2025-09-04 23:31:08,102 - doc_processor.app.main - INFO - [af5a96b7-64f2-4bbf-886a-e6e7ff0a123c] Successfully parsed document ID: 6a3a5601-511e-4287-93c8-00de12e901b6
 2025-09-04 23:31:08,129 - doc_processor.app.main - INFO - [723df3fe-69ae-478f-8ed8-f51ac1c76fa7] Getting feedback for document: 6a3a5601-511e-4287-93c8-00de12e901b6
+2025-09-05 00:51:26,820 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-mpnet-base-v2
+2025-09-05 00:51:29,898 - doc_processor.app.services.embedding_service - INFO - LangChain components initialized with model: sentence-transformers/all-mpnet-base-v2
+2025-09-05 00:51:29,982 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-mpnet-base-v2
+2025-09-05 00:51:32,233 - doc_processor.app.services.embedding_service - INFO - LangChain components initialized with model: sentence-transformers/all-mpnet-base-v2
+2025-09-05 00:51:32,269 - doc_processor.app.services.document_service - INFO - Loading 65 documents from data/documents.json
+2025-09-05 00:51:32,270 - doc_processor.app.services.document_service - INFO - Successfully loaded 65 documents
+2025-09-05 00:52:58,166 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-mpnet-base-v2
+2025-09-05 00:53:01,264 - doc_processor.app.services.embedding_service - INFO - LangChain components initialized with model: sentence-transformers/all-mpnet-base-v2
+2025-09-05 00:53:01,346 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-mpnet-base-v2
+2025-09-05 00:53:03,787 - doc_processor.app.services.embedding_service - INFO - LangChain components initialized with model: sentence-transformers/all-mpnet-base-v2
+2025-09-05 00:53:03,813 - doc_processor.app.services.document_service - INFO - Loading 65 documents from data/documents.json
+2025-09-05 00:53:03,814 - doc_processor.app.services.document_service - INFO - Successfully loaded 65 documents
+2025-09-05 00:58:09,192 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-mpnet-base-v2
+2025-09-05 00:58:11,492 - doc_processor.app.services.embedding_service - INFO - LangChain components initialized with model: sentence-transformers/all-mpnet-base-v2
+2025-09-05 00:58:11,575 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-mpnet-base-v2
+2025-09-05 00:58:13,857 - doc_processor.app.services.embedding_service - INFO - LangChain components initialized with model: sentence-transformers/all-mpnet-base-v2
+2025-09-05 00:58:13,882 - doc_processor.app.services.document_service - INFO - Loading 65 documents from data/documents.json
+2025-09-05 00:58:13,883 - doc_processor.app.services.document_service - INFO - Successfully loaded 65 documents
+2025-09-05 00:58:47,295 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-mpnet-base-v2
+2025-09-05 00:58:49,560 - doc_processor.app.services.embedding_service - INFO - LangChain components initialized with model: sentence-transformers/all-mpnet-base-v2
+2025-09-05 00:58:49,648 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-mpnet-base-v2
+2025-09-05 00:58:51,912 - doc_processor.app.services.embedding_service - INFO - LangChain components initialized with model: sentence-transformers/all-mpnet-base-v2
+2025-09-05 00:58:51,938 - doc_processor.app.services.document_service - INFO - Loading 65 documents from data/documents.json
+2025-09-05 00:58:51,938 - doc_processor.app.services.document_service - INFO - Successfully loaded 65 documents
+2025-09-05 00:59:11,555 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-mpnet-base-v2
+2025-09-05 00:59:13,888 - doc_processor.app.services.embedding_service - INFO - LangChain components initialized with model: sentence-transformers/all-mpnet-base-v2
+2025-09-05 00:59:13,972 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-mpnet-base-v2
+2025-09-05 00:59:16,315 - doc_processor.app.services.embedding_service - INFO - LangChain components initialized with model: sentence-transformers/all-mpnet-base-v2
+2025-09-05 00:59:16,340 - doc_processor.app.services.document_service - INFO - Loading 65 documents from data/documents.json
+2025-09-05 00:59:16,341 - doc_processor.app.services.document_service - INFO - Successfully loaded 65 documents
+2025-09-05 00:59:30,140 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-mpnet-base-v2
+2025-09-05 00:59:32,366 - doc_processor.app.services.embedding_service - INFO - LangChain components initialized with model: sentence-transformers/all-mpnet-base-v2
+2025-09-05 00:59:32,450 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-mpnet-base-v2
+2025-09-05 00:59:34,744 - doc_processor.app.services.embedding_service - INFO - LangChain components initialized with model: sentence-transformers/all-mpnet-base-v2
+2025-09-05 00:59:34,769 - doc_processor.app.services.document_service - INFO - Loading 65 documents from data/documents.json
+2025-09-05 00:59:34,770 - doc_processor.app.services.document_service - INFO - Successfully loaded 65 documents
+2025-09-05 01:00:12,652 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-mpnet-base-v2
+2025-09-05 01:00:15,575 - doc_processor.app.services.embedding_service - INFO - LangChain components initialized with model: sentence-transformers/all-mpnet-base-v2
+2025-09-05 01:00:15,662 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-mpnet-base-v2
+2025-09-05 01:00:17,997 - doc_processor.app.services.embedding_service - INFO - LangChain components initialized with model: sentence-transformers/all-mpnet-base-v2
+2025-09-05 01:00:17,997 - doc_processor.app.services.document_service - INFO - Loading 0 documents from data/documents.json
+2025-09-05 01:00:17,997 - doc_processor.app.services.document_service - INFO - Successfully loaded 0 documents
+2025-09-05 01:00:55,185 - doc_processor.app.main - INFO - [19694ecd-72ad-4003-b23e-47c987ccd5bb] Received document upload: October 26, 2025.docx
+2025-09-05 01:00:55,185 - doc_processor.app.main - INFO - [19694ecd-72ad-4003-b23e-47c987ccd5bb] Creating document: October 26, 2025.docx
+2025-09-05 01:00:55,186 - doc_processor.app.services.document_processor - INFO - Using LangChain parser for application/vnd.openxmlformats-officedocument.wordprocessingml.document
+2025-09-05 01:00:55,188 - doc_processor.app.services.langchain_parsers - INFO - Parsed DOCX into 5 sections using LangChain
+2025-09-05 01:00:55,188 - doc_processor.app.services.agents.workflow_orchestrator - INFO - Starting AutoGen workflow 30789d35-cee6-4bd3-8cc8-d123cab8bbcb for document 9b2e17f3-0556-476e-bab6-6d1e990b9484
+2025-09-05 01:00:55,188 - doc_processor.app.services.agents.workflow_orchestrator - INFO - Starting simplified full workflow for document October 26, 2025.docx
+2025-09-05 01:00:55,188 - doc_processor.app.services.agents.workflow_orchestrator - INFO - Executing summarization step
+2025-09-05 01:00:55,188 - doc_processor.app.services.agents.workflow_orchestrator - INFO - Summarization prompt length: 5014 characters
+2025-09-05 01:01:02,775 - httpx - INFO - HTTP Request: POST https://hashedinhu-openai.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-09-05 01:01:02,778 - autogen.oai.client - WARNING - Model gpt-4o-2024-11-20 is not found. The cost will be 0. In your config_list, add field {"price" : [prompt_price_per_1k, completion_token_price_per_1k]} for customized pricing.
+2025-09-05 01:01:06,811 - httpx - INFO - HTTP Request: POST https://hashedinhu-openai.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-09-05 01:01:06,812 - autogen.oai.client - WARNING - Model gpt-4o-2024-11-20 is not found. The cost will be 0. In your config_list, add field {"price" : [prompt_price_per_1k, completion_token_price_per_1k]} for customized pricing.
+2025-09-05 01:01:06,813 - doc_processor.app.services.agents.workflow_orchestrator - INFO - Executing entity extraction step
+2025-09-05 01:01:06,813 - doc_processor.app.services.agents.workflow_orchestrator - INFO - Entity extraction prompt length: 5357 characters
+2025-09-05 01:01:13,171 - httpx - INFO - HTTP Request: POST https://hashedinhu-openai.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-09-05 01:01:13,172 - autogen.oai.client - WARNING - Model gpt-4o-2024-11-20 is not found. The cost will be 0. In your config_list, add field {"price" : [prompt_price_per_1k, completion_token_price_per_1k]} for customized pricing.
+2025-09-05 01:01:21,162 - httpx - INFO - HTTP Request: POST https://hashedinhu-openai.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-09-05 01:01:21,162 - autogen.oai.client - WARNING - Model gpt-4o-2024-11-20 is not found. The cost will be 0. In your config_list, add field {"price" : [prompt_price_per_1k, completion_token_price_per_1k]} for customized pricing.
+2025-09-05 01:01:21,164 - doc_processor.app.services.agents.workflow_orchestrator - INFO - Executing validation step
+2025-09-05 01:01:27,247 - httpx - INFO - HTTP Request: POST https://hashedinhu-openai.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-09-05 01:01:27,247 - autogen.oai.client - WARNING - Model gpt-4o-2024-11-20 is not found. The cost will be 0. In your config_list, add field {"price" : [prompt_price_per_1k, completion_token_price_per_1k]} for customized pricing.
+2025-09-05 01:01:33,450 - httpx - INFO - HTTP Request: POST https://hashedinhu-openai.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-09-05 01:01:33,451 - autogen.oai.client - WARNING - Model gpt-4o-2024-11-20 is not found. The cost will be 0. In your config_list, add field {"price" : [prompt_price_per_1k, completion_token_price_per_1k]} for customized pricing.
+2025-09-05 01:01:45,512 - httpx - INFO - HTTP Request: POST https://hashedinhu-openai.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-09-05 01:01:45,513 - autogen.oai.client - WARNING - Model gpt-4o-2024-11-20 is not found. The cost will be 0. In your config_list, add field {"price" : [prompt_price_per_1k, completion_token_price_per_1k]} for customized pricing.
+2025-09-05 01:01:50,022 - httpx - INFO - HTTP Request: POST https://hashedinhu-openai.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2025-09-05 01:01:50,023 - autogen.oai.client - WARNING - Model gpt-4o-2024-11-20 is not found. The cost will be 0. In your config_list, add field {"price" : [prompt_price_per_1k, completion_token_price_per_1k]} for customized pricing.
+2025-09-05 01:01:50,025 - doc_processor.app.services.agents.workflow_orchestrator - INFO - Stored metrics for workflow 30789d35-cee6-4bd3-8cc8-d123cab8bbcb
+2025-09-05 01:01:50,026 - doc_processor.app.services.document_processor - INFO - Extracted 7 entities from AutoGen workflow
+2025-09-05 01:01:50,026 - doc_processor.app.services.document_processor - INFO - Extracted summary from AutoGen workflow: 555 characters
+2025-09-05 01:01:50,689 - doc_processor.app.services.document_processor - INFO - Generated embeddings for 5 sections
+2025-09-05 01:01:50,698 - doc_processor.app.main - INFO - [19694ecd-72ad-4003-b23e-47c987ccd5bb] Document created: e646abe5-1e5a-4243-a17e-dfa0178d831b
+2025-09-05 01:01:50,744 - doc_processor.app.main - INFO - [ed39811f-b879-4e67-8c79-77fa39ea2160] Getting status for document: e646abe5-1e5a-4243-a17e-dfa0178d831b
+2025-09-05 01:01:50,745 - doc_processor.app.main - INFO - [4610ef09-a278-491e-95c4-ac34152f934e] Getting document: e646abe5-1e5a-4243-a17e-dfa0178d831b
+2025-09-05 01:01:50,746 - doc_processor.app.main - INFO - [4610ef09-a278-491e-95c4-ac34152f934e] Attempting to parse UUID: 'e646abe5-1e5a-4243-a17e-dfa0178d831b'
+2025-09-05 01:01:50,746 - doc_processor.app.main - INFO - [4610ef09-a278-491e-95c4-ac34152f934e] Successfully parsed document ID: e646abe5-1e5a-4243-a17e-dfa0178d831b
+2025-09-05 01:01:54,552 - doc_processor.app.main - INFO - [c8758fe7-0373-4701-9494-b5a3132188ea] Getting document: e646abe5-1e5a-4243-a17e-dfa0178d831b
+2025-09-05 01:01:54,552 - doc_processor.app.main - INFO - [c8758fe7-0373-4701-9494-b5a3132188ea] Attempting to parse UUID: 'e646abe5-1e5a-4243-a17e-dfa0178d831b'
+2025-09-05 01:01:54,552 - doc_processor.app.main - INFO - [c8758fe7-0373-4701-9494-b5a3132188ea] Successfully parsed document ID: e646abe5-1e5a-4243-a17e-dfa0178d831b
+2025-09-05 01:01:54,595 - doc_processor.app.main - INFO - [7a2e69e9-8277-42a2-b47c-8d1a6869a2a8] Getting feedback for document: e646abe5-1e5a-4243-a17e-dfa0178d831b
+2025-09-05 01:01:58,158 - doc_processor.app.main - INFO - [8307a237-83e9-4122-942b-86590bbb9398] Getting document: e646abe5-1e5a-4243-a17e-dfa0178d831b
+2025-09-05 01:01:58,158 - doc_processor.app.main - INFO - [8307a237-83e9-4122-942b-86590bbb9398] Attempting to parse UUID: 'e646abe5-1e5a-4243-a17e-dfa0178d831b'
+2025-09-05 01:01:58,158 - doc_processor.app.main - INFO - [8307a237-83e9-4122-942b-86590bbb9398] Successfully parsed document ID: e646abe5-1e5a-4243-a17e-dfa0178d831b
+2025-09-05 01:02:00,106 - doc_processor.app.main - INFO - [291dfe8c-bed0-483a-a46f-153b50fffb0d] Getting document: e646abe5-1e5a-4243-a17e-dfa0178d831b
+2025-09-05 01:02:00,106 - doc_processor.app.main - INFO - [291dfe8c-bed0-483a-a46f-153b50fffb0d] Attempting to parse UUID: 'e646abe5-1e5a-4243-a17e-dfa0178d831b'
+2025-09-05 01:02:00,106 - doc_processor.app.main - INFO - [291dfe8c-bed0-483a-a46f-153b50fffb0d] Successfully parsed document ID: e646abe5-1e5a-4243-a17e-dfa0178d831b
+2025-09-05 01:02:12,573 - doc_processor.app.main - INFO - [de5be986-cb5d-4196-9329-243ed1af314a] Getting document: e646abe5-1e5a-4243-a17e-dfa0178d831b
+2025-09-05 01:02:12,573 - doc_processor.app.main - INFO - [de5be986-cb5d-4196-9329-243ed1af314a] Attempting to parse UUID: 'e646abe5-1e5a-4243-a17e-dfa0178d831b'
+2025-09-05 01:02:12,573 - doc_processor.app.main - INFO - [de5be986-cb5d-4196-9329-243ed1af314a] Successfully parsed document ID: e646abe5-1e5a-4243-a17e-dfa0178d831b
+2025-09-05 01:02:12,648 - doc_processor.app.main - INFO - [7564a7c2-84fe-4832-af1d-64396f000e19] Getting document: e646abe5-1e5a-4243-a17e-dfa0178d831b
+2025-09-05 01:02:12,648 - doc_processor.app.main - INFO - [7564a7c2-84fe-4832-af1d-64396f000e19] Attempting to parse UUID: 'e646abe5-1e5a-4243-a17e-dfa0178d831b'
+2025-09-05 01:02:12,648 - doc_processor.app.main - INFO - [7564a7c2-84fe-4832-af1d-64396f000e19] Successfully parsed document ID: e646abe5-1e5a-4243-a17e-dfa0178d831b
+2025-09-05 01:02:12,693 - doc_processor.app.main - INFO - [20862077-d783-4f3c-a6ef-3c72e45d2823] Asking question about document: e646abe5-1e5a-4243-a17e-dfa0178d831b
+2025-09-05 01:02:12,693 - doc_processor.app.services.langchain_qa - INFO - Starting Q&A for document e646abe5-1e5a-4243-a17e-dfa0178d831b with question: what date it is?
+2025-09-05 01:02:12,693 - doc_processor.app.services.langchain_qa - INFO - Indexing document e646abe5-1e5a-4243-a17e-dfa0178d831b for search
+2025-09-05 01:02:12,693 - doc_processor.app.services.langchain_qa - INFO - Indexing document e646abe5-1e5a-4243-a17e-dfa0178d831b with 5 sections
+2025-09-05 01:02:12,696 - doc_processor.app.services.langchain_qa - INFO - Generated embeddings for 5 sections
+2025-09-05 01:02:12,696 - doc_processor.app.services.langchain_qa - INFO - Indexed document October 26, 2025.docx with 17 chunks
+2025-09-05 01:02:12,696 - doc_processor.app.services.langchain_qa - INFO - Found 17 chunks for document e646abe5-1e5a-4243-a17e-dfa0178d831b
+2025-09-05 01:02:12,750 - doc_processor.app.services.langchain_qa - INFO - Generated question embedding with 768 dimensions
+2025-09-05 01:02:12,751 - doc_processor.app.services.langchain_qa - INFO - Found 17 chunks with embeddings, 3 above similarity threshold 0.3
+2025-09-05 01:02:12,751 - doc_processor.app.services.langchain_qa - INFO - Selected top 3 results for answer generation
+2025-09-05 01:02:12,751 - doc_processor.app.services.langchain_qa - INFO - Found 3 relevant chunks for question

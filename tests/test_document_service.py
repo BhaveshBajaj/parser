@@ -4,8 +4,8 @@ from uuid import UUID
 import os
 import shutil
 
-from app.models.document import Document, DocumentStatus
-from app.services.document_service import DocumentService, document_service
+from models.document import Document, DocumentStatus
+from services.document_service import DocumentService, document_service
 
 
 @pytest.fixture
@@ -18,7 +18,8 @@ def temp_data_dir(tmp_path):
     shutil.rmtree(data_dir, ignore_errors=True)
 
 
-def test_create_document(temp_data_dir):
+@pytest.mark.asyncio
+async def test_create_document(temp_data_dir):
     """Test creating a new document."""
     # Initialize service with temp directory
     service = DocumentService(data_dir=temp_data_dir)
@@ -50,7 +51,8 @@ def test_create_document(temp_data_dir):
     assert retrieved_doc.id == created_doc.id
 
 
-def test_update_document(temp_data_dir):
+@pytest.mark.asyncio
+async def test_update_document(temp_data_dir):
     """Test updating a document."""
     service = DocumentService(data_dir=temp_data_dir)
     
@@ -85,7 +87,8 @@ def test_update_document(temp_data_dir):
     assert retrieved_doc.summary == "Test summary"
 
 
-def test_list_documents(temp_data_dir):
+@pytest.mark.asyncio
+async def test_list_documents(temp_data_dir):
     """Test listing documents."""
     service = DocumentService(data_dir=temp_data_dir)
     

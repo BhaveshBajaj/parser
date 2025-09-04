@@ -9,9 +9,9 @@ from pathlib import Path
 # Add the doc_processor to the path
 sys.path.insert(0, str(Path(__file__).parent / "doc_processor"))
 
-from doc_processor.app.services.embedding_service import EmbeddingService
-from doc_processor.app.services.langchain_parsers import LangChainParserFactory
-from doc_processor.app.services.document_processor import DocumentProcessor
+from services.embedding_service import EmbeddingService
+from services.langchain_parsers import LangChainParserFactory
+from services.document_processor import DocumentProcessor
 
 
 async def test_embedding_service():

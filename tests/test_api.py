@@ -5,9 +5,9 @@ import os
 import json
 from pathlib import Path
 
-from app.main import app
-from app.models.document import Document, DocumentStatus
-from app.services.document_service import document_service
+from main import app
+from models.document import Document, DocumentStatus
+from services.document_service import document_service
 
 # Test client
 client = TestClient(app)
@@ -49,14 +49,14 @@ def setup_teardown():
 
 
 def test_health_check():
-    ""Test the health check endpoint."""
+    """Test the health check endpoint."""
     response = client.get("/health")
     assert response.status_code == 200
     assert response.json() == {"status": "ok"}
 
 
 def test_upload_document():
-    ""Test uploading a document."""
+    """Test uploading a document."""
     # Prepare test file
     files = {
         "file": (TEST_FILENAME, TEST_FILE_CONTENT, TEST_CONTENT_TYPE)
@@ -81,7 +81,7 @@ def test_upload_document():
 
 
 def test_get_document_status():
-    ""Test getting document status."""
+    """Test getting document status."""
     # First, upload a document
     files = {"file": (TEST_FILENAME, TEST_FILE_CONTENT, TEST_CONTENT_TYPE)}
     upload_response = client.post("/api/v1/upload", files=files)
@@ -99,14 +99,14 @@ def test_get_document_status():
 
 
 def test_get_nonexistent_document_status():
-    ""Test getting status for a non-existent document."""
+    """Test getting status for a non-existent document."""
     response = client.get("/api/v1/status/nonexistent-id")
     assert response.status_code == 404
     assert response.json()["detail"] == "Document not found"
 
 
 def test_get_document_summary_not_ready():
-    ""Test getting a summary when the document isn't summarized yet."""
+    """Test getting a summary when the document isn't summarized yet."""
     # First, upload a document
     files = {"file": (TEST_FILENAME, TEST_FILE_CONTENT, TEST_CONTENT_TYPE)}
     upload_response = client.post("/api/v1/upload", files=files)
@@ -121,7 +121,7 @@ def test_get_document_summary_not_ready():
 
 
 def test_mock_qa():
-    ""Test the mock QA endpoint."""
+    """Test the mock QA endpoint."""
     # Test without document ID
     response = client.post(
         "/api/v1/qa",
@@ -154,7 +154,7 @@ def test_mock_qa():
 
 
 def test_upload_invalid_file():
-    ""Test uploading an invalid file."""
+    """Test uploading an invalid file."""
     # Test with no file
     response = client.post("/api/v1/upload")
     assert response.status_code == 422  # Validation error
@@ -166,7 +166,7 @@ def test_upload_invalid_file():
 
 
 def test_file_size_limit():
-    ""Test the file size limit."""
+    """Test the file size limit."""
     # Create a file larger than the limit (16MB)
     large_file_content = b"x" * (17 * 1024 * 1024)  # 17MB
     
