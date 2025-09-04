@@ -339,3 +339,5 @@ def get_search_index(config: Optional[Dict[str, Any]] = None) -> VectorSearchInd
     if _search_index is None:
         _search_index = VectorSearchIndex(config)
     return _search_index
+
+

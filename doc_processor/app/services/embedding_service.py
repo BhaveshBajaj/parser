@@ -385,3 +385,5 @@ def get_embedding_service(config: Optional[Dict[str, Any]] = None) -> EmbeddingS
     if _embedding_service is None:
         _embedding_service = EmbeddingService(config)
     return _embedding_service
+
+
