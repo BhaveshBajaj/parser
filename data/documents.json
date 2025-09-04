@@ -11799,5 +11799,1553 @@
         }
       ]
     }
+  },
+  "593c4494-7e15-4fab-a728-cf74ccfc4681": {
+    "filename": "The Last Train.docx",
+    "metadata": {
+      "original_filename": "The Last Train.docx",
+      "stored_path": "data/uploads/The Last Train.docx",
+      "uploaded_via": "api",
+      "filename": "The Last Train.docx",
+      "content_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "size_bytes": 7485,
+      "language": "",
+      "format": "DOCX",
+      "author": "",
+      "title": "Word Document",
+      "created": null,
+      "modified": "2025-09-04 08:23:22",
+      "last_modified_by": "python-docx",
+      "revision": 1,
+      "category": "",
+      "comments": "",
+      "identifier": "",
+      "keywords": "",
+      "subject": "",
+      "version": "",
+      "sections": 1,
+      "entities": 8,
+      "entity_types": {
+        "PERSON": 7,
+        "ORG": 1
+      }
+    },
+    "content_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "size": 7485,
+    "id": "593c4494-7e15-4fab-a728-cf74ccfc4681",
+    "status": "processed",
+    "created_at": "2025-09-04 08:23:22.372814+00:00",
+    "updated_at": "2025-09-04 08:23:31.628780+00:00",
+    "summary": "The document, titled \"The Last Train,\" centers on Asha, a young woman standing alone at a nearly deserted train station near midnight. She is faced with a pivotal decision: whether to leave her village and family behind to pursue a scholarship opportunity at a university abroad. The narrative explores Asha's internal struggle as she weighs her sense of duty to her family\u2014her father's insistence that her place is at home, memories of her mother and younger brother\u2014against her aspirations and the promise of a new life symbolized by the unopened letter in her satchel.\n\nAs the last train arrives, Asha's hesitation is palpable, reflecting the emotional complexity of choosing between personal ambition and familial responsibility. The conductor's gentle inquiry serves as a catalyst, prompting her to confront her fears and hopes. The story highlights themes of self-discovery, sacrifice, and the tension between tradition and change. The university abroad represents both opportunity and uncertainty, while the station and train serve as metaphors for transition and the threshold between past and future. Overall, the document poignantly captures a moment of transformation, emphasizing the courage required to pursue one's dreams amidst conflicting loyalties.",
+    "error": null,
+    "extra_data": {
+      "sections": [
+        {
+          "title": "The Last Train",
+          "content": "The Last Train\n\nThe platform clock ticked toward midnight as Asha clutched her satchel and glanced at the empty tracks. The last train was late, and the station, usually alive with chatter, felt hollow. A single lamppost flickered, casting long shadows.\n\nShe had made her choice hours ago\u2014leave the village that had bound her dreams with duty. Her father\u2019s words echoed: \u201cYour place is here.\u201d But the unopened letter in her satchel said otherwise. It bore the seal of a university abroad, offering her a scholarship and a life beyond the narrow lanes she had always known.\n\nA distant rumble broke her thoughts. Headlights cut through the fog. The train screeched to a halt, doors sliding open with a hiss.\n\nShe hesitated. For a heartbeat, she saw her mother\u2019s tired smile, her little brother chasing kites, her father bent over the fields. Could she abandon them?\n\n\u201cBoarding?\u201d the conductor asked gently, as though he could see her turmoil.\n\nAsha stepped closer, her hand trembling. Then a voice carried through the mist\u2014her brother\u2019s. He stood at the far end of the platform, waving wildly. \u201cGo!\u201d he shouted. \u201cGo before you change your mind!\u201d\n\nTears welled in her eyes, but a smile broke through. She climbed aboard, the doors shutting behind her with finality.\n\nAs the train pulled away, Asha pressed her forehead to the glass. The station blurred, then vanished. Ahead lay uncertainty, but also possibility. For the first time, the weight of staying lifted, and the promise of becoming filled the night air.\n\nShe whispered to herself, \u201cI\u2019m on my way.\u201d",
+          "section_type": "document",
+          "page_number": null,
+          "entities": [
+            {
+              "text": "Asha",
+              "type": "PERSON",
+              "start": 61,
+              "end": 65,
+              "confidence": 1.0,
+              "metadata": {
+                "role": "protagonist"
+              }
+            },
+            {
+              "text": "her father",
+              "type": "PERSON",
+              "start": 807,
+              "end": 817,
+              "confidence": 0.98,
+              "metadata": {
+                "relation": "Asha's father"
+              }
+            },
+            {
+              "text": "a university abroad",
+              "type": "ORG",
+              "start": 468,
+              "end": 487,
+              "confidence": 0.95,
+              "metadata": {
+                "description": "the institution offering Asha a scholarship"
+              }
+            },
+            {
+              "text": "her mother",
+              "type": "PERSON",
+              "start": 747,
+              "end": 757,
+              "confidence": 0.98,
+              "metadata": {
+                "relation": "Asha's mother"
+              }
+            },
+            {
+              "text": "her little brother",
+              "type": "PERSON",
+              "start": 773,
+              "end": 791,
+              "confidence": 0.98,
+              "metadata": {
+                "relation": "Asha's brother"
+              }
+            },
+            {
+              "text": "her father",
+              "type": "PERSON",
+              "start": 807,
+              "end": 817,
+              "confidence": 0.98,
+              "metadata": {
+                "relation": "Asha's father"
+              }
+            },
+            {
+              "text": "the conductor",
+              "type": "PERSON",
+              "start": 877,
+              "end": 890,
+              "confidence": 0.97,
+              "metadata": {
+                "role": "train conductor"
+              }
+            },
+            {
+              "text": "her brother",
+              "type": "PERSON",
+              "start": 1021,
+              "end": 1032,
+              "confidence": 0.98,
+              "metadata": {
+                "relation": "Asha's brother"
+              }
+            }
+          ]
+        }
+      ],
+      "all_entities": [
+        {
+          "text": "Asha",
+          "type": "PERSON",
+          "start": 61,
+          "end": 65,
+          "confidence": 1.0,
+          "metadata": {
+            "role": "protagonist"
+          }
+        },
+        {
+          "text": "her father",
+          "type": "PERSON",
+          "start": 807,
+          "end": 817,
+          "confidence": 0.98,
+          "metadata": {
+            "relation": "Asha's father"
+          }
+        },
+        {
+          "text": "a university abroad",
+          "type": "ORG",
+          "start": 468,
+          "end": 487,
+          "confidence": 0.95,
+          "metadata": {
+            "description": "the institution offering Asha a scholarship"
+          }
+        },
+        {
+          "text": "her mother",
+          "type": "PERSON",
+          "start": 747,
+          "end": 757,
+          "confidence": 0.98,
+          "metadata": {
+            "relation": "Asha's mother"
+          }
+        },
+        {
+          "text": "her little brother",
+          "type": "PERSON",
+          "start": 773,
+          "end": 791,
+          "confidence": 0.98,
+          "metadata": {
+            "relation": "Asha's brother"
+          }
+        },
+        {
+          "text": "her father",
+          "type": "PERSON",
+          "start": 807,
+          "end": 817,
+          "confidence": 0.98,
+          "metadata": {
+            "relation": "Asha's father"
+          }
+        },
+        {
+          "text": "the conductor",
+          "type": "PERSON",
+          "start": 877,
+          "end": 890,
+          "confidence": 0.97,
+          "metadata": {
+            "role": "train conductor"
+          }
+        },
+        {
+          "text": "her brother",
+          "type": "PERSON",
+          "start": 1021,
+          "end": 1032,
+          "confidence": 0.98,
+          "metadata": {
+            "relation": "Asha's brother"
+          }
+        }
+      ]
+    }
+  },
+  "f111a697-3a67-4c3c-9965-3215fbbc9314": {
+    "filename": "The Last Train.docx",
+    "metadata": {
+      "original_filename": "The Last Train.docx",
+      "stored_path": "data/uploads/The Last Train_2.docx",
+      "uploaded_via": "api",
+      "filename": "The Last Train.docx",
+      "content_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "size_bytes": 7485,
+      "language": "",
+      "format": "DOCX",
+      "author": "",
+      "title": "Word Document",
+      "created": null,
+      "modified": "2025-09-04 08:24:50",
+      "last_modified_by": "python-docx",
+      "revision": 1,
+      "category": "",
+      "comments": "",
+      "identifier": "",
+      "keywords": "",
+      "subject": "",
+      "version": "",
+      "sections": 1,
+      "entities": 8,
+      "entity_types": {
+        "PERSON": 7,
+        "ORG": 1
+      }
+    },
+    "content_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "size": 7485,
+    "id": "f111a697-3a67-4c3c-9965-3215fbbc9314",
+    "status": "processed",
+    "created_at": "2025-09-04 08:24:50.224788+00:00",
+    "updated_at": "2025-09-04 08:24:59.702544+00:00",
+    "summary": "The document, titled \"The Last Train,\" centers on Asha, a young woman standing alone at a nearly deserted train station near midnight. She faces a pivotal decision: whether to leave her village, where familial duty has long constrained her aspirations, or to pursue a new life offered by a scholarship from a university abroad. The narrative vividly depicts Asha\u2019s emotional struggle, highlighting the tension between her family's expectations\u2014particularly her father's insistence that her place is at home\u2014and the opportunity for personal growth and independence symbolized by the unopened letter in her satchel.\n\nAs the last train arrives, Asha is torn by memories of her family and the weight of her choice. The conductor\u2019s gentle inquiry underscores her internal conflict, prompting her to confront the possibility of leaving behind her loved ones for an uncertain future. The story explores themes of duty versus ambition, the pain of separation, and the courage required to embrace change. Through Asha\u2019s experience, the document reflects on the universal challenge of balancing personal dreams with familial responsibilities.",
+    "error": null,
+    "extra_data": {
+      "sections": [
+        {
+          "title": "The Last Train",
+          "content": "The Last Train\n\nThe platform clock ticked toward midnight as Asha clutched her satchel and glanced at the empty tracks. The last train was late, and the station, usually alive with chatter, felt hollow. A single lamppost flickered, casting long shadows.\n\nShe had made her choice hours ago\u2014leave the village that had bound her dreams with duty. Her father\u2019s words echoed: \u201cYour place is here.\u201d But the unopened letter in her satchel said otherwise. It bore the seal of a university abroad, offering her a scholarship and a life beyond the narrow lanes she had always known.\n\nA distant rumble broke her thoughts. Headlights cut through the fog. The train screeched to a halt, doors sliding open with a hiss.\n\nShe hesitated. For a heartbeat, she saw her mother\u2019s tired smile, her little brother chasing kites, her father bent over the fields. Could she abandon them?\n\n\u201cBoarding?\u201d the conductor asked gently, as though he could see her turmoil.\n\nAsha stepped closer, her hand trembling. Then a voice carried through the mist\u2014her brother\u2019s. He stood at the far end of the platform, waving wildly. \u201cGo!\u201d he shouted. \u201cGo before you change your mind!\u201d\n\nTears welled in her eyes, but a smile broke through. She climbed aboard, the doors shutting behind her with finality.\n\nAs the train pulled away, Asha pressed her forehead to the glass. The station blurred, then vanished. Ahead lay uncertainty, but also possibility. For the first time, the weight of staying lifted, and the promise of becoming filled the night air.\n\nShe whispered to herself, \u201cI\u2019m on my way.\u201d",
+          "section_type": "document",
+          "page_number": null,
+          "entities": [
+            {
+              "text": "Asha",
+              "type": "PERSON",
+              "start": 61,
+              "end": 65,
+              "confidence": 1.0,
+              "metadata": {
+                "role": "protagonist"
+              }
+            },
+            {
+              "text": "her father",
+              "type": "PERSON",
+              "start": 807,
+              "end": 817,
+              "confidence": 0.98,
+              "metadata": {
+                "relation": "Asha's father"
+              }
+            },
+            {
+              "text": "a university abroad",
+              "type": "ORG",
+              "start": 468,
+              "end": 487,
+              "confidence": 0.95,
+              "metadata": {
+                "description": "the institution offering Asha a scholarship"
+              }
+            },
+            {
+              "text": "her mother",
+              "type": "PERSON",
+              "start": 747,
+              "end": 757,
+              "confidence": 0.98,
+              "metadata": {
+                "relation": "Asha's mother"
+              }
+            },
+            {
+              "text": "her little brother",
+              "type": "PERSON",
+              "start": 773,
+              "end": 791,
+              "confidence": 0.98,
+              "metadata": {
+                "relation": "Asha's brother"
+              }
+            },
+            {
+              "text": "her father",
+              "type": "PERSON",
+              "start": 807,
+              "end": 817,
+              "confidence": 0.98,
+              "metadata": {
+                "relation": "Asha's father"
+              }
+            },
+            {
+              "text": "the conductor",
+              "type": "PERSON",
+              "start": 877,
+              "end": 890,
+              "confidence": 0.95,
+              "metadata": {
+                "role": "train conductor"
+              }
+            },
+            {
+              "text": "her brother",
+              "type": "PERSON",
+              "start": 1021,
+              "end": 1032,
+              "confidence": 0.98,
+              "metadata": {
+                "relation": "Asha's brother"
+              }
+            }
+          ]
+        }
+      ],
+      "all_entities": [
+        {
+          "text": "Asha",
+          "type": "PERSON",
+          "start": 61,
+          "end": 65,
+          "confidence": 1.0,
+          "metadata": {
+            "role": "protagonist"
+          }
+        },
+        {
+          "text": "her father",
+          "type": "PERSON",
+          "start": 807,
+          "end": 817,
+          "confidence": 0.98,
+          "metadata": {
+            "relation": "Asha's father"
+          }
+        },
+        {
+          "text": "a university abroad",
+          "type": "ORG",
+          "start": 468,
+          "end": 487,
+          "confidence": 0.95,
+          "metadata": {
+            "description": "the institution offering Asha a scholarship"
+          }
+        },
+        {
+          "text": "her mother",
+          "type": "PERSON",
+          "start": 747,
+          "end": 757,
+          "confidence": 0.98,
+          "metadata": {
+            "relation": "Asha's mother"
+          }
+        },
+        {
+          "text": "her little brother",
+          "type": "PERSON",
+          "start": 773,
+          "end": 791,
+          "confidence": 0.98,
+          "metadata": {
+            "relation": "Asha's brother"
+          }
+        },
+        {
+          "text": "her father",
+          "type": "PERSON",
+          "start": 807,
+          "end": 817,
+          "confidence": 0.98,
+          "metadata": {
+            "relation": "Asha's father"
+          }
+        },
+        {
+          "text": "the conductor",
+          "type": "PERSON",
+          "start": 877,
+          "end": 890,
+          "confidence": 0.95,
+          "metadata": {
+            "role": "train conductor"
+          }
+        },
+        {
+          "text": "her brother",
+          "type": "PERSON",
+          "start": 1021,
+          "end": 1032,
+          "confidence": 0.98,
+          "metadata": {
+            "relation": "Asha's brother"
+          }
+        }
+      ]
+    }
+  },
+  "ba1b79a0-1f42-4ec0-a3e0-7bcebef3be87": {
+    "filename": "The Last Train.docx",
+    "metadata": {
+      "original_filename": "The Last Train.docx",
+      "stored_path": "data/uploads/The Last Train_3.docx",
+      "uploaded_via": "api",
+      "filename": "The Last Train.docx",
+      "content_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "size_bytes": 7485,
+      "language": "",
+      "format": "DOCX",
+      "author": "",
+      "title": "Word Document",
+      "created": null,
+      "modified": "2025-09-04 08:27:25",
+      "last_modified_by": "python-docx",
+      "revision": 1,
+      "category": "",
+      "comments": "",
+      "identifier": "",
+      "keywords": "",
+      "subject": "",
+      "version": "",
+      "sections": 1,
+      "entities": 8,
+      "entity_types": {
+        "PERSON": 7,
+        "ORG": 1
+      }
+    },
+    "content_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "size": 7485,
+    "id": "ba1b79a0-1f42-4ec0-a3e0-7bcebef3be87",
+    "status": "processed",
+    "created_at": "2025-09-04 08:27:25.388142+00:00",
+    "updated_at": "2025-09-04 08:27:34.018710+00:00",
+    "summary": "The document, \"The Last Train,\" centers on Asha, a young woman standing on a nearly deserted train platform at midnight, wrestling with a life-changing decision. She is torn between staying in her village, where her family\u2014her father, mother, and little brother\u2014depend on her, and pursuing a new future offered by a scholarship from a university abroad. The station\u2019s emptiness and the lateness of the last train mirror Asha\u2019s internal conflict and sense of isolation as she contemplates leaving behind her familiar life.\n\nThe narrative highlights the emotional weight of her choice, underscored by her father\u2019s insistence that her place is at home and the unopened letter representing opportunity and independence. As the train arrives and the conductor gently prompts her to board, Asha is forced to confront her fears and hopes. The story poignantly explores themes of duty versus aspiration, familial bonds, and the courage required to embrace change. Ultimately, it captures a universal moment of transition, where the protagonist must decide whether to honor her roots or step into an unknown future.",
+    "error": null,
+    "extra_data": {
+      "sections": [
+        {
+          "title": "The Last Train",
+          "content": "The Last Train\n\nThe platform clock ticked toward midnight as Asha clutched her satchel and glanced at the empty tracks. The last train was late, and the station, usually alive with chatter, felt hollow. A single lamppost flickered, casting long shadows.\n\nShe had made her choice hours ago\u2014leave the village that had bound her dreams with duty. Her father\u2019s words echoed: \u201cYour place is here.\u201d But the unopened letter in her satchel said otherwise. It bore the seal of a university abroad, offering her a scholarship and a life beyond the narrow lanes she had always known.\n\nA distant rumble broke her thoughts. Headlights cut through the fog. The train screeched to a halt, doors sliding open with a hiss.\n\nShe hesitated. For a heartbeat, she saw her mother\u2019s tired smile, her little brother chasing kites, her father bent over the fields. Could she abandon them?\n\n\u201cBoarding?\u201d the conductor asked gently, as though he could see her turmoil.\n\nAsha stepped closer, her hand trembling. Then a voice carried through the mist\u2014her brother\u2019s. He stood at the far end of the platform, waving wildly. \u201cGo!\u201d he shouted. \u201cGo before you change your mind!\u201d\n\nTears welled in her eyes, but a smile broke through. She climbed aboard, the doors shutting behind her with finality.\n\nAs the train pulled away, Asha pressed her forehead to the glass. The station blurred, then vanished. Ahead lay uncertainty, but also possibility. For the first time, the weight of staying lifted, and the promise of becoming filled the night air.\n\nShe whispered to herself, \u201cI\u2019m on my way.\u201d",
+          "section_type": "document",
+          "page_number": null,
+          "entities": [
+            {
+              "text": "Asha",
+              "type": "PERSON",
+              "start": 61,
+              "end": 65,
+              "confidence": 1.0,
+              "metadata": {
+                "role": "main character"
+              }
+            },
+            {
+              "text": "her father",
+              "type": "PERSON",
+              "start": 807,
+              "end": 817,
+              "confidence": 0.95,
+              "metadata": {
+                "relation": "Asha's father"
+              }
+            },
+            {
+              "text": "a university abroad",
+              "type": "ORG",
+              "start": 468,
+              "end": 487,
+              "confidence": 0.9,
+              "metadata": {
+                "description": "university offering scholarship"
+              }
+            },
+            {
+              "text": "her mother",
+              "type": "PERSON",
+              "start": 747,
+              "end": 757,
+              "confidence": 0.95,
+              "metadata": {
+                "relation": "Asha's mother"
+              }
+            },
+            {
+              "text": "her little brother",
+              "type": "PERSON",
+              "start": 773,
+              "end": 791,
+              "confidence": 0.95,
+              "metadata": {
+                "relation": "Asha's brother"
+              }
+            },
+            {
+              "text": "her father",
+              "type": "PERSON",
+              "start": 807,
+              "end": 817,
+              "confidence": 0.95,
+              "metadata": {
+                "relation": "Asha's father"
+              }
+            },
+            {
+              "text": "the conductor",
+              "type": "PERSON",
+              "start": 877,
+              "end": 890,
+              "confidence": 0.9,
+              "metadata": {
+                "role": "train conductor"
+              }
+            },
+            {
+              "text": "her brother",
+              "type": "PERSON",
+              "start": 1021,
+              "end": 1032,
+              "confidence": 0.95,
+              "metadata": {
+                "relation": "Asha's brother"
+              }
+            }
+          ]
+        }
+      ],
+      "all_entities": [
+        {
+          "text": "Asha",
+          "type": "PERSON",
+          "start": 61,
+          "end": 65,
+          "confidence": 1.0,
+          "metadata": {
+            "role": "main character"
+          }
+        },
+        {
+          "text": "her father",
+          "type": "PERSON",
+          "start": 807,
+          "end": 817,
+          "confidence": 0.95,
+          "metadata": {
+            "relation": "Asha's father"
+          }
+        },
+        {
+          "text": "a university abroad",
+          "type": "ORG",
+          "start": 468,
+          "end": 487,
+          "confidence": 0.9,
+          "metadata": {
+            "description": "university offering scholarship"
+          }
+        },
+        {
+          "text": "her mother",
+          "type": "PERSON",
+          "start": 747,
+          "end": 757,
+          "confidence": 0.95,
+          "metadata": {
+            "relation": "Asha's mother"
+          }
+        },
+        {
+          "text": "her little brother",
+          "type": "PERSON",
+          "start": 773,
+          "end": 791,
+          "confidence": 0.95,
+          "metadata": {
+            "relation": "Asha's brother"
+          }
+        },
+        {
+          "text": "her father",
+          "type": "PERSON",
+          "start": 807,
+          "end": 817,
+          "confidence": 0.95,
+          "metadata": {
+            "relation": "Asha's father"
+          }
+        },
+        {
+          "text": "the conductor",
+          "type": "PERSON",
+          "start": 877,
+          "end": 890,
+          "confidence": 0.9,
+          "metadata": {
+            "role": "train conductor"
+          }
+        },
+        {
+          "text": "her brother",
+          "type": "PERSON",
+          "start": 1021,
+          "end": 1032,
+          "confidence": 0.95,
+          "metadata": {
+            "relation": "Asha's brother"
+          }
+        }
+      ]
+    }
+  },
+  "3f1f86df-9d1f-46e1-b239-4970c061bbfa": {
+    "filename": "DB DESIGN FOR TRAINING MODULE_2.docx",
+    "metadata": {
+      "original_filename": "DB DESIGN FOR TRAINING MODULE_2.docx",
+      "stored_path": "data/uploads/DB DESIGN FOR TRAINING MODULE_3.docx",
+      "uploaded_via": "api",
+      "test": true,
+      "source": "test_script"
+    },
+    "content_type": "application/octet-stream",
+    "size": 8638,
+    "id": "3f1f86df-9d1f-46e1-b239-4970c061bbfa",
+    "status": "failed",
+    "created_at": "2025-09-04 08:33:10.633029+00:00",
+    "updated_at": "2025-09-04 08:33:10.681853+00:00",
+    "summary": null,
+    "error": "Unsupported content type: application/octet-stream",
+    "extra_data": {}
+  },
+  "1a001435-da01-42c5-ad2d-686741d6825a": {
+    "filename": "The Last Train (1).docx",
+    "metadata": {
+      "original_filename": "The Last Train (1).docx",
+      "stored_path": "data/uploads/The Last Train 1.docx",
+      "uploaded_via": "api",
+      "filename": "The Last Train (1).docx",
+      "content_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "size_bytes": 7956,
+      "language": "",
+      "format": "DOCX",
+      "author": "",
+      "title": "Word Document",
+      "created": null,
+      "modified": "2025-09-04 09:45:19",
+      "last_modified_by": "python-docx",
+      "revision": 1,
+      "category": "",
+      "comments": "",
+      "identifier": "",
+      "keywords": "",
+      "subject": "",
+      "version": "",
+      "sections": 1,
+      "entities": 28,
+      "entity_types": {
+        "PERSON": 6,
+        "ORG": 6,
+        "GPE": 5,
+        "PRODUCT": 5,
+        "DATE": 2,
+        "EVENT": 2,
+        "TIME": 2
+      }
+    },
+    "content_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "size": 7956,
+    "id": "1a001435-da01-42c5-ad2d-686741d6825a",
+    "status": "processed",
+    "created_at": "2025-09-04 09:45:19.683828+00:00",
+    "updated_at": "2025-09-04 09:45:36.209319+00:00",
+    "summary": "The document recounts a critical incident involving Anita Sharma, an employee of Infosys Ltd., who lost a confidential briefcase at New Delhi Railway Station on March 3, 2025. The briefcase contained sensitive project documents related to \"Aurora,\" a new AI product under development by Infosys. Anita, having been cautioned by her manager Rajiv Menon about the importance of the briefcase, became alarmed when it went missing amidst the busy station environment.\n\nUpon realizing the loss, Anita immediately reported the incident to Inspector Ramesh Yadav at the Station Security Office. The inspector documented the details and initiated a search by contacting the Delhi Metro Authority, highlighting the urgency of recovering the briefcase due to its valuable contents. The narrative underscores the potential repercussions for Infosys, as the future of their AI project\u2014and possibly the company's competitive edge\u2014hinges on the recovery of the lost prototype files.\n\nKey entities involved include Anita Sharma, Rajiv Menon, Inspector Ramesh Yadav, and organizations such as Infosys Ltd., Delhi Metro Authority, and the Station Security Office. The event is set in prominent New Delhi locations, emphasizing both the high stakes and the public nature of the loss. The document illustrates the tension and procedural response to a corporate security breach, with implications for both the individuals and organizations involved.",
+    "error": null,
+    "extra_data": {
+      "sections": [
+        {
+          "title": "The Forgotten Briefcase",
+          "content": "The Forgotten Briefcase\n\nOn March 3, 2025, Anita Sharma stepped off the train at New Delhi Railway Station. She adjusted her glasses, glanced at the crowd, and clutched a slim leather briefcase that bore the logo of Infosys Ltd. Inside were confidential project papers about a new AI product codenamed Aurora.\n\nAnita had been warned by her manager, Rajiv Menon, that morning: \u201cDon\u2019t lose sight of this. The future of the company depends on it.\u201d\n\nBut in the chaos of the station, the briefcase slipped from her hand as she bent to tie her shoelace. By the time she stood up, it was gone.\n\nPanic surged. She rushed to the Station Security Office, where an officer named Inspector Ramesh Yadav began logging details. \u201cDate of loss?\u201d he asked.\n\n\u201cToday\u2014March 3rd,\u201d Anita replied breathlessly.\n\n\u201cOrganization?\u201d\n\n\u201cInfosys.\u201d\n\n\u201cProduct inside?\u201d\n\n\u201cAurora, the prototype files.\u201d\n\nInspector Yadav scribbled in his ledger and then called the Delhi Metro Authority. \u201cCheck for a black Samsonite briefcase near Gate 5 of Connaught Place,\u201d he instructed.\n\nMeanwhile, across the city, a young man named Irfan Ali boarded a bus near India Gate. At his feet sat the very briefcase Anita had lost. Curious, he unlatched it, saw the files, and recognized the value. Aurora wasn\u2019t just software\u2014it was a product rumored to rival Microsoft\u2019s Copilot.\n\nBy evening, news reached the office of The Times of India, where journalist Meera Kapoor smelled a headline. \u201cInfosys Loses Secret AI Project in New Delhi,\u201d she typed.\n\nBut before the story could break, Anita\u2019s phone buzzed. A text message lit up her screen:\n\n*\u201cBriefcase found. Meet me at *Caf\u00e9 Coffee Day, Connaught Place, 8 PM. \u2014Irfan.\u201d\n\nHeart pounding, Anita raced through the neon-lit streets. At exactly 8:00 PM, under the caf\u00e9\u2019s glowing sign, she saw Irfan waiting with the briefcase.\n\n\u201cYou could have sold this,\u201d Anita whispered.\n\nIrfan smiled faintly. \u201cSome things are worth more than money.\u201d\n\nAs she clasped the case tightly, the city lights of New Delhi shimmered like a promise.",
+          "section_type": "document",
+          "page_number": null,
+          "entities": [
+            {
+              "text": "March 3, 2025",
+              "type": "DATE",
+              "start": 28,
+              "end": 41,
+              "confidence": 0.95,
+              "metadata": {}
+            },
+            {
+              "text": "Anita Sharma",
+              "type": "PERSON",
+              "start": 43,
+              "end": 55,
+              "confidence": 0.95,
+              "metadata": {}
+            },
+            {
+              "text": "New Delhi Railway Station",
+              "type": "GPE",
+              "start": 81,
+              "end": 106,
+              "confidence": 0.9,
+              "metadata": {}
+            },
+            {
+              "text": "Infosys Ltd.",
+              "type": "ORG",
+              "start": 216,
+              "end": 228,
+              "confidence": 0.95,
+              "metadata": {}
+            },
+            {
+              "text": "Aurora",
+              "type": "PRODUCT",
+              "start": 302,
+              "end": 308,
+              "confidence": 0.9,
+              "metadata": {}
+            },
+            {
+              "text": "Rajiv Menon",
+              "type": "PERSON",
+              "start": 349,
+              "end": 360,
+              "confidence": 0.95,
+              "metadata": {}
+            },
+            {
+              "text": "Station Security Office",
+              "type": "ORG",
+              "start": 620,
+              "end": 643,
+              "confidence": 0.85,
+              "metadata": {}
+            },
+            {
+              "text": "Inspector Ramesh Yadav",
+              "type": "PERSON",
+              "start": 668,
+              "end": 690,
+              "confidence": 0.95,
+              "metadata": {}
+            },
+            {
+              "text": "March 3rd",
+              "type": "DATE",
+              "start": 748,
+              "end": 757,
+              "confidence": 0.9,
+              "metadata": {}
+            },
+            {
+              "text": "Infosys",
+              "type": "ORG",
+              "start": 807,
+              "end": 814,
+              "confidence": 0.95,
+              "metadata": {}
+            },
+            {
+              "text": "Aurora",
+              "type": "PRODUCT",
+              "start": 838,
+              "end": 844,
+              "confidence": 0.9,
+              "metadata": {}
+            },
+            {
+              "text": "Delhi Metro Authority",
+              "type": "ORG",
+              "start": 929,
+              "end": 950,
+              "confidence": 0.9,
+              "metadata": {}
+            },
+            {
+              "text": "Samsonite",
+              "type": "PRODUCT",
+              "start": 971,
+              "end": 980,
+              "confidence": 0.85,
+              "metadata": {}
+            },
+            {
+              "text": "Gate 5",
+              "type": "EVENT",
+              "start": 996,
+              "end": 1002,
+              "confidence": 0.7,
+              "metadata": {}
+            },
+            {
+              "text": "Connaught Place",
+              "type": "GPE",
+              "start": 1006,
+              "end": 1021,
+              "confidence": 0.9,
+              "metadata": {}
+            },
+            {
+              "text": "Irfan Ali",
+              "type": "PERSON",
+              "start": 1086,
+              "end": 1095,
+              "confidence": 0.95,
+              "metadata": {}
+            },
+            {
+              "text": "India Gate",
+              "type": "GPE",
+              "start": 1115,
+              "end": 1125,
+              "confidence": 0.9,
+              "metadata": {}
+            },
+            {
+              "text": "Aurora",
+              "type": "PRODUCT",
+              "start": 838,
+              "end": 844,
+              "confidence": 0.9,
+              "metadata": {}
+            },
+            {
+              "text": "Microsoft\u2019s Copilot",
+              "type": "PRODUCT",
+              "start": 1307,
+              "end": 1326,
+              "confidence": 0.9,
+              "metadata": {}
+            },
+            {
+              "text": "The Times of India",
+              "type": "ORG",
+              "start": 1368,
+              "end": 1386,
+              "confidence": 0.95,
+              "metadata": {}
+            },
+            {
+              "text": "Meera Kapoor",
+              "type": "PERSON",
+              "start": 1405,
+              "end": 1417,
+              "confidence": 0.95,
+              "metadata": {}
+            },
+            {
+              "text": "Infosys Loses Secret AI Project in New Delhi",
+              "type": "EVENT",
+              "start": 1439,
+              "end": 1483,
+              "confidence": 0.8,
+              "metadata": {}
+            },
+            {
+              "text": "Caf\u00e9 Coffee Day",
+              "type": "ORG",
+              "start": 1620,
+              "end": 1635,
+              "confidence": 0.9,
+              "metadata": {}
+            },
+            {
+              "text": "Connaught Place",
+              "type": "GPE",
+              "start": 1637,
+              "end": 1652,
+              "confidence": 0.9,
+              "metadata": {}
+            },
+            {
+              "text": "8 PM",
+              "type": "TIME",
+              "start": 1654,
+              "end": 1658,
+              "confidence": 0.9,
+              "metadata": {}
+            },
+            {
+              "text": "Irfan",
+              "type": "PERSON",
+              "start": 1661,
+              "end": 1666,
+              "confidence": 0.8,
+              "metadata": {}
+            },
+            {
+              "text": "8:00 PM",
+              "type": "TIME",
+              "start": 1739,
+              "end": 1746,
+              "confidence": 0.9,
+              "metadata": {}
+            },
+            {
+              "text": "New Delhi",
+              "type": "GPE",
+              "start": 1474,
+              "end": 1483,
+              "confidence": 0.9,
+              "metadata": {}
+            }
+          ]
+        }
+      ],
+      "all_entities": [
+        {
+          "text": "March 3, 2025",
+          "type": "DATE",
+          "start": 28,
+          "end": 41,
+          "confidence": 0.95,
+          "metadata": {}
+        },
+        {
+          "text": "Anita Sharma",
+          "type": "PERSON",
+          "start": 43,
+          "end": 55,
+          "confidence": 0.95,
+          "metadata": {}
+        },
+        {
+          "text": "New Delhi Railway Station",
+          "type": "GPE",
+          "start": 81,
+          "end": 106,
+          "confidence": 0.9,
+          "metadata": {}
+        },
+        {
+          "text": "Infosys Ltd.",
+          "type": "ORG",
+          "start": 216,
+          "end": 228,
+          "confidence": 0.95,
+          "metadata": {}
+        },
+        {
+          "text": "Aurora",
+          "type": "PRODUCT",
+          "start": 302,
+          "end": 308,
+          "confidence": 0.9,
+          "metadata": {}
+        },
+        {
+          "text": "Rajiv Menon",
+          "type": "PERSON",
+          "start": 349,
+          "end": 360,
+          "confidence": 0.95,
+          "metadata": {}
+        },
+        {
+          "text": "Station Security Office",
+          "type": "ORG",
+          "start": 620,
+          "end": 643,
+          "confidence": 0.85,
+          "metadata": {}
+        },
+        {
+          "text": "Inspector Ramesh Yadav",
+          "type": "PERSON",
+          "start": 668,
+          "end": 690,
+          "confidence": 0.95,
+          "metadata": {}
+        },
+        {
+          "text": "March 3rd",
+          "type": "DATE",
+          "start": 748,
+          "end": 757,
+          "confidence": 0.9,
+          "metadata": {}
+        },
+        {
+          "text": "Infosys",
+          "type": "ORG",
+          "start": 807,
+          "end": 814,
+          "confidence": 0.95,
+          "metadata": {}
+        },
+        {
+          "text": "Aurora",
+          "type": "PRODUCT",
+          "start": 838,
+          "end": 844,
+          "confidence": 0.9,
+          "metadata": {}
+        },
+        {
+          "text": "Delhi Metro Authority",
+          "type": "ORG",
+          "start": 929,
+          "end": 950,
+          "confidence": 0.9,
+          "metadata": {}
+        },
+        {
+          "text": "Samsonite",
+          "type": "PRODUCT",
+          "start": 971,
+          "end": 980,
+          "confidence": 0.85,
+          "metadata": {}
+        },
+        {
+          "text": "Gate 5",
+          "type": "EVENT",
+          "start": 996,
+          "end": 1002,
+          "confidence": 0.7,
+          "metadata": {}
+        },
+        {
+          "text": "Connaught Place",
+          "type": "GPE",
+          "start": 1006,
+          "end": 1021,
+          "confidence": 0.9,
+          "metadata": {}
+        },
+        {
+          "text": "Irfan Ali",
+          "type": "PERSON",
+          "start": 1086,
+          "end": 1095,
+          "confidence": 0.95,
+          "metadata": {}
+        },
+        {
+          "text": "India Gate",
+          "type": "GPE",
+          "start": 1115,
+          "end": 1125,
+          "confidence": 0.9,
+          "metadata": {}
+        },
+        {
+          "text": "Aurora",
+          "type": "PRODUCT",
+          "start": 838,
+          "end": 844,
+          "confidence": 0.9,
+          "metadata": {}
+        },
+        {
+          "text": "Microsoft\u2019s Copilot",
+          "type": "PRODUCT",
+          "start": 1307,
+          "end": 1326,
+          "confidence": 0.9,
+          "metadata": {}
+        },
+        {
+          "text": "The Times of India",
+          "type": "ORG",
+          "start": 1368,
+          "end": 1386,
+          "confidence": 0.95,
+          "metadata": {}
+        },
+        {
+          "text": "Meera Kapoor",
+          "type": "PERSON",
+          "start": 1405,
+          "end": 1417,
+          "confidence": 0.95,
+          "metadata": {}
+        },
+        {
+          "text": "Infosys Loses Secret AI Project in New Delhi",
+          "type": "EVENT",
+          "start": 1439,
+          "end": 1483,
+          "confidence": 0.8,
+          "metadata": {}
+        },
+        {
+          "text": "Caf\u00e9 Coffee Day",
+          "type": "ORG",
+          "start": 1620,
+          "end": 1635,
+          "confidence": 0.9,
+          "metadata": {}
+        },
+        {
+          "text": "Connaught Place",
+          "type": "GPE",
+          "start": 1637,
+          "end": 1652,
+          "confidence": 0.9,
+          "metadata": {}
+        },
+        {
+          "text": "8 PM",
+          "type": "TIME",
+          "start": 1654,
+          "end": 1658,
+          "confidence": 0.9,
+          "metadata": {}
+        },
+        {
+          "text": "Irfan",
+          "type": "PERSON",
+          "start": 1661,
+          "end": 1666,
+          "confidence": 0.8,
+          "metadata": {}
+        },
+        {
+          "text": "8:00 PM",
+          "type": "TIME",
+          "start": 1739,
+          "end": 1746,
+          "confidence": 0.9,
+          "metadata": {}
+        },
+        {
+          "text": "New Delhi",
+          "type": "GPE",
+          "start": 1474,
+          "end": 1483,
+          "confidence": 0.9,
+          "metadata": {}
+        }
+      ]
+    }
+  },
+  "ad8ed5a9-1915-4e52-ae39-96b751437f68": {
+    "filename": "October 26, 2025.docx",
+    "metadata": {
+      "original_filename": "October 26, 2025.docx",
+      "stored_path": "data/uploads/October 26, 2025.docx",
+      "uploaded_via": "api",
+      "filename": "October 26, 2025.docx",
+      "content_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "size_bytes": 8962,
+      "language": "",
+      "format": "DOCX",
+      "author": "",
+      "title": "Word Document",
+      "created": null,
+      "modified": "2025-09-04 09:46:47",
+      "last_modified_by": "python-docx",
+      "revision": 1,
+      "category": "",
+      "comments": "",
+      "identifier": "",
+      "keywords": "",
+      "subject": "",
+      "version": "",
+      "sections": 1,
+      "entities": 7,
+      "entity_types": {
+        "PERSON": 2,
+        "GPE": 2,
+        "DATE": 1,
+        "ORG": 1,
+        "PRODUCT": 1
+      }
+    },
+    "content_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "size": 8962,
+    "id": "ad8ed5a9-1915-4e52-ae39-96b751437f68",
+    "status": "processed",
+    "created_at": "2025-09-04 09:46:47.772111+00:00",
+    "updated_at": "2025-09-04 09:46:55.472600+00:00",
+    "summary": "On October 26, 2025, Elias Thorne, a meticulous and risk-averse engineer, stands outside the imposing headquarters of Novus Dynamics in Kyoto. The atmosphere is tense and charged with anticipation, as Elias prepares to present his innovative design to the leading tech company renowned for shaping the future. Despite his preference for predictability, Elias is taking a significant personal and professional risk, hoping that his creation, the Chronomark, will impress the industry's top minds and secure his place among them.\n\nNovus Dynamics, located in the heart of Kyoto's Gion district, is depicted as a dominant force in technology, setting the pace for global innovation. Elias's venture is small and independent, highlighting the David-versus-Goliath dynamic of his upcoming pitch. The narrative emphasizes the emotional weight of the moment for Elias, underscoring the potential for either breakthrough success or devastating failure. The document sets the stage for a pivotal encounter, introducing key entities such as Lena Petrova (likely a significant figure at Novus Dynamics), and establishing the Chronomark as the focal product of Elias's ambition.",
+    "error": null,
+    "extra_data": {
+      "sections": [
+        {
+          "title": "October 26, 2025. The air was crisp, carrying the scent of rain-soaked asphalt and burnt sugar from ...",
+          "content": "October 26, 2025. The air was crisp, carrying the scent of rain-soaked asphalt and burnt sugar from a nearby bakery. Elias Thorne, a man whose face held the permanent creases of a well-worn map, stood outside the towering headquarters of Novus Dynamics. His heart hammered a nervous rhythm against his ribs. Elias wasn't a man of grand gestures or daring risks; he was a methodical engineer who believed in blueprints and predictable outcomes. But today, he was gambling everything on a single, audacious moment.\n\nThe building itself was a monument to the future\u2014sleek glass and polished steel reaching for the sky in the heart of Kyoto. Novus Dynamics was the titan of the tech world, a company that didn't just innovate; it defined the next era. They were the architects of tomorrow, and Elias, with his small, independent venture, was about to stand before them with a design that could either be his masterpiece or his folly.\n\nHe clutched the hard-cased briefcase, the cool metal a stark contrast to his clammy palms. Inside was the prototype for his life's work: the Chronomark\u2014a personal chronometer that didn't just tell time but could, with a simple touch, render a perfect, three-dimensional holographic map of any user-defined location. It was more than a gadget; it was a memory keeper, a navigational tool, and a piece of art all in one. Elias had poured five years of his life into it, working in a cramped garage where the smell of solder and caffeine was a constant companion.\n\nHe stepped inside the Novus lobby, the silence of the space interrupted only by the gentle hum of the building's advanced climate control. The receptionist, a woman with unnervingly perfect posture, directed him to the 47th floor. With each rising floor, the city below shrank into a grid of shimmering lights.\n\nWhen the elevator doors opened, he was greeted by the CEO, a formidable woman named Lena Petrova. She didn't offer a handshake, only a sharp, assessing look that felt like a probe into his very soul. \"Mr. Thorne,\" she said, her voice like cut glass. \"Show me what you've got. Make it quick.\"\n\nElias took a deep breath, his mind a whirlwind of schematics and code. He carefully placed the Chronomark on the glass conference table. It was a minimalist design, a smooth obsidian disk with a single, glowing line around its circumference. He activated it, and the room was instantly filled with a shimmering, detailed holographic projection of a bustling market in the Gion district. The projection wasn't just static; it showed people moving, lanterns swaying, the quiet life of the city captured in mid-motion.\n\nLena leaned in, her eyes narrowed in fascination. \"What did you use for the data?\" she asked.\n\n\"Real-time satellite feeds, historical archives, and a proprietary algorithm for environmental rendering,\" Elias explained, his voice gaining confidence. \"It can be synced with any data stream\u2014traffic, weather, even public events. The potential is limitless.\"\n\nShe walked around the hologram, her fingers ghosting through the ethereal image. Elias had prepared for this, but the depth of her focus was unnerving. He watched her face for any sign of approval, a flicker of interest.\n\nAfter what felt like an eternity, she looked up, her expression unreadable. \"Impressive,\" she said simply. \"But the market is saturated with holographic tech. Why this? What makes the Chronomark a product Novus should invest in?\"\n\n\"It's not just a tool, it's an experience,\" Elias said, his pitch honed by countless rehearsals. \"It links a specific moment in time with a specific place. It's nostalgia made tangible. A person could revisit their wedding day, a first date, or even the moment they met their child for the first time. It's the human element, Madam. We don't just sell technology; we sell memories.\"\n\nLena Petrova smiled then, a genuine, if slight, turn of her lips. It was the first time Elias had seen her truly react. \"You're a sentimental person for an engineer, Mr. Thorne,\" she said. \"But you're right. The market isn't looking for another gadget; it's looking for something that connects. Novus Dynamics will make you an offer.\"\n\nAs he left the organization's building, the setting sun cast long shadows across the place that was now his future. The date on his phone read October 26, 2025, and for the first time in years, Elias Thorne felt like he wasn't just building a product, but a legacy.",
+          "section_type": "document",
+          "page_number": null,
+          "entities": [
+            {
+              "text": "October 26, 2025",
+              "type": "DATE",
+              "start": 0,
+              "end": 16,
+              "confidence": 0.95,
+              "metadata": {}
+            },
+            {
+              "text": "Elias Thorne",
+              "type": "PERSON",
+              "start": 117,
+              "end": 129,
+              "confidence": 0.95,
+              "metadata": {}
+            },
+            {
+              "text": "Novus Dynamics",
+              "type": "ORG",
+              "start": 238,
+              "end": 252,
+              "confidence": 0.95,
+              "metadata": {}
+            },
+            {
+              "text": "Kyoto",
+              "type": "GPE",
+              "start": 631,
+              "end": 636,
+              "confidence": 0.95,
+              "metadata": {}
+            },
+            {
+              "text": "Chronomark",
+              "type": "PRODUCT",
+              "start": 1072,
+              "end": 1082,
+              "confidence": 0.95,
+              "metadata": {}
+            },
+            {
+              "text": "Gion district",
+              "type": "GPE",
+              "start": 2470,
+              "end": 2483,
+              "confidence": 0.85,
+              "metadata": {}
+            },
+            {
+              "text": "Lena Petrova",
+              "type": "PERSON",
+              "start": 1889,
+              "end": 1901,
+              "confidence": 0.95,
+              "metadata": {}
+            }
+          ]
+        }
+      ],
+      "all_entities": [
+        {
+          "text": "October 26, 2025",
+          "type": "DATE",
+          "start": 0,
+          "end": 16,
+          "confidence": 0.95,
+          "metadata": {}
+        },
+        {
+          "text": "Elias Thorne",
+          "type": "PERSON",
+          "start": 117,
+          "end": 129,
+          "confidence": 0.95,
+          "metadata": {}
+        },
+        {
+          "text": "Novus Dynamics",
+          "type": "ORG",
+          "start": 238,
+          "end": 252,
+          "confidence": 0.95,
+          "metadata": {}
+        },
+        {
+          "text": "Kyoto",
+          "type": "GPE",
+          "start": 631,
+          "end": 636,
+          "confidence": 0.95,
+          "metadata": {}
+        },
+        {
+          "text": "Chronomark",
+          "type": "PRODUCT",
+          "start": 1072,
+          "end": 1082,
+          "confidence": 0.95,
+          "metadata": {}
+        },
+        {
+          "text": "Gion district",
+          "type": "GPE",
+          "start": 2470,
+          "end": 2483,
+          "confidence": 0.85,
+          "metadata": {}
+        },
+        {
+          "text": "Lena Petrova",
+          "type": "PERSON",
+          "start": 1889,
+          "end": 1901,
+          "confidence": 0.95,
+          "metadata": {}
+        }
+      ]
+    }
+  },
+  "7add610f-ef73-4a2b-8579-ddf72cd57bf5": {
+    "filename": "October 26, 2025.docx",
+    "metadata": {
+      "original_filename": "October 26, 2025.docx",
+      "stored_path": "data/uploads/October 26, 2025_2.docx",
+      "uploaded_via": "api",
+      "filename": "October 26, 2025.docx",
+      "content_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "size_bytes": 8962,
+      "language": "",
+      "format": "DOCX",
+      "author": "",
+      "title": "Word Document",
+      "created": null,
+      "modified": "2025-09-04 09:48:58",
+      "last_modified_by": "python-docx",
+      "revision": 1,
+      "category": "",
+      "comments": "",
+      "identifier": "",
+      "keywords": "",
+      "subject": "",
+      "version": "",
+      "sections": 1,
+      "entities": 10,
+      "entity_types": {
+        "PERSON": 3,
+        "DATE": 2,
+        "ORG": 2,
+        "GPE": 2,
+        "PRODUCT": 1
+      }
+    },
+    "content_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "size": 8962,
+    "id": "7add610f-ef73-4a2b-8579-ddf72cd57bf5",
+    "status": "processed",
+    "created_at": "2025-09-04 09:48:58.877268+00:00",
+    "updated_at": "2025-09-04 09:49:06.904412+00:00",
+    "summary": "The document centers on Elias Thorne, a cautious and methodical engineer, as he prepares for a pivotal moment outside the headquarters of Novus Dynamics in Kyoto on October 26, 2025. Novus Dynamics is portrayed as a leading force in the technology sector, renowned for shaping the future through groundbreaking innovation. Elias, representing his small independent venture, is about to present a significant design\u2014potentially his life's masterpiece\u2014to this influential organization.\n\nSet against the atmospheric backdrop of Kyoto\u2019s Gion district, the narrative emphasizes Elias's internal tension and the magnitude of his undertaking. The mention of Lena Petrova and the product \"Chronomark\" suggests additional key players and technological developments relevant to the unfolding events. The document highlights themes of risk, ambition, and the intersection between individual ingenuity and corporate power, setting the stage for a consequential meeting that could redefine Elias's career and possibly impact the tech industry at large.",
+    "error": null,
+    "extra_data": {
+      "sections": [
+        {
+          "title": "October 26, 2025. The air was crisp, carrying the scent of rain-soaked asphalt and burnt sugar from ...",
+          "content": "October 26, 2025. The air was crisp, carrying the scent of rain-soaked asphalt and burnt sugar from a nearby bakery. Elias Thorne, a man whose face held the permanent creases of a well-worn map, stood outside the towering headquarters of Novus Dynamics. His heart hammered a nervous rhythm against his ribs. Elias wasn't a man of grand gestures or daring risks; he was a methodical engineer who believed in blueprints and predictable outcomes. But today, he was gambling everything on a single, audacious moment.\n\nThe building itself was a monument to the future\u2014sleek glass and polished steel reaching for the sky in the heart of Kyoto. Novus Dynamics was the titan of the tech world, a company that didn't just innovate; it defined the next era. They were the architects of tomorrow, and Elias, with his small, independent venture, was about to stand before them with a design that could either be his masterpiece or his folly.\n\nHe clutched the hard-cased briefcase, the cool metal a stark contrast to his clammy palms. Inside was the prototype for his life's work: the Chronomark\u2014a personal chronometer that didn't just tell time but could, with a simple touch, render a perfect, three-dimensional holographic map of any user-defined location. It was more than a gadget; it was a memory keeper, a navigational tool, and a piece of art all in one. Elias had poured five years of his life into it, working in a cramped garage where the smell of solder and caffeine was a constant companion.\n\nHe stepped inside the Novus lobby, the silence of the space interrupted only by the gentle hum of the building's advanced climate control. The receptionist, a woman with unnervingly perfect posture, directed him to the 47th floor. With each rising floor, the city below shrank into a grid of shimmering lights.\n\nWhen the elevator doors opened, he was greeted by the CEO, a formidable woman named Lena Petrova. She didn't offer a handshake, only a sharp, assessing look that felt like a probe into his very soul. \"Mr. Thorne,\" she said, her voice like cut glass. \"Show me what you've got. Make it quick.\"\n\nElias took a deep breath, his mind a whirlwind of schematics and code. He carefully placed the Chronomark on the glass conference table. It was a minimalist design, a smooth obsidian disk with a single, glowing line around its circumference. He activated it, and the room was instantly filled with a shimmering, detailed holographic projection of a bustling market in the Gion district. The projection wasn't just static; it showed people moving, lanterns swaying, the quiet life of the city captured in mid-motion.\n\nLena leaned in, her eyes narrowed in fascination. \"What did you use for the data?\" she asked.\n\n\"Real-time satellite feeds, historical archives, and a proprietary algorithm for environmental rendering,\" Elias explained, his voice gaining confidence. \"It can be synced with any data stream\u2014traffic, weather, even public events. The potential is limitless.\"\n\nShe walked around the hologram, her fingers ghosting through the ethereal image. Elias had prepared for this, but the depth of her focus was unnerving. He watched her face for any sign of approval, a flicker of interest.\n\nAfter what felt like an eternity, she looked up, her expression unreadable. \"Impressive,\" she said simply. \"But the market is saturated with holographic tech. Why this? What makes the Chronomark a product Novus should invest in?\"\n\n\"It's not just a tool, it's an experience,\" Elias said, his pitch honed by countless rehearsals. \"It links a specific moment in time with a specific place. It's nostalgia made tangible. A person could revisit their wedding day, a first date, or even the moment they met their child for the first time. It's the human element, Madam. We don't just sell technology; we sell memories.\"\n\nLena Petrova smiled then, a genuine, if slight, turn of her lips. It was the first time Elias had seen her truly react. \"You're a sentimental person for an engineer, Mr. Thorne,\" she said. \"But you're right. The market isn't looking for another gadget; it's looking for something that connects. Novus Dynamics will make you an offer.\"\n\nAs he left the organization's building, the setting sun cast long shadows across the place that was now his future. The date on his phone read October 26, 2025, and for the first time in years, Elias Thorne felt like he wasn't just building a product, but a legacy.",
+          "section_type": "document",
+          "page_number": null,
+          "entities": [
+            {
+              "text": "October 26, 2025",
+              "type": "DATE",
+              "start": 0,
+              "end": 16,
+              "confidence": 0.95,
+              "metadata": {}
+            },
+            {
+              "text": "Elias Thorne",
+              "type": "PERSON",
+              "start": 117,
+              "end": 129,
+              "confidence": 0.95,
+              "metadata": {}
+            },
+            {
+              "text": "Novus Dynamics",
+              "type": "ORG",
+              "start": 238,
+              "end": 252,
+              "confidence": 0.95,
+              "metadata": {}
+            },
+            {
+              "text": "Kyoto",
+              "type": "GPE",
+              "start": 631,
+              "end": 636,
+              "confidence": 0.95,
+              "metadata": {}
+            },
+            {
+              "text": "Chronomark",
+              "type": "PRODUCT",
+              "start": 1072,
+              "end": 1082,
+              "confidence": 0.95,
+              "metadata": {}
+            },
+            {
+              "text": "Gion district",
+              "type": "GPE",
+              "start": 2470,
+              "end": 2483,
+              "confidence": 0.9,
+              "metadata": {}
+            },
+            {
+              "text": "Lena Petrova",
+              "type": "PERSON",
+              "start": 1889,
+              "end": 1901,
+              "confidence": 0.95,
+              "metadata": {}
+            },
+            {
+              "text": "Novus",
+              "type": "ORG",
+              "start": 1515,
+              "end": 1520,
+              "confidence": 0.8,
+              "metadata": {}
+            },
+            {
+              "text": "October 26, 2025",
+              "type": "DATE",
+              "start": 4287,
+              "end": 4303,
+              "confidence": 0.95,
+              "metadata": {}
+            },
+            {
+              "text": "Elias Thorne",
+              "type": "PERSON",
+              "start": 4338,
+              "end": 4350,
+              "confidence": 0.95,
+              "metadata": {}
+            }
+          ]
+        }
+      ],
+      "all_entities": [
+        {
+          "text": "October 26, 2025",
+          "type": "DATE",
+          "start": 0,
+          "end": 16,
+          "confidence": 0.95,
+          "metadata": {}
+        },
+        {
+          "text": "Elias Thorne",
+          "type": "PERSON",
+          "start": 117,
+          "end": 129,
+          "confidence": 0.95,
+          "metadata": {}
+        },
+        {
+          "text": "Novus Dynamics",
+          "type": "ORG",
+          "start": 238,
+          "end": 252,
+          "confidence": 0.95,
+          "metadata": {}
+        },
+        {
+          "text": "Kyoto",
+          "type": "GPE",
+          "start": 631,
+          "end": 636,
+          "confidence": 0.95,
+          "metadata": {}
+        },
+        {
+          "text": "Chronomark",
+          "type": "PRODUCT",
+          "start": 1072,
+          "end": 1082,
+          "confidence": 0.95,
+          "metadata": {}
+        },
+        {
+          "text": "Gion district",
+          "type": "GPE",
+          "start": 2470,
+          "end": 2483,
+          "confidence": 0.9,
+          "metadata": {}
+        },
+        {
+          "text": "Lena Petrova",
+          "type": "PERSON",
+          "start": 1889,
+          "end": 1901,
+          "confidence": 0.95,
+          "metadata": {}
+        },
+        {
+          "text": "Novus",
+          "type": "ORG",
+          "start": 1515,
+          "end": 1520,
+          "confidence": 0.8,
+          "metadata": {}
+        },
+        {
+          "text": "October 26, 2025",
+          "type": "DATE",
+          "start": 4287,
+          "end": 4303,
+          "confidence": 0.95,
+          "metadata": {}
+        },
+        {
+          "text": "Elias Thorne",
+          "type": "PERSON",
+          "start": 4338,
+          "end": 4350,
+          "confidence": 0.95,
+          "metadata": {}
+        }
+      ]
+    }
   }
 }

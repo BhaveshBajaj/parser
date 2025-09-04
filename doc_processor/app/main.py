@@ -31,7 +31,7 @@ from .models.document import Document, DocumentCreate, DocumentStatus, DocumentU
 from .services.document_service import document_service
 from .services.parsers import DocumentSection
 from .services.entity_extractor import Entity, EntityType
-from .services.agents.workflow_orchestrator import WorkflowOrchestrator
+from .services.agents.autogen_agents import AutoGenWorkflowOrchestrator
 
 # Configure logging
 logging.basicConfig(
@@ -47,8 +47,8 @@ logger = logging.getLogger(__name__)
 # Create FastAPI app
 app = FastAPI(
     title=settings.APP_NAME,
-    description="Document Processing API with Entity Extraction",
-    version="0.1.0",
+    description="Document Processing API with AutoGen Multi-Agent Workflows and LLM-Powered Analysis",
+    version="1.0.0",
     docs_url="/docs",
     redoc_url="/redoc",
     openapi_url="/openapi.json",
@@ -66,8 +66,8 @@ app.add_middleware(
 # Add GZip middleware for responses
 app.add_middleware(GZipMiddleware, minimum_size=1000)
 
-# Initialize workflow orchestrator
-workflow_orchestrator = WorkflowOrchestrator()
+# Initialize AutoGen workflow orchestrator
+autogen_orchestrator = AutoGenWorkflowOrchestrator()
 
 # Custom JSON encoder for UUID and datetime
 class CustomJSONEncoder(json.JSONEncoder):
@@ -92,9 +92,11 @@ async def root() -> Dict[str, Any]:
         Dict with API information and available endpoints
     """
     return {
-        "message": "Document Processing API",
-        "version": "0.1.0",
+        "message": "Document Processing API with AutoGen Multi-Agent Workflows",
+        "version": "1.0.0",
         "status": "running",
+        "framework": "Microsoft AutoGen",
+        "implementation": "LLM-powered multi-agent system",
         "timestamp": datetime.now(timezone.utc).isoformat(),
         "endpoints": {
             "health": "/health",
@@ -107,8 +109,15 @@ async def root() -> Dict[str, Any]:
             "document_qa": "/documents/{document_id}/qa",
             "corpus_workflow": "/corpus/workflows",
             "corpus_qa": "/corpus/qa",
-            "workflow_status": "/workflows/{workflow_id}/status"
+            "workflow_status": "/workflows/{workflow_id}/status",
+            "orchestrator_info": "/orchestrator/info"
         },
+        "capabilities": [
+            "AutoGen multi-agent orchestration",
+            "LLM-powered document analysis",
+            "Conversational AI agents",
+            "Advanced reasoning capabilities"
+        ],
         "docs": "/docs"
     }
 
@@ -123,7 +132,9 @@ async def health_check() -> Dict[str, str]:
     """
     return {
         "status": "ok",
-        "version": "0.1.0",
+        "version": "1.0.0",
+        "framework": "AutoGen",
+        "implementation": "LLM-powered",
         "timestamp": datetime.now(timezone.utc).isoformat()
     }
 
@@ -930,8 +941,8 @@ async def execute_document_workflow(
                 detail="Document not found"
             )
         
-        # Execute workflow
-        workflow_result = await workflow_orchestrator.execute_document_processing_workflow(
+        # Execute AutoGen workflow
+        workflow_result = await autogen_orchestrator.execute_document_workflow(
             document=document,
             workflow_type=workflow_request.workflow_type,
             context=workflow_request.context
@@ -942,10 +953,10 @@ async def execute_document_workflow(
             workflow_type=workflow_result["workflow_type"],
             document_id=workflow_result["document_id"],
             status=workflow_result.get("status", "completed"),
-            execution_results=workflow_result.get("execution_results"),
+            execution_results=workflow_result.get("agent_results"),
             workflow_summary=workflow_result.get("workflow_summary"),
             error=workflow_result.get("error"),
-            timestamp=workflow_result["timestamp"]
+            timestamp=workflow_result.get("timestamp", "")
         )
         
     except ValueError as e:
@@ -995,7 +1006,7 @@ async def ask_document_question(
             "question": question_request.question
         }
         
-        workflow_result = await workflow_orchestrator.execute_document_processing_workflow(
+        workflow_result = await autogen_orchestrator.execute_document_workflow(
             document=document,
             workflow_type="qa",
             context=qa_context
@@ -1003,10 +1014,10 @@ async def ask_document_question(
         
         # Extract Q&A results
         qa_results = {}
-        if "execution_results" in workflow_result:
-            for agent_name, result in workflow_result["execution_results"].items():
-                if "qa" in agent_name and hasattr(result, 'result_data'):
-                    qa_results[agent_name] = result.result_data
+        if "agent_results" in workflow_result:
+            for agent_name, result in workflow_result["agent_results"].items():
+                if "qa" in agent_name and isinstance(result, dict) and 'result_data' in result:
+                    qa_results[agent_name] = result['result_data']
         
         return {
             "document_id": document_id,
@@ -1071,8 +1082,8 @@ async def execute_corpus_workflow(
                 detail="No valid documents found"
             )
         
-        # Execute corpus workflow
-        workflow_result = await workflow_orchestrator.execute_corpus_workflow(
+        # Execute AutoGen corpus workflow
+        workflow_result = await autogen_orchestrator.execute_corpus_workflow(
             documents=documents,
             workflow_type=corpus_request.workflow_type,
             context=corpus_request.context
@@ -1086,7 +1097,7 @@ async def execute_corpus_workflow(
             document_results=workflow_result.get("document_results"),
             corpus_results=workflow_result.get("corpus_results"),
             error=workflow_result.get("error"),
-            timestamp=workflow_result["timestamp"]
+            timestamp=workflow_result.get("timestamp", "")
         )
         
     except HTTPException:
@@ -1137,7 +1148,7 @@ async def ask_corpus_question(
             "question": question_request.question
         }
         
-        workflow_result = await workflow_orchestrator.execute_corpus_workflow(
+        workflow_result = await autogen_orchestrator.execute_corpus_workflow(
             documents=documents,
             workflow_type="corpus_qa",
             context=qa_context
@@ -1145,10 +1156,10 @@ async def ask_corpus_question(
         
         # Extract corpus Q&A results
         qa_results = {}
-        if "corpus_results" in workflow_result:
-            for agent_name, result in workflow_result["corpus_results"].items():
-                if "qa" in agent_name and hasattr(result, 'result_data'):
-                    qa_results[agent_name] = result.result_data
+        if "corpus_results" in workflow_result and "agent_results" in workflow_result["corpus_results"]:
+            for agent_name, result in workflow_result["corpus_results"]["agent_results"].items():
+                if "qa" in agent_name and isinstance(result, dict) and 'result_data' in result:
+                    qa_results[agent_name] = result['result_data']
         
         return {
             "corpus_size": len(documents),
@@ -1199,6 +1210,78 @@ async def get_workflow_status(
         raise HTTPException(
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
             detail=f"Error retrieving workflow status: {str(e)}"
+        )
+
+# Status and Information Endpoints
+
+@app.get(
+    "/orchestrator/info",
+    response_model=Dict[str, Any],
+    summary="Get AutoGen orchestrator information"
+)
+async def get_orchestrator_info(
+    request_id: str = Depends(get_request_id)
+) -> Dict[str, Any]:
+    """
+    Get information about the AutoGen orchestrator implementation.
+    
+    Provides details about capabilities, configuration, and usage.
+    """
+    try:
+        logger.info(f"[{request_id}] Getting AutoGen orchestrator information")
+        
+        return {
+            "orchestrator": {
+                "name": "AutoGen Workflow Orchestrator",
+                "framework": "Microsoft AutoGen",
+                "version": "autogen>=0.3.0",
+                "implementation": "LLM-powered multi-agent system"
+            },
+            "capabilities": [
+                "Conversational AI agents",
+                "Multi-agent group chats",
+                "Advanced reasoning capabilities",
+                "Dynamic agent interactions",
+                "LLM-powered decision making",
+                "Sophisticated orchestration patterns"
+            ],
+            "agents": {
+                "summarization_agent": "Advanced document summarization with LLM reasoning",
+                "entity_agent": "Sophisticated entity extraction and analysis",
+                "qa_agent": "Conversational question answering",
+                "validation_agent": "Cross-agent validation and quality assurance"
+            },
+            "workflow_types": [
+                "full - Complete multi-agent processing",
+                "summarization - Advanced summarization workflows",
+                "entity_extraction - Sophisticated entity analysis",
+                "qa - Conversational question answering",
+                "corpus_analysis - Multi-document analysis",
+                "corpus_qa - Cross-document question answering"
+            ],
+            "requirements": {
+                "azure_openai_configured": bool(settings.AZURE_OPENAI_API_KEY and settings.AZURE_OPENAI_ENDPOINT),
+                            "required_env_vars": [
+                "AZURE_OPENAI_API_KEY",
+                "AZURE_OPENAI_ENDPOINT", 
+                "AZURE_OPENAI_DEPLOYMENT",
+                "AZURE_OPENAI_API_VERSION"
+            ]
+        },
+        "system_features": {
+            "llm_powered": "100% LLM processing with Azure OpenAI",
+            "semantic_search": "Vector embeddings for content retrieval",
+            "no_hardcoding": "All logic uses LLM reasoning",
+            "no_fallbacks": "Pure AutoGen implementation",
+            "embedding_integration": "Full vector search capabilities"
+        }
+    }
+        
+    except Exception as e:
+        logger.error(f"[{request_id}] Error getting orchestrator info: {str(e)}", exc_info=True)
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail=f"Error retrieving orchestrator information: {str(e)}"
         )
 
 # Error handlers

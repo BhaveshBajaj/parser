@@ -118,6 +118,11 @@ class EntityExtractor:
             # Parse the response
             content = response.choices[0].message.content
             entities = self._parse_response(content, text)
+            
+            # Validate and filter entities
+            entities = self._validate_entities(entities, text)
+            
+            logger.info(f"Extracted {len(entities)} entities")
             return entities
             
         except Exception as e:
@@ -129,24 +134,24 @@ class EntityExtractor:
     def _create_system_message(self, entity_types: List[EntityType]) -> str:
         """Create the system message for entity extraction."""
         entity_descriptions = {
-            EntityType.PERSON: "People, including fictional",
-            EntityType.ORG: "Companies, agencies, institutions, etc.",
-            EntityType.GPE: "Countries, cities, states",
-            EntityType.DATE: "Absolute or relative dates or periods",
-            EntityType.TIME: "Times smaller than a day",
-            EntityType.MONEY: "Monetary values, including unit",
-            EntityType.PERCENT: "Percentage (including '%')",
-            EntityType.PRODUCT: "Objects, vehicles, foods, etc. (not services)",
-            EntityType.EVENT: "Named hurricanes, battles, wars, sports events, etc.",
-            EntityType.NORP: "Nationalities or religious or political groups",
-            EntityType.FAC: "Buildings, airports, highways, bridges, etc.",
-            EntityType.LOC: "Non-GPE locations, mountain ranges, bodies of water",
-            EntityType.LOCATION: "General location entities, gates, stations, etc.",
-            EntityType.WORK_OF_ART: "Titles of books, songs, etc.",
-            EntityType.LAW: "Named documents made into laws",
-            EntityType.LANGUAGE: "Any named language",
-            EntityType.QUANTITY: "Measurements, counts, distances, etc.",
-            EntityType.ORDINAL: "First, second, etc.",
+            EntityType.PERSON: "People, including fictional characters, proper names",
+            EntityType.ORG: "Companies, agencies, institutions, organizations, corporations",
+            EntityType.GPE: "Countries, cities, states, provinces, nations, geopolitical entities",
+            EntityType.DATE: "Absolute or relative dates, periods, time references",
+            EntityType.TIME: "Times smaller than a day (hours, minutes, seconds)",
+            EntityType.MONEY: "Monetary values, currency amounts, financial figures",
+            EntityType.PERCENT: "Percentage values, ratios, proportions",
+            EntityType.PRODUCT: "Objects, vehicles, foods, physical products (not services)",
+            EntityType.EVENT: "Named hurricanes, battles, wars, sports events, conferences",
+            EntityType.NORP: "Nationalities, religious groups, political groups, ethnicities",
+            EntityType.FAC: "Buildings, airports, highways, bridges, infrastructure",
+            EntityType.LOC: "Non-GPE locations, mountain ranges, bodies of water, landmarks",
+            EntityType.LOCATION: "General location entities, gates, stations, venues",
+            EntityType.WORK_OF_ART: "Titles of books, songs, movies, artworks, creative works",
+            EntityType.LAW: "Named documents made into laws, legal documents",
+            EntityType.LANGUAGE: "Any named language, programming languages",
+            EntityType.QUANTITY: "Measurements, counts, distances, weights, volumes",
+            EntityType.ORDINAL: "First, second, third, etc. (ordinal numbers)",
             EntityType.CARDINAL: "Numerals that do not fall under another type",
         }
         
@@ -162,104 +167,177 @@ class EntityExtractor:
             for et, desc in entity_descriptions.items()
         )
         
-        return f"""You are a highly accurate named entity recognition system. 
-Extract entities from the provided text and return them in the specified JSON format.
+        return f"""You are an expert named entity recognition system. Extract entities from the provided text and return them as a valid JSON array.
 
-Entity types to extract (with descriptions):
+CRITICAL REQUIREMENTS:
+1. Return ONLY valid JSON - no markdown, no explanations, no additional text
+2. Extract entities that are clearly identifiable and contextually relevant
+3. Provide EXACT character positions by counting from the beginning of the text
+4. Use conservative confidence scores (0.7+ for high confidence, 0.5+ for medium)
+5. Focus on meaningful entities that add value to document understanding
+
+Entity types to extract:
 {entity_list}
 
-For each entity, provide:
-- text: The exact text of the entity
-- type: The entity type (must be one of the types listed above)
-- start: The starting character offset of the entity in the original text
-- end: The ending character offset (exclusive) of the entity in the original text
-- confidence: A confidence score between 0 and 1
-- metadata: Any additional metadata about the entity
+EXTRACTION RULES:
+- PERSON: Full names (first + last), not just first names or titles
+- ORG: Complete organization names, not abbreviations unless primary identifier
+- GPE: Specific geographic locations, not general terms like "city" or "country"
+- DATE: Specific dates, years, or time periods, not relative terms like "today"
+- MONEY: Monetary amounts with currency symbols or words
+- Only extract entities that appear in the text exactly as written
+- Skip entities shorter than 2 characters or too generic
 
-Return the entities as a JSON array of objects with the above fields.
-"""
+REQUIRED JSON FORMAT:
+[
+  {{
+    "text": "exact entity text from document",
+    "type": "ENTITY_TYPE",
+    "start": 0,
+    "end": 10,
+    "confidence": 0.85,
+    "metadata": {{}}
+  }}
+]
+
+IMPORTANT: Return ONLY the JSON array. No markdown code blocks, no explanations, no additional text."""
     
     def _parse_response(self, response_text: str, original_text: str) -> List[Entity]:
         """Parse the response from the model into Entity objects."""
         try:
-            # Try to extract JSON from the response
-            json_match = re.search(r'```(?:json\n)?([\s\S]*?)\n```', response_text)
-            if json_match:
-                json_str = json_match.group(1)
-            else:
-                # If no code block, try to parse the whole response as JSON
-                json_str = response_text
-                
+            # Clean the response text to extract JSON
+            json_str = self._extract_json_from_response(response_text)
             entities_data = json.loads(json_str)
+            
             if not isinstance(entities_data, list):
                 raise ValueError("Expected a list of entities")
                 
             entities = []
             for item in entities_data:
                 try:
-                    # Validate entity type
-                    entity_type = EntityType(item["type"].upper())
-                    
-                    # Create entity
-                    entity = Entity(
-                        text=item["text"],
-                        type=entity_type,
-                        start=item["start"],
-                        end=item["end"],
-                        confidence=item.get("confidence", 1.0),
-                        metadata=item.get("metadata", {})
-                    )
-                    
-                    # Verify the entity text matches the original text
-                    if entity.start < len(original_text) and entity.end <= len(original_text):
-                        actual_text = original_text[entity.start:entity.end]
-                        if actual_text != entity.text:
-                            logger.warning(
-                                f"Entity text mismatch: '{entity.text}' != "
-                                f"'{actual_text}' (start={entity.start}, end={entity.end})"
-                            )
-                            # Try to find the correct position using multiple strategies
-                            corrected = self._find_correct_position(entity.text, original_text, entity.start)
-                            if corrected:
-                                entity.start, entity.end = corrected
-                                logger.info(f"Found correct position at {entity.start}-{entity.end}")
-                            else:
-                                # If we can't find the correct position, try to find it anywhere in the text
-                                corrected = self._find_correct_position(entity.text, original_text, 0)
-                                if corrected:
-                                    entity.start, entity.end = corrected
-                                    logger.info(f"Found correct position at {entity.start}-{entity.end} (searched from beginning)")
-                                else:
-                                    logger.warning(f"Could not find correct position for entity: '{entity.text}' - skipping")
-                                    continue  # Skip this entity if we can't find it
-                    else:
-                        logger.warning(
-                            f"Entity position out of bounds: start={entity.start}, end={entity.end}, "
-                            f"text_length={len(original_text)}"
-                        )
-                        # Try to find the correct position even if out of bounds
-                        corrected = self._find_correct_position(entity.text, original_text, 0)
-                        if corrected:
-                            entity.start, entity.end = corrected
-                            logger.info(f"Found correct position at {entity.start}-{entity.end}")
-                        else:
-                            logger.warning(f"Could not find correct position for out-of-bounds entity: '{entity.text}' - skipping")
-                            continue  # Skip this entity if we can't find it
-                        
-                    entities.append(entity)
-                    
-                except (KeyError, ValueError) as e:
+                    # Validate and create entity
+                    entity = self._create_entity_from_dict(item, original_text)
+                    if entity:
+                        entities.append(entity)
+                except Exception as e:
                     logger.warning(f"Skipping invalid entity: {item}, error: {str(e)}")
                     continue
                     
             return entities
             
         except json.JSONDecodeError as e:
-            logger.error(f"Failed to parse entity extraction response: {response_text}")
+            logger.error(f"Failed to parse entity extraction response: {response_text[:200]}...")
             raise ValueError(f"Invalid JSON response from model: {str(e)}")
         except Exception as e:
             logger.error(f"Error parsing entities: {str(e)}")
             raise
+    
+    def _extract_json_from_response(self, response_text: str) -> str:
+        """Extract JSON from the LLM response, handling various formats."""
+        # Remove any markdown code blocks
+        json_match = re.search(r'```(?:json\n)?([\s\S]*?)\n```', response_text)
+        if json_match:
+            return json_match.group(1).strip()
+        
+        # Look for JSON array pattern
+        json_match = re.search(r'\[[\s\S]*\]', response_text)
+        if json_match:
+            return json_match.group(0).strip()
+        
+        # Try to parse the whole response as JSON
+        return response_text.strip()
+    
+    def _create_entity_from_dict(self, item: dict, original_text: str) -> Optional[Entity]:
+        """Create an Entity object from a dictionary, with validation."""
+        try:
+            # Validate required fields
+            if not all(key in item for key in ["text", "type", "start", "end"]):
+                logger.warning(f"Missing required fields in entity: {item}")
+                return None
+            
+            # Validate entity type
+            entity_type = EntityType(item["type"].upper())
+            
+            # Create entity
+            entity = Entity(
+                text=item["text"],
+                type=entity_type,
+                start=int(item["start"]),
+                end=int(item["end"]),
+                confidence=float(item.get("confidence", 0.5)),
+                metadata=item.get("metadata", {})
+            )
+            
+            # Validate position and text match
+            if not self._validate_entity_position(entity, original_text):
+                return None
+                
+            return entity
+            
+        except (KeyError, ValueError, TypeError) as e:
+            logger.warning(f"Invalid entity data: {item}, error: {str(e)}")
+            return None
+    
+    def _validate_entity_position(self, entity: Entity, original_text: str) -> bool:
+        """Validate that entity position and text match the original text."""
+        # Check bounds
+        if entity.start < 0 or entity.end > len(original_text) or entity.start >= entity.end:
+            logger.warning(f"Entity position out of bounds: start={entity.start}, end={entity.end}, text_length={len(original_text)}")
+            return False
+        
+        # Check text match
+        actual_text = original_text[entity.start:entity.end]
+        if actual_text != entity.text:
+            logger.warning(f"Entity text mismatch: '{entity.text}' != '{actual_text}' (start={entity.start}, end={entity.end})")
+            # Try to find correct position
+            corrected = self._find_correct_position(entity.text, original_text, entity.start)
+            if corrected:
+                entity.start, entity.end = corrected
+                logger.info(f"Found correct position at {entity.start}-{entity.end}")
+                return True
+            else:
+                return False
+        
+        return True
+    
+    def _validate_entities(self, entities: List[Entity], original_text: str) -> List[Entity]:
+        """Validate and filter entities based on quality criteria."""
+        if not entities:
+            return []
+        
+        validated_entities = []
+        
+        for entity in entities:
+            # Skip entities that are too short
+            if len(entity.text.strip()) < 2:
+                logger.debug(f"Skipping entity too short: '{entity.text}'")
+                continue
+            
+            # Skip entities with very low confidence
+            if entity.confidence < 0.3:
+                logger.debug(f"Skipping entity with low confidence: '{entity.text}' (confidence: {entity.confidence})")
+                continue
+            
+            # Skip common words and articles
+            common_words = {'the', 'a', 'an', 'and', 'or', 'but', 'in', 'on', 'at', 'to', 'for', 'of', 'with', 'by'}
+            if entity.text.lower().strip() in common_words:
+                logger.debug(f"Skipping common word: '{entity.text}'")
+                continue
+            
+            # Skip entities that are just numbers (unless they're meaningful)
+            if entity.text.strip().isdigit() and entity.type not in [EntityType.CARDINAL, EntityType.ORDINAL, EntityType.QUANTITY]:
+                logger.debug(f"Skipping numeric entity: '{entity.text}'")
+                continue
+            
+            # Skip entities that are just punctuation
+            if not any(c.isalnum() for c in entity.text):
+                logger.debug(f"Skipping non-alphanumeric entity: '{entity.text}'")
+                continue
+            
+            validated_entities.append(entity)
+        
+        logger.info(f"Validated {len(validated_entities)}/{len(entities)} entities")
+        return validated_entities
     
     def _find_correct_position(self, entity_text: str, original_text: str, hint_start: int = 0) -> Optional[Tuple[int, int]]:
         """
