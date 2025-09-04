@@ -3,6 +3,7 @@
 import asyncio
 import json
 import logging
+import time
 from datetime import datetime, timezone
 from typing import Any, Dict, List, Optional
 from uuid import uuid4
@@ -11,11 +12,16 @@ import autogen
 
 from ...models.document import Document
 from ..embedding_service import get_embedding_service
+from ..metrics_storage import MetricsStorage
 from .base_agent import BaseAutoGenAgent
 from .summarization_agent import SummarizationAgent
 from .entity_agent import EntityAgent
 from .qa_agent import QAAgent
 from .validation_agent import ValidationAgent
+from .content_review_agent import ContentReviewAgent
+from .security_agent import SecurityAgent
+from .performance_agent import PerformanceAgent
+from .critic_agent import CriticAgent
 
 logger = logging.getLogger(__name__)
 
@@ -27,14 +33,23 @@ class WorkflowOrchestrator:
         self.config = config or {}
         self.logger = logging.getLogger(__name__)
         
-        # Initialize agents
+        # Initialize core agents
         self.summarization_agent = SummarizationAgent(self.config.get("summarization", {}))
         self.entity_agent = EntityAgent(self.config.get("entity", {}))
         self.qa_agent = QAAgent(self.config.get("qa", {}))
         self.validation_agent = ValidationAgent(self.config.get("validation", {}))
         
+        # Initialize review and analysis agents
+        self.content_review_agent = ContentReviewAgent(self.config.get("content_review", {}))
+        self.security_agent = SecurityAgent(self.config.get("security", {}))
+        self.performance_agent = PerformanceAgent(self.config.get("performance", {}))
+        self.critic_agent = CriticAgent(self.config.get("critic", {}))
+        
         # Initialize embedding service
         self.embedding_service = get_embedding_service(self.config)
+        
+        # Initialize metrics storage
+        self.metrics_storage = MetricsStorage(self.config.get("metrics_storage_path"))
         
         # Create user proxy for coordination
         self.user_proxy = autogen.UserProxyAgent(
@@ -72,7 +87,10 @@ class WorkflowOrchestrator:
         
         try:
             # Set document context for all agents
-            for agent in [self.summarization_agent, self.entity_agent, self.qa_agent, self.validation_agent]:
+            core_agents = [self.summarization_agent, self.entity_agent, self.qa_agent, self.validation_agent]
+            review_agents = [self.content_review_agent, self.security_agent, self.performance_agent, self.critic_agent]
+            
+            for agent in core_agents + review_agents:
                 agent.set_document_context(document, context)
             
             # Execute workflow based on type
@@ -84,6 +102,14 @@ class WorkflowOrchestrator:
                 result = await self._execute_entity_workflow(document, workflow_id, context)
             elif workflow_type == "qa" and context and "question" in context:
                 result = await self._execute_qa_workflow(document, workflow_id, context)
+            elif workflow_type == "content_review":
+                result = await self._execute_content_review_workflow(document, workflow_id, context)
+            elif workflow_type == "security_review":
+                result = await self._execute_security_review_workflow(document, workflow_id, context)
+            elif workflow_type == "performance_analysis":
+                result = await self._execute_performance_analysis_workflow(document, workflow_id, context)
+            elif workflow_type == "critic_analysis":
+                result = await self._execute_critic_analysis_workflow(document, workflow_id, context)
             else:
                 raise ValueError(f"Unknown workflow type: {workflow_type}")
             
@@ -97,6 +123,9 @@ class WorkflowOrchestrator:
                 rollback_result = await self._execute_rollback(workflow_id, workflow_type, "Validation failed")
                 result["rollback_executed"] = True
                 result["rollback_result"] = rollback_result
+            
+            # Store metrics for analysis
+            await self._store_workflow_metrics(workflow_id, workflow_type, result, document)
             
             # Update workflow state
             self.active_workflows[workflow_id]["status"] = "completed"
@@ -258,6 +287,142 @@ class WorkflowOrchestrator:
             response, self.qa_agent, workflow_id, document, "qa"
         )
     
+    async def _execute_content_review_workflow(
+        self,
+        document: Document,
+        workflow_id: str,
+        context: Optional[Dict[str, Any]] = None
+    ) -> Dict[str, Any]:
+        """Execute content review workflow for bias detection and completeness analysis."""
+        
+        document_content = self.content_review_agent.get_document_content(max_length=8000)
+        content_type = context.get("content_type", "general") if context else "general"
+        prompt = self.content_review_agent.generate_content_review_prompt(document_content, content_type)
+        
+        self.logger.info(f"Content review prompt length: {len(prompt)} characters")
+        
+        # Direct interaction with content review agent
+        response = await asyncio.to_thread(
+            self.user_proxy.initiate_chat,
+            self.content_review_agent,
+            message=prompt
+        )
+        
+        return self._process_single_agent_result(
+            response, self.content_review_agent, workflow_id, document, "content_review"
+        )
+    
+    async def _execute_security_review_workflow(
+        self,
+        document: Document,
+        workflow_id: str,
+        context: Optional[Dict[str, Any]] = None
+    ) -> Dict[str, Any]:
+        """Execute security review workflow for sensitive data detection and compliance checks."""
+        
+        document_content = self.security_agent.get_document_content(max_length=8000)
+        content_type = context.get("content_type", "general") if context else "general"
+        prompt = self.security_agent.generate_security_review_prompt(document_content, content_type)
+        
+        self.logger.info(f"Security review prompt length: {len(prompt)} characters")
+        
+        # Direct interaction with security agent
+        response = await asyncio.to_thread(
+            self.user_proxy.initiate_chat,
+            self.security_agent,
+            message=prompt
+        )
+        
+        return self._process_single_agent_result(
+            response, self.security_agent, workflow_id, document, "security_review"
+        )
+    
+    async def _execute_performance_analysis_workflow(
+        self,
+        document: Document,
+        workflow_id: str,
+        context: Optional[Dict[str, Any]] = None
+    ) -> Dict[str, Any]:
+        """Execute performance analysis workflow for metrics tracking and optimization."""
+        
+        # Get performance metrics from context or generate default ones
+        metrics_data = context.get("performance_metrics", {}) if context else {}
+        
+        # Add execution time tracking
+        start_time = time.time()
+        prompt = self.performance_agent.generate_performance_analysis_prompt(metrics_data)
+        
+        self.logger.info(f"Performance analysis prompt length: {len(prompt)} characters")
+        
+        # Direct interaction with performance agent
+        response = await asyncio.to_thread(
+            self.user_proxy.initiate_chat,
+            self.performance_agent,
+            message=prompt
+        )
+        
+        end_time = time.time()
+        
+        # Track execution metrics
+        execution_metrics = self.performance_agent.track_execution_metrics(
+            workflow_id, "performance_agent", start_time, end_time, metrics_data
+        )
+        
+        result = self._process_single_agent_result(
+            response, self.performance_agent, workflow_id, document, "performance_analysis"
+        )
+        
+        # Add execution metrics to result
+        result["execution_metrics"] = execution_metrics
+        
+        return result
+    
+    async def _execute_critic_analysis_workflow(
+        self,
+        document: Document,
+        workflow_id: str,
+        context: Optional[Dict[str, Any]] = None
+    ) -> Dict[str, Any]:
+        """Execute critic analysis workflow for disagreement tracking and conflict resolution."""
+        
+        # Get agent results from context for comparison
+        agent_results = context.get("agent_results", {}) if context else {}
+        
+        if not agent_results:
+            return {
+                "workflow_id": workflow_id,
+                "workflow_type": "critic_analysis",
+                "document_id": str(document.id),
+                "status": "skipped",
+                "reason": "No agent results available for comparison",
+                "agent_results": {}
+            }
+        
+        document_content = self.critic_agent.get_document_content(max_length=6000)
+        prompt = self.critic_agent.generate_critic_analysis_prompt(agent_results, document_content)
+        
+        self.logger.info(f"Critic analysis prompt length: {len(prompt)} characters")
+        
+        # Direct interaction with critic agent
+        response = await asyncio.to_thread(
+            self.user_proxy.initiate_chat,
+            self.critic_agent,
+            message=prompt
+        )
+        
+        result = self._process_single_agent_result(
+            response, self.critic_agent, workflow_id, document, "critic_analysis"
+        )
+        
+        # Track disagreement if we have results
+        if result.get("agent_results", {}).get("critic_agent", {}).get("result_data"):
+            conflict_analysis = result["agent_results"]["critic_agent"]["result_data"]
+            disagreement_record = self.critic_agent.track_disagreement(
+                workflow_id, agent_results, conflict_analysis
+            )
+            result["disagreement_tracking"] = disagreement_record
+        
+        return result
     
     def _process_single_agent_result(
         self,
@@ -415,3 +580,54 @@ class WorkflowOrchestrator:
                 "error_recovery": "Comprehensive error handling"
             }
         }
+    
+    async def _store_workflow_metrics(self, workflow_id: str, workflow_type: str, result: Dict[str, Any], document: Document):
+        """Store workflow metrics for analysis and tracking."""
+        try:
+            # Calculate execution time
+            workflow_start = self.active_workflows[workflow_id]["start_time"]
+            workflow_end = datetime.now(timezone.utc)
+            execution_time = (workflow_end - workflow_start).total_seconds()
+            
+            # Store performance metrics
+            performance_metrics = {
+                "execution_time": execution_time,
+                "workflow_type": workflow_type,
+                "document_id": str(document.id),
+                "document_filename": document.filename,
+                "status": result.get("status", "unknown"),
+                "agent_results_count": len(result.get("agent_results", {})),
+                "validation_passed": not result.get("validation", {}).get("rollback_decision", False)
+            }
+            
+            self.metrics_storage.store_performance_metrics(workflow_id, performance_metrics)
+            
+            # Store content review metrics if available
+            if "content_review_agent" in result.get("agent_results", {}):
+                content_review_data = result["agent_results"]["content_review_agent"].get("result_data", {})
+                if content_review_data:
+                    self.metrics_storage.store_content_review_metrics(workflow_id, content_review_data)
+            
+            # Store security metrics if available
+            if "security_agent" in result.get("agent_results", {}):
+                security_data = result["agent_results"]["security_agent"].get("result_data", {})
+                if security_data:
+                    self.metrics_storage.store_security_metrics(workflow_id, security_data)
+            
+            # Store critic feedback if available
+            if "disagreement_tracking" in result:
+                critic_feedback = result["disagreement_tracking"]
+                self.metrics_storage.store_critic_feedback(workflow_id, critic_feedback)
+            
+            self.logger.info(f"Stored metrics for workflow {workflow_id}")
+            
+        except Exception as e:
+            self.logger.error(f"Failed to store metrics for workflow {workflow_id}: {str(e)}")
+    
+    def get_performance_summary(self, time_window_hours: int = 24) -> Dict[str, Any]:
+        """Get performance summary from metrics storage."""
+        return self.metrics_storage.get_performance_summary(time_window_hours)
+    
+    def get_critic_summary(self, time_window_hours: int = 24) -> Dict[str, Any]:
+        """Get critic feedback summary from metrics storage."""
+        return self.metrics_storage.get_critic_summary(time_window_hours)
